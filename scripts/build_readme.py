@@ -13,19 +13,34 @@ import json
 import re
 import sys
 from pathlib import Path
+from typing import NamedTuple
 
 ROOT = Path(__file__).resolve().parent.parent
 SERVERS_DIR = ROOT / "servers"
 README = ROOT / "README.md"
 
-# Ordine, intestazione e descrizione delle categorie ammesse.
+
+class Category(NamedTuple):
+    slug: str
+    emoji: str
+    label: str
+    description: str
+
+    @property
+    def heading(self) -> str:
+        return f"{self.emoji} {self.label}"
+
+
+# Categorie ammesse, nell'ordine in cui compaiono nel README.
+# L'emoji e' separata dalla label perche' serve solo alle intestazioni Markdown:
+# i consumatori di catalog.json ricevono la label pulita.
 CATEGORIES = [
-    ("dati-statistiche", "📊 Dati e Statistiche", "ISTAT, Eurostat, open data"),
-    ("legal-tech", "⚖️ Legal-Tech e Normativa", "Normativa, giurisprudenza, privacy"),
-    ("fatturazione", "🧾 Fatturazione Elettronica", "Fatture elettroniche, SDI"),
-    ("pa-finanza-pubblica", "🏛️ PA, Parlamento e Finanza Pubblica", "PA, parlamento, fisco, appalti"),
-    ("cybersecurity-compliance", "🛡️ Cybersecurity e Compliance", "ACN, AGCM, compliance"),
-    ("design-altro", "🎨 Design e Altro", "Design system, meteo, altro"),
+    Category("dati-statistiche", "📊", "Dati e Statistiche", "ISTAT, Eurostat, open data"),
+    Category("legal-tech", "⚖️", "Legal-Tech e Normativa", "Normativa, giurisprudenza, privacy"),
+    Category("fatturazione", "🧾", "Fatturazione Elettronica", "Fatture elettroniche, SDI"),
+    Category("pa-finanza-pubblica", "🏛️", "PA, Parlamento e Finanza Pubblica", "PA, parlamento, fisco, appalti"),
+    Category("cybersecurity-compliance", "🛡️", "Cybersecurity e Compliance", "ACN, AGCM, compliance"),
+    Category("design-altro", "🎨", "Design e Altro", "Design system, meteo, altro"),
 ]
 
 # Abbreviazioni usate nella colonna "Lang" del catalogo.
@@ -83,19 +98,19 @@ def render_row(server: dict) -> str:
 
 
 def render_catalog(servers: list[dict]) -> str:
-    known = {slug for slug, _, _ in CATEGORIES}
+    known = {category.slug for category in CATEGORIES}
     for server in servers:
         if server.get("category") not in known:
             sys.exit(f"{server['_path']}: categoria sconosciuta {server.get('category')!r}")
 
     sections = []
-    for slug, title, _ in CATEGORIES:
-        rows = sorted((s for s in servers if s["category"] == slug), key=sort_key)
+    for category in CATEGORIES:
+        rows = sorted((s for s in servers if s["category"] == category.slug), key=sort_key)
         if not rows:
             continue
         body = "\n".join(render_row(server) for server in rows)
         sections.append(
-            f"## {title}\n\n"
+            f"## {category.heading}\n\n"
             "| Progetto | ⭐ | Lang | Descrizione |\n"
             "|----------|---:|------|-------------|\n"
             f"{body}"
@@ -142,8 +157,8 @@ def render_badges(servers: list[dict]) -> str:
 
 def render_category_table() -> str:
     lines = ["| Categoria | Descrizione |", "|-----------|-------------|"]
-    for slug, _, description in CATEGORIES:
-        lines.append(f"| `{slug}` | {description} |")
+    for category in CATEGORIES:
+        lines.append(f"| `{category.slug}` | {category.description} |")
     return "\n".join(lines)
 
 

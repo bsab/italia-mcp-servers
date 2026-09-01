@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogo dei server MCP italiani</title>
+<meta name="description" content="Catalogo curato dei server Model Context Protocol italiani: dati pubblici, legal-tech, fatturazione elettronica, pubblica amministrazione.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #61656b;
+    --line: #d8dbe0;
+    --card: #f7f8fa;
+    --accent: #0b5fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#8b949e; --line:#272d36; --card:#161b22; --accent:#5b9dff; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 2rem 1.25rem 4rem; max-width: 60rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  h1 { margin: 0 0 .25rem; font-size: 1.75rem; }
+  .lede { margin: 0 0 1.5rem; color: var(--muted); }
+  a { color: var(--accent); }
+  .api {
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+    padding: .75rem 1rem; margin-bottom: 1.5rem; font-size: .9rem;
+  }
+  .api code { word-break: break-all; }
+  .controls { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+  input[type=search], select {
+    padding: .5rem .65rem; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--bg); color: var(--fg); font: inherit; font-size: .95rem;
+  }
+  input[type=search] { flex: 1 1 16rem; }
+  #count { color: var(--muted); font-size: .875rem; margin-bottom: 1rem; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li {
+    border: 1px solid var(--line); border-radius: 8px;
+    padding: .9rem 1rem; margin-bottom: .6rem; background: var(--card);
+  }
+  .row { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+  .name { font-weight: 600; }
+  .meta { color: var(--muted); font-size: .8125rem; }
+  .desc { margin: .35rem 0 .5rem; }
+  .tag {
+    display: inline-block; font-size: .75rem; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: .05rem .5rem; margin: 0 .25rem .25rem 0;
+  }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: .875rem; }
+</style>
+</head>
+<body>
+<h1>Server MCP italiani</h1>
+<p class="lede">Catalogo curato dei server <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> per il contesto italiano.</p>
+
+<div class="api">
+  Catalogo in JSON: <a href="catalog.json"><code>catalog.json</code></a> —
+  schemi: <a href="schema/catalog.schema.json"><code>catalog</code></a>,
+  <a href="schema/server.schema.json"><code>server</code></a> —
+  sorgente: <a href="https://github.com/bsab/italia-mcp-servers">GitHub</a>
+</div>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="Cerca per nome, descrizione o tag…" autocomplete="off">
+  <select id="category"><option value="">Tutte le categorie</option></select>
+  <select id="language"><option value="">Tutti i linguaggi</option></select>
+</div>
+
+<p id="count">Caricamento…</p>
+<ul id="list"></ul>
+
+<footer>Fatto con ❤️ in Italia — per rendere i dati italiani accessibili all'AI</footer>
+
+<script>
+const el = (id) => document.getElementById(id);
+let servers = [];
+
+const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (c) => (
+  { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+));
+
+function render() {
+  const query = el('q').value.trim().toLowerCase();
+  const category = el('category').value;
+  const language = el('language').value;
+
+  const matches = servers.filter((s) => {
+    if (category && s.category !== category) return false;
+    if (language && s.language !== language) return false;
+    if (!query) return true;
+    const haystack = [s.name, s.description, s.author, ...(s.tags || [])].join(' ').toLowerCase();
+    return haystack.includes(query);
+  });
+
+  el('count').textContent = `${matches.length} server su ${servers.length}`;
+  el('list').innerHTML = matches.map((s) => `
+    <li>
+      <div class="row">
+        <a class="name" href="${escapeHtml(s.url)}">${escapeHtml(s.name)}</a>
+        <span class="meta">${escapeHtml(s.language)} · ★ ${s.stars} · ${escapeHtml(s.license || 'nessuna licenza dichiarata')}</span>
+      </div>
+      <p class="desc">${escapeHtml(s.description)}</p>
+      <div>${(s.tags || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
+    </li>`).join('');
+}
+
+function fillSelect(select, values) {
+  for (const value of values) {
+    const option = document.createElement('option');
+    option.value = value.id ?? value;
+    option.textContent = value.label ?? value;
+    select.append(option);
+  }
+}
+
+fetch('catalog.json')
+  .then((response) => {
+    if (!response.ok) throw new Error(response.statusText);
+    return response.json();
+  })
+  .then((catalog) => {
+    servers = catalog.servers;
+    fillSelect(el('category'), catalog.categories);
+    fillSelect(el('language'), [...new Set(servers.map((s) => s.language))].sort());
+    for (const id of ['q', 'category', 'language']) el(id).addEventListener('input', render);
+    render();
+  })
+  .catch((error) => {
+    el('count').textContent = `Impossibile caricare il catalogo: ${error.message}`;
+  });
+</script>
+</body>
+</html>

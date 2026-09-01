@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bsab.github.io/italia-mcp-servers/schema/catalog.schema.json",
+  "title": "Catalogo dei server MCP italiani",
+  "description": "Struttura di catalog.json, il catalogo aggregato pubblicato su GitHub Pages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "generated_at", "source", "count", "categories", "servers"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "version": {
+      "description": "Versione della struttura del documento. Cambia solo per modifiche incompatibili.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "generated_at": {
+      "description": "Istante di generazione, in UTC.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "description": "Repository da cui il catalogo e' generato.",
+      "type": "string",
+      "format": "uri"
+    },
+    "license": {
+      "description": "Licenza del catalogo, distinta da quelle dei singoli server.",
+      "type": "string"
+    },
+    "count": {
+      "description": "Numero di voci in servers.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "emoji", "description", "count"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "emoji": { "type": "string" },
+          "description": { "type": "string" },
+          "count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "servers": {
+      "type": "array",
+      "items": {
+        "$ref": "server.schema.json#/$defs/server",
+        "required": ["url"],
+        "properties": {
+          "url": {
+            "description": "Link canonico del server: repository_url, altrimenti site_url, altrimenti mcp_endpoint. Presente solo nel catalogo aggregato, non nei file in servers/.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    }
+  }
+}

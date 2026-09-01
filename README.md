@@ -95,6 +95,26 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | Categorie | 6 |
 <!-- END:stats -->
 
+## 🔌 Catalogo in formato JSON
+
+Il catalogo è pubblicato anche in forma leggibile dalle macchine, rigenerato
+automaticamente a ogni aggiornamento:
+
+```bash
+curl -s https://bsab.github.io/italia-mcp-servers/catalog.json | jq '.servers[] | .name'
+```
+
+| Risorsa | URL |
+|---------|-----|
+| Catalogo | <https://bsab.github.io/italia-mcp-servers/catalog.json> |
+| Schema del catalogo | <https://bsab.github.io/italia-mcp-servers/schema/catalog.schema.json> |
+| Schema di un server | <https://bsab.github.io/italia-mcp-servers/schema/server.schema.json> |
+| Ricerca e filtri | <https://bsab.github.io/italia-mcp-servers/> |
+
+Il campo `version` indica la versione della struttura del documento e cambia solo
+per modifiche incompatibili. Ogni voce di `servers` contiene i campi del file in
+`servers/` più `url`, il link canonico del progetto.
+
 ## 🤝 Come contribuire
 
 Conosci un server MCP italiano non presente in questo catalogo? Apri una PR!

@@ -26,6 +26,24 @@ python3 scripts/build_readme.py
 | `python3 scripts/validate_servers.py` | Valida `servers/` contro lo schema e controlla nomi di file, duplicati e URL |
 | `python3 scripts/build_readme.py` | Rigenera badge, tabelle e statistiche del README |
 | `python3 scripts/build_readme.py --check` | Verifica l'allineamento senza riscrivere nulla (usato dalla CI) |
+| `python3 scripts/build_catalog.py` | Genera `site/` con `catalog.json` e la pagina di consultazione |
+
+## Catalogo in formato JSON
+
+Il catalogo è pubblicato anche in forma leggibile dalle macchine, rigenerato a ogni
+push su `main`:
+
+| Risorsa | URL |
+|---------|-----|
+| Catalogo | <https://bsab.github.io/italia-mcp-servers/catalog.json> |
+| Schema del catalogo | <https://bsab.github.io/italia-mcp-servers/schema/catalog.schema.json> |
+| Schema di un server | <https://bsab.github.io/italia-mcp-servers/schema/server.schema.json> |
+| Pagina di consultazione | <https://bsab.github.io/italia-mcp-servers/> |
+
+Il campo `version` indica la versione della struttura del documento e cambia solo
+per modifiche incompatibili. Ogni voce di `servers` contiene i campi del file
+corrispondente più `url`, il link canonico (`repository_url`, altrimenti
+`site_url`, altrimenti `mcp_endpoint`).
 
 ## Criteri
 
