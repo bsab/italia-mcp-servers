@@ -6,6 +6,12 @@
   "license": "NOASSERTION",
   "stars": 23,
   "category": "pa-finanza-pubblica",
+  "featured": true,
+  "short_description": "Assistente per la dichiarazione dei redditi",
   "description": "Assistente MCP intelligente per la compilazione della dichiarazione dei redditi italiana.",
-  "tags": ["dichiarazione-redditi", "fisco", "python"]
+  "tags": [
+    "dichiarazione-redditi",
+    "fisco",
+    "python"
+  ]
 }

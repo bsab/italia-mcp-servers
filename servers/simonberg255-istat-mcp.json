@@ -6,6 +6,12 @@
   "license": "MIT",
   "stars": 3,
   "category": "dati-statistiche",
+  "short_description": "4700+ dataset ISTAT via SDMX, senza API key",
   "description": "Server MCP per statistiche ISTAT — 4700+ dataset via SDMX REST API, senza API key.",
-  "tags": ["istat", "sdmx", "statistiche", "python"]
+  "tags": [
+    "istat",
+    "sdmx",
+    "statistiche",
+    "python"
+  ]
 }

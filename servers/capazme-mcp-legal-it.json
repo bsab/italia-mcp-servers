@@ -6,6 +6,13 @@
   "license": "Apache-2.0",
   "stars": 14,
   "category": "legal-tech",
+  "featured": true,
+  "short_description": "200+ tool: statuti, giurisprudenza, calcoli legali",
   "description": "Server MCP + plugin Claude per il diritto italiano — 200+ tool: statuti verificati, ricerca giurisprudenza, calcoli legali.",
-  "tags": ["diritto", "giurisprudenza", "legale", "python"]
+  "tags": [
+    "diritto",
+    "giurisprudenza",
+    "legale",
+    "python"
+  ]
 }

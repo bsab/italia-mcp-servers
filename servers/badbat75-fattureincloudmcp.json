@@ -6,6 +6,11 @@
   "license": "n/a",
   "stars": 0,
   "category": "fatturazione",
+  "short_description": "Fatture in Cloud API v2, CRUD completo",
   "description": "Server MCP (stdio, TypeScript SDK) per le API Fatture in Cloud v2: CRUD su documenti emessi/ricevuti.",
-  "tags": ["fatturazione", "fatture-in-cloud", "typescript"]
+  "tags": [
+    "fatturazione",
+    "fatture-in-cloud",
+    "typescript"
+  ]
 }

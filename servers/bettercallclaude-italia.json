@@ -6,6 +6,13 @@
   "license": "AGPL-3.0",
   "stars": 44,
   "category": "legal-tech",
+  "featured": true,
+  "short_description": "Quadro normativo italiano completo",
   "description": "BetterCallClaude per il quadro normativo italiano, con MCP dedicati esclusivamente al diritto italiano.",
-  "tags": ["diritto", "normativa", "legale", "javascript"]
+  "tags": [
+    "diritto",
+    "normativa",
+    "legale",
+    "javascript"
+  ]
 }

@@ -6,6 +6,13 @@
   "license": "AGPL-3.0",
   "stars": 1,
   "category": "design-altro",
+  "short_description": "Dati sismici e eventi in tempo reale via web service INGV",
   "description": "Accesso ai dati sismici e agli eventi sismici in tempo reale tramite i web service INGV.",
-  "tags": ["ingv", "terremoti", "sismologia", "geofisica", "open-data"]
+  "tags": [
+    "ingv",
+    "terremoti",
+    "sismologia",
+    "geofisica",
+    "open-data"
+  ]
 }

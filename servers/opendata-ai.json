@@ -6,6 +6,13 @@
   "license": "MIT",
   "stars": 1,
   "category": "dati-statistiche",
+  "short_description": "Multi-source: CKAN, ISTAT, Eurostat, OECD",
   "description": "AI conversazionale multi-source per open data italiani ed europei — CKAN, ISTAT, Eurostat, OECD.",
-  "tags": ["open-data", "istat", "eurostat", "ckan", "python"]
+  "tags": [
+    "open-data",
+    "istat",
+    "eurostat",
+    "ckan",
+    "python"
+  ]
 }

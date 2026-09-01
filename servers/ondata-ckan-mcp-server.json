@@ -6,6 +6,13 @@
   "license": "MIT",
   "stars": 57,
   "category": "dati-statistiche",
+  "featured": true,
+  "short_description": "Connettore generico per istanze CKAN (dati.gov.it e portali regionali)",
   "description": "Connettore generico per istanze CKAN, compatibile con dati.gov.it e portali regionali aperti.",
-  "tags": ["ckan", "open-data", "dati-gov-it", "portali-regionali"]
+  "tags": [
+    "ckan",
+    "open-data",
+    "dati-gov-it",
+    "portali-regionali"
+  ]
 }

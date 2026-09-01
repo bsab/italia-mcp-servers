@@ -6,6 +6,12 @@
   "license": "MIT",
   "stars": 10,
   "category": "legal-tech",
+  "short_description": "Normattiva + sentenze TAR/CdS",
   "description": "Server MCP per la legislazione italiana (Normattiva) e le sentenze dei tribunali amministrativi (TAR/CdS).",
-  "tags": ["normattiva", "tar", "legislazione", "python"]
+  "tags": [
+    "normattiva",
+    "tar",
+    "legislazione",
+    "python"
+  ]
 }

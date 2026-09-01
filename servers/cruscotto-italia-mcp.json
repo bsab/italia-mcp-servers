@@ -8,7 +8,19 @@
   "license": "unknown",
   "stars": 0,
   "category": "pa-finanza-pubblica",
+  "short_description": "Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità",
   "description": "Dati comunali per codice ISTAT: demografia, SIOPE, contratti, opere, PNRR, sanità territoriale. MCP pubblico, stateless, read-only, senza autenticazione.",
-  "tools": ["search_comune", "comune_kpi", "comune_dashboard"],
-  "tags": ["comuni", "istat", "siope", "pnrr", "open-data", "remote-mcp"]
+  "tags": [
+    "comuni",
+    "istat",
+    "siope",
+    "pnrr",
+    "open-data",
+    "remote-mcp"
+  ],
+  "tools": [
+    "search_comune",
+    "comune_kpi",
+    "comune_dashboard"
+  ]
 }

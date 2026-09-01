@@ -6,6 +6,12 @@
   "license": "Apache-2.0",
   "stars": 0,
   "category": "cybersecurity-compliance",
+  "short_description": "ACN — linee guida e advisory",
   "description": "Server MCP per le linee guida e gli advisory dell'ACN (Agenzia per la Cybersicurezza Nazionale).",
-  "tags": ["acn", "cybersecurity", "advisory", "typescript"]
+  "tags": [
+    "acn",
+    "cybersecurity",
+    "advisory",
+    "typescript"
+  ]
 }

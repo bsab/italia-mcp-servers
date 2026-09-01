@@ -6,6 +6,12 @@
   "license": "Apache-2.0",
   "stars": 0,
   "category": "cybersecurity-compliance",
+  "short_description": "AGCM — decisioni antitrust",
   "description": "Server MCP per le decisioni dell'AGCM (Autorità Garante della Concorrenza e del Mercato).",
-  "tags": ["agcm", "antitrust", "concorrenza", "typescript"]
+  "tags": [
+    "agcm",
+    "antitrust",
+    "concorrenza",
+    "typescript"
+  ]
 }

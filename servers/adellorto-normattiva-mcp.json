@@ -6,6 +6,11 @@
   "license": "MIT",
   "stars": 1,
   "category": "legal-tech",
+  "short_description": "API di Normattiva",
   "description": "Server MCP per le API di Normattiva — legislazione italiana.",
-  "tags": ["normattiva", "legislazione", "python"]
+  "tags": [
+    "normattiva",
+    "legislazione",
+    "python"
+  ]
 }

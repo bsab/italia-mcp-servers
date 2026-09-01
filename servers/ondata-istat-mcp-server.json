@@ -6,6 +6,14 @@
   "license": "MIT",
   "stars": 23,
   "category": "dati-statistiche",
+  "featured": true,
+  "short_description": "Statistiche ISTAT via SDMX API — il più maturo",
   "description": "Server MCP per interrogare le statistiche italiane ISTAT via SDMX API. Compatibile con qualsiasi client MCP.",
-  "tags": ["istat", "sdmx", "statistiche", "open-data", "python"]
+  "tags": [
+    "istat",
+    "sdmx",
+    "statistiche",
+    "open-data",
+    "python"
+  ]
 }
