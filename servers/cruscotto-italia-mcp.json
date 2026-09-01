@@ -1,0 +1,14 @@
+{
+  "name": "Cruscotto Italia MCP",
+  "site_url": "https://cruscotto-italia-mcp.agid.workers.dev/mcp",
+  "mcp_endpoint": "https://cruscotto-italia-mcp.agid.workers.dev/mcp",
+  "transport": "streamable-http",
+  "author": "agid",
+  "language": "TypeScript",
+  "license": "unknown",
+  "stars": 0,
+  "category": "pa-finanza-pubblica",
+  "description": "Dati comunali per codice ISTAT: demografia, SIOPE, contratti, opere, PNRR, sanità territoriale. MCP pubblico, stateless, read-only, senza autenticazione.",
+  "tools": ["search_comune", "comune_kpi", "comune_dashboard"],
+  "tags": ["comuni", "istat", "siope", "pnrr", "open-data", "remote-mcp"]
+}
