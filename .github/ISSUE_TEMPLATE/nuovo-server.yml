@@ -21,8 +21,8 @@ body:
   - type: input
     id: repository_url
     attributes:
-      label: URL del repository
-      description: Per i server remoti senza repository pubblico, indica l'endpoint MCP.
+      label: URL pubblico del progetto
+      description: Indica il repository, il sito con la documentazione oppure l'endpoint MCP.
       placeholder: https://github.com/owner/repo
     validations:
       required: true
@@ -66,7 +66,7 @@ body:
           required: true
         - label: È pertinente al contesto italiano (dati, normativa, servizi)
           required: true
-        - label: Il repository è pubblico oppure l'endpoint MCP è accessibile
+        - label: È disponibile almeno un riferimento pubblico tra repository, sito o endpoint MCP
           required: true
         - label: Ha documentazione d'uso
           required: true

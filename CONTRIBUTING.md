@@ -49,8 +49,8 @@ corrispondente più `url`, il link canonico (`repository_url`, altrimenti
 
 - Il server deve implementare il Model Context Protocol
 - Deve essere pertinente al contesto italiano
-- Il repository deve essere pubblico su GitHub
-- Deve avere documentazione d'uso
+- Deve fornire almeno un riferimento pubblico tra repository, sito o endpoint MCP
+- Deve avere documentazione d'uso sufficiente
 
 ## Segnalare problemi
 

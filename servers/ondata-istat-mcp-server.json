@@ -7,7 +7,7 @@
   "stars": 23,
   "category": "dati-statistiche",
   "featured": true,
-  "short_description": "Statistiche ISTAT via SDMX API — il più maturo",
+  "short_description": "Statistiche ISTAT via SDMX API",
   "description": "Server MCP per interrogare le statistiche italiane ISTAT via SDMX API. Compatibile con qualsiasi client MCP.",
   "tags": [
     "istat",
