@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"/></a>
-  <img src="https://img.shields.io/badge/server%20MCP-22-blue.svg" alt="22 server"/>
+  <img src="https://img.shields.io/badge/server%20MCP-23-blue.svg" alt="23 server"/>
   <img src="https://img.shields.io/badge/categorie-6-orange.svg" alt="6 categorie"/>
   <img src="https://img.shields.io/badge/made%20in-Italy%20%F0%9F%87%AE%F0%9F%87%B9-red.svg" alt="Made in Italy"/>
 </p>
@@ -48,7 +48,8 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
-| [**DoveVannoINostriSoldi**](https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi) | 258 | TS | Spesa pubblica: SIOPE, debito, PNRR, IRPEF e altro |
+| [**DoveVannoINostriSoldi**](https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi) | 258 | TS | Spesa pubblica: SIOPE, debito, PNRR, IRPEF e altro — [endpoint remoto](https://www.dovevannoinostrisoldi.com/api/mcp) |
+| [Cruscotto Italia MCP](https://cruscotto-italia-mcp.agid.workers.dev/mcp) | 0 | TS | Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità |
 | [**Dichiarino MCP**](https://github.com/gsaccardi/dichiarino-mcp) | 23 | Python | Assistente per la dichiarazione dei redditi |
 | [ANAC MCP](https://github.com/SimonBerg255/anac-mcp) | 4 | Python | Appalti pubblici ANAC (BDNCP) |
 | [Italian Parliament MCP](https://github.com/ondata/italianparliament-mcp) | 2 | TS | Dati del Parlamento italiano |
@@ -73,9 +74,9 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 
 | Metrica | Valore |
 |---------|--------|
-| Server totali | **22** |
+| Server totali | **23** |
 | Python | 12 |
-| TypeScript | 8 |
+| TypeScript | 9 |
 | JavaScript | 2 |
 | Licenze open source | 18 |
 | Categorie | 6 |

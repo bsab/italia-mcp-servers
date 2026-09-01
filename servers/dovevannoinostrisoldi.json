@@ -2,11 +2,14 @@
   "name": "DoveVannoINostriSoldi",
   "repository_url": "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi",
   "site_url": "https://www.dovevannoinostrisoldi.com",
+  "mcp_endpoint": "https://www.dovevannoinostrisoldi.com/api/mcp",
+  "transport": "streamable-http",
   "author": "Italian-Builders-Org",
   "language": "TypeScript",
   "license": "AGPL-3.0",
   "stars": 258,
   "category": "pa-finanza-pubblica",
-  "description": "Progetto civico per capire come vengono usati i soldi pubblici italiani. Server MCP pubblico con dataset su spesa, debito, PNRR e altro.",
-  "tags": ["spesa-pubblica", "open-data", "civic-tech", "nextjs", "typescript"]
+  "description": "Server MCP pubblico con 31 dataset sulla spesa pubblica italiana: SIOPE, debito, PNRR, IRPEF e altro. Endpoint remoto Streamable HTTP, senza autenticazione.",
+  "tools": ["list_datasets", "query_dataset"],
+  "tags": ["spesa-pubblica", "open-data", "civic-tech", "remote-mcp", "finanza-pubblica"]
 }
