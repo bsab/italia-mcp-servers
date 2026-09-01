@@ -99,7 +99,8 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 Conosci un server MCP italiano non presente in questo catalogo? Apri una PR!
 
 1. Crea un file JSON in `servers/` con il nome in `kebab-case.json`
-2. Segui lo schema:
+2. Segui lo schema — la definizione formale è in
+   [`schema/server.schema.json`](schema/server.schema.json):
 
 ```json
 {
@@ -107,6 +108,7 @@ Conosci un server MCP italiano non presente in questo catalogo? Apri una PR!
   "repository_url": "https://github.com/owner/repo",
   "site_url": "https://...",
   "mcp_endpoint": "https://.../mcp",
+  "transport": "streamable-http",
   "author": "owner",
   "language": "Python",
   "license": "MIT",
@@ -118,19 +120,23 @@ Conosci un server MCP italiano non presente in questo catalogo? Apri una PR!
 }
 ```
 
-I campi `site_url`, `mcp_endpoint`, `short_description` e `featured` sono opzionali:
-`short_description` sostituisce `description` nelle tabelle del catalogo,
-`mcp_endpoint` aggiunge il link all'endpoint remoto e `featured: true` mette il
-progetto in evidenza in cima alla sua categoria.
+I campi `site_url`, `mcp_endpoint`, `transport`, `short_description`, `featured` e
+`tools` sono opzionali: `short_description` sostituisce `description` nelle tabelle
+del catalogo, `mcp_endpoint` aggiunge il link all'endpoint remoto e `featured: true`
+mette il progetto in evidenza in cima alla sua categoria. Almeno uno tra
+`repository_url`, `site_url` e `mcp_endpoint` è obbligatorio.
 
-3. **Rigenera il README** — le tabelle, i badge e le statistiche sono generati dai
-   file in `servers/` e non vanno modificati a mano:
+3. **Valida e rigenera il README** — le tabelle, i badge e le statistiche sono
+   generati dai file in `servers/` e non vanno modificati a mano:
 
 ```bash
+python3 -m pip install -r scripts/requirements.txt
+python3 scripts/validate_servers.py
 python3 scripts/build_readme.py
 ```
 
-La CI verifica l'allineamento con `python3 scripts/build_readme.py --check`.
+La CI esegue gli stessi controlli su ogni pull request, con
+`python3 scripts/build_readme.py --check` per verificare l'allineamento del README.
 
 ### Categorie ammesse
 

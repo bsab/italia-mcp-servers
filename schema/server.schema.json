@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bsab/italia-mcp-servers/blob/main/schema/server.schema.json",
+  "title": "Server MCP italiano",
+  "description": "Schema di una voce del catalogo, corrispondente a un file in servers/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "author",
+    "language",
+    "license",
+    "stars",
+    "category",
+    "description",
+    "tags"
+  ],
+  "anyOf": [
+    { "required": ["repository_url"] },
+    { "required": ["site_url"] },
+    { "required": ["mcp_endpoint"] }
+  ],
+  "properties": {
+    "name": {
+      "description": "Nome del server come mostrato nel catalogo.",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "repository_url": {
+      "description": "URL del repository pubblico. Assente solo per i server remoti senza codice pubblicato.",
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "site_url": {
+      "description": "Sito o documentazione del progetto.",
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "mcp_endpoint": {
+      "description": "Endpoint MCP remoto, per i server utilizzabili senza installazione locale.",
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "transport": {
+      "description": "Trasporto MCP esposto dal server.",
+      "type": "string",
+      "enum": ["stdio", "sse", "streamable-http"]
+    },
+    "author": {
+      "description": "Utente o organizzazione che pubblica il server.",
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "description": "Linguaggio di implementazione principale.",
+      "type": "string",
+      "enum": ["Python", "TypeScript", "JavaScript", "Go", "Rust", "Java", "C#", "Ruby", "PHP"]
+    },
+    "license": {
+      "description": "Identificativo SPDX della licenza, oppure un valore che indica una licenza non dichiarata.",
+      "type": "string",
+      "minLength": 1
+    },
+    "stars": {
+      "description": "Stelle su GitHub al momento dell'ultimo aggiornamento.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "category": {
+      "description": "Categoria del catalogo. Deve corrispondere alle sezioni definite in scripts/build_readme.py.",
+      "type": "string",
+      "enum": [
+        "dati-statistiche",
+        "legal-tech",
+        "fatturazione",
+        "pa-finanza-pubblica",
+        "cybersecurity-compliance",
+        "design-altro"
+      ]
+    },
+    "featured": {
+      "description": "Se true, il server compare in evidenza in cima alla sua categoria.",
+      "type": "boolean"
+    },
+    "short_description": {
+      "description": "Descrizione compatta usata nelle tabelle del README. In assenza viene usata description.",
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 120
+    },
+    "description": {
+      "description": "Descrizione del server, massimo 200 caratteri.",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 200
+    },
+    "tags": {
+      "description": "Parole chiave in kebab-case minuscolo.",
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "tools": {
+      "description": "Nomi dei tool MCP esposti, quando documentati.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_.-]+$"
+      }
+    }
+  }
+}
