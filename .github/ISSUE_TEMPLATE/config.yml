@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentazione del Model Context Protocol
+    url: https://modelcontextprotocol.io/
+    about: Specifiche e guide ufficiali del protocollo MCP.
+  - name: Come contribuire
+    url: https://github.com/bsab/italia-mcp-servers/blob/main/CONTRIBUTING.md
+    about: Schema dei file in servers/ e procedura per aggiungere un server.

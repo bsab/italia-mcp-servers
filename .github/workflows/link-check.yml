@@ -1,0 +1,40 @@
+name: Link check
+
+# I link ai repository esterni si rompono nel tempo (repo archiviati, rinominati
+# o cancellati): questo controllo gira in modo schedulato invece che su ogni PR,
+# perche' un fallimento dipende da fattori esterni al contributo.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    name: Verifica i link del catalogo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Controlla i link
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept 200,206,429
+            README.md 'servers/*.json'
+          fail: false
+
+      - name: Apri o aggiorna una issue in caso di link rotti
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Link non raggiungibili nel catalogo"
+          content-filepath: ./lychee/out.md
+          labels: manutenzione
