@@ -1,0 +1,11 @@
+{
+  "name": "INGV MCP FDSNWS Event",
+  "repository_url": "https://github.com/INGV/mcp-fdsnws-event",
+  "author": "INGV",
+  "language": "Python",
+  "license": "AGPL-3.0",
+  "stars": 1,
+  "category": "design-altro",
+  "description": "Accesso ai dati sismici e agli eventi sismici in tempo reale tramite i web service INGV.",
+  "tags": ["ingv", "terremoti", "sismologia", "geofisica", "open-data"]
+}

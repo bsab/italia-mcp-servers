@@ -1,0 +1,11 @@
+{
+  "name": "MCP Fattura Elettronica IT",
+  "repository_url": "https://github.com/cmendezs/mcp-fattura-elettronica-it",
+  "author": "cmendezs",
+  "language": "Python",
+  "license": "Apache-2.0",
+  "stars": 1,
+  "category": "fatturazione",
+  "description": "Validatore e parser XSD per tracciati XML FatturaPA/SDI (ordinaria e semplificata).",
+  "tags": ["fattura-elettronica", "fatturapa", "sdi", "xml", "xsd"]
+}

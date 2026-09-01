@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"/></a>
-  <img src="https://img.shields.io/badge/server%20MCP-23-blue.svg" alt="23 server"/>
+  <img src="https://img.shields.io/badge/server%20MCP-30-blue.svg" alt="30 server"/>
   <img src="https://img.shields.io/badge/categorie-6-orange.svg" alt="6 categorie"/>
   <img src="https://img.shields.io/badge/made%20in-Italy%20%F0%9F%87%AE%F0%9F%87%B9-red.svg" alt="Made in Italy"/>
 </p>
@@ -20,7 +20,10 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
 | [**ISTAT MCP Server**](https://github.com/ondata/istat_mcp_server) | 23 | Python | Statistiche ISTAT via SDMX API — il più maturo |
+| [**CKAN MCP Server**](https://github.com/ondata/ckan-mcp-server) | 57 | TS | Connettore generico per istanze CKAN (dati.gov.it e portali regionali) |
 | [ISTAT MCP](https://github.com/SimonBerg255/istat-mcp) | 3 | Python | 4700+ dataset ISTAT via SDMX, senza API key |
+| [ISTAT MCP Server (istatapi)](https://github.com/Halpph/istat-mcp-server) | 2 | Python | Dati statistici ISTAT via libreria Python istatapi |
+| [Italy OpenData MCP](https://github.com/stucchi/italy-opendata-mcp) | 1 | Python | Comuni, province, regioni, CAP, coordinate e codici ISTAT/ANPR |
 | [ISTAT MCP Suite](https://github.com/ManoloZocco/istat-mcp-suite) | 0 | Python | Server unificato per dataset ISTAT |
 | [OpenData AI](https://github.com/agent-engineering-studio/opendata-ai) | 1 | Python | Multi-source: CKAN, ISTAT, Eurostat, OECD |
 
@@ -42,6 +45,7 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 |----------|---:|------|-------------|
 | [**Fatture in Cloud MCP**](https://github.com/aringad/fattureincloud-mcp) | 18 | Python | Fatture in Cloud API con Claude AI |
 | [Aruba Fatture MCP](https://github.com/MarckDev/aruba-fatture-mcp) | 3 | TS | Aruba Fatturazione Elettronica + SDI |
+| [MCP Fattura Elettronica IT](https://github.com/cmendezs/mcp-fattura-elettronica-it) | 1 | Python | Validatore e parser XSD per tracciati XML FatturaPA/SDI |
 | [FattureInCloudMCP](https://github.com/badbat75/FattureInCloudMCP) | 0 | TS | Fatture in Cloud API v2, CRUD completo |
 
 ## 🏛️ PA, Parlamento e Finanza Pubblica
@@ -51,8 +55,10 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | [**DoveVannoINostriSoldi**](https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi) | 258 | TS | Spesa pubblica: SIOPE, debito, PNRR, IRPEF e altro — [endpoint remoto](https://www.dovevannoinostrisoldi.com/api/mcp) |
 | [Cruscotto Italia MCP](https://cruscotto-italia-mcp.agid.workers.dev/mcp) | 0 | TS | Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità |
 | [**Dichiarino MCP**](https://github.com/gsaccardi/dichiarino-mcp) | 23 | Python | Assistente per la dichiarazione dei redditi |
+| [Dati Semantic MCP](https://github.com/italia/dati-semantic-mcp) | 9 | TS | Catalogo semantico Developers Italia, vocabolari e ontologie PA via SPARQL |
 | [ANAC MCP](https://github.com/SimonBerg255/anac-mcp) | 4 | Python | Appalti pubblici ANAC (BDNCP) |
 | [Italian Parliament MCP](https://github.com/ondata/italianparliament-mcp) | 2 | TS | Dati del Parlamento italiano |
+| [RepublicMCP](https://github.com/giuliogarofalo/RepublicMCP) | 1 | TS | Query SPARQL sugli open data di Camera e Senato |
 
 ## 🛡️ Cybersecurity e Compliance
 
@@ -66,6 +72,7 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
 | [Filo — Design System Italia](https://github.com/Fupete/design-system-italia-mcp) | 3 | TS | Design system .italia (sperimentale) |
+| [INGV MCP FDSNWS Event](https://github.com/INGV/mcp-fdsnws-event) | 1 | Python | Dati sismici e eventi in tempo reale via web service INGV |
 | [MCP Meteo Italia](https://github.com/makremriahi99/MCP-Meteo-Italia) | 0 | Python | Meteo in tempo reale con FastMCP + Gradio |
 
 ---
@@ -74,11 +81,11 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 
 | Metrica | Valore |
 |---------|--------|
-| Server totali | **23** |
-| Python | 12 |
-| TypeScript | 9 |
+| Server totali | **30** |
+| Python | 16 |
+| TypeScript | 12 |
 | JavaScript | 2 |
-| Licenze open source | 18 |
+| Licenze open source | 25 |
 | Categorie | 6 |
 
 ## 🤝 Come contribuire

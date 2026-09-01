@@ -1,0 +1,11 @@
+{
+  "name": "ISTAT MCP Server (istatapi)",
+  "repository_url": "https://github.com/Halpph/istat-mcp-server",
+  "author": "Halpph",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 2,
+  "category": "dati-statistiche",
+  "description": "Interfaccia MCP per i dati statistici ISTAT basata sulla libreria Python istatapi.",
+  "tags": ["istat", "istatapi", "statistiche", "open-data"]
+}

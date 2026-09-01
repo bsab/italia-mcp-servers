@@ -1,0 +1,11 @@
+{
+  "name": "RepublicMCP",
+  "repository_url": "https://github.com/giuliogarofalo/RepublicMCP",
+  "author": "giuliogarofalo",
+  "language": "TypeScript",
+  "license": "MIT",
+  "stars": 1,
+  "category": "pa-finanza-pubblica",
+  "description": "Query SPARQL sugli open data ufficiali di Camera dei Deputati e Senato della Repubblica.",
+  "tags": ["parlamento", "camera", "senato", "sparql", "open-data"]
+}

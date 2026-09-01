@@ -1,0 +1,11 @@
+{
+  "name": "Italy OpenData MCP",
+  "repository_url": "https://github.com/stucchi/italy-opendata-mcp",
+  "author": "stucchi",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 1,
+  "category": "dati-statistiche",
+  "description": "Query locali su comuni, province, regioni, CAP, coordinate e codici Belfiore/catastali da fonti ISTAT e ANPR.",
+  "tags": ["comuni", "istat", "anpr", "cap", "open-data"]
+}

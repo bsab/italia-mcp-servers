@@ -1,0 +1,11 @@
+{
+  "name": "Dati Semantic MCP",
+  "repository_url": "https://github.com/italia/dati-semantic-mcp",
+  "author": "italia",
+  "language": "TypeScript",
+  "license": "MIT",
+  "stars": 9,
+  "category": "pa-finanza-pubblica",
+  "description": "Server per interrogare il catalogo semantico di Developers Italia (schema.gov.it), vocabolari controllati e ontologie della PA via SPARQL.",
+  "tags": ["sparql", "ontologie", "developers-italia", "schema-gov-it", "open-data"]
+}
