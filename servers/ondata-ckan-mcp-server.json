@@ -1,0 +1,11 @@
+{
+  "name": "CKAN MCP Server",
+  "repository_url": "https://github.com/ondata/ckan-mcp-server",
+  "author": "ondata",
+  "language": "TypeScript",
+  "license": "MIT",
+  "stars": 57,
+  "category": "dati-statistiche",
+  "description": "Connettore generico per istanze CKAN, compatibile con dati.gov.it e portali regionali aperti.",
+  "tags": ["ckan", "open-data", "dati-gov-it", "portali-regionali"]
+}
