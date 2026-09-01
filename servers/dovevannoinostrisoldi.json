@@ -9,7 +9,18 @@
   "license": "AGPL-3.0",
   "stars": 258,
   "category": "pa-finanza-pubblica",
+  "featured": true,
+  "short_description": "Spesa pubblica: SIOPE, debito, PNRR, IRPEF e altro",
   "description": "Server MCP pubblico con 31 dataset sulla spesa pubblica italiana: SIOPE, debito, PNRR, IRPEF e altro. Endpoint remoto Streamable HTTP, senza autenticazione.",
-  "tools": ["list_datasets", "query_dataset"],
-  "tags": ["spesa-pubblica", "open-data", "civic-tech", "remote-mcp", "finanza-pubblica"]
+  "tags": [
+    "spesa-pubblica",
+    "open-data",
+    "civic-tech",
+    "remote-mcp",
+    "finanza-pubblica"
+  ],
+  "tools": [
+    "list_datasets",
+    "query_dataset"
+  ]
 }

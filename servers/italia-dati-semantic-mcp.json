@@ -6,6 +6,13 @@
   "license": "MIT",
   "stars": 9,
   "category": "pa-finanza-pubblica",
+  "short_description": "Catalogo semantico Developers Italia, vocabolari e ontologie PA via SPARQL",
   "description": "Server per interrogare il catalogo semantico di Developers Italia (schema.gov.it), vocabolari controllati e ontologie della PA via SPARQL.",
-  "tags": ["sparql", "ontologie", "developers-italia", "schema-gov-it", "open-data"]
+  "tags": [
+    "sparql",
+    "ontologie",
+    "developers-italia",
+    "schema-gov-it",
+    "open-data"
+  ]
 }

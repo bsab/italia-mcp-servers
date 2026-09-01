@@ -6,6 +6,13 @@
   "license": "MIT",
   "stars": 1,
   "category": "dati-statistiche",
+  "short_description": "Comuni, province, regioni, CAP, coordinate e codici ISTAT/ANPR",
   "description": "Query locali su comuni, province, regioni, CAP, coordinate e codici Belfiore/catastali da fonti ISTAT e ANPR.",
-  "tags": ["comuni", "istat", "anpr", "cap", "open-data"]
+  "tags": [
+    "comuni",
+    "istat",
+    "anpr",
+    "cap",
+    "open-data"
+  ]
 }

@@ -6,6 +6,11 @@
   "license": "n/a",
   "stars": 0,
   "category": "dati-statistiche",
+  "short_description": "Server unificato per dataset ISTAT",
   "description": "Server MCP unificato per interrogare e scaricare dataset ISTAT via SDMX REST API.",
-  "tags": ["istat", "sdmx", "python"]
+  "tags": [
+    "istat",
+    "sdmx",
+    "python"
+  ]
 }

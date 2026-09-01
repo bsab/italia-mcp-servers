@@ -6,6 +6,12 @@
   "license": "NOASSERTION",
   "stars": 0,
   "category": "legal-tech",
+  "short_description": "CLI + MCP per citare norme da Normattiva.it",
   "description": "CLI e server MCP per leggere, verificare e citare norme italiane da Normattiva.it.",
-  "tags": ["normattiva", "cli", "citazioni", "python"]
+  "tags": [
+    "normattiva",
+    "cli",
+    "citazioni",
+    "python"
+  ]
 }

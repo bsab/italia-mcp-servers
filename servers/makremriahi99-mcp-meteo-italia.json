@@ -6,6 +6,12 @@
   "license": "n/a",
   "stars": 0,
   "category": "design-altro",
+  "short_description": "Meteo in tempo reale con FastMCP + Gradio",
   "description": "Server MCP per dati meteo italiani in tempo reale — FastMCP + Gradio, integrabile con Claude.",
-  "tags": ["meteo", "tempo-reale", "gradio", "python"]
+  "tags": [
+    "meteo",
+    "tempo-reale",
+    "gradio",
+    "python"
+  ]
 }

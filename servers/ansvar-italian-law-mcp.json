@@ -6,6 +6,12 @@
   "license": "Apache-2.0",
   "stars": 1,
   "category": "legal-tech",
+  "short_description": "GDPR, Codice Privacy, cybercrime",
   "description": "Database legislativo italiano: protezione dati (GDPR/Codice Privacy), cybercrime (Codice Penale), compliance.",
-  "tags": ["gdpr", "privacy", "codice-penale", "typescript"]
+  "tags": [
+    "gdpr",
+    "privacy",
+    "codice-penale",
+    "typescript"
+  ]
 }

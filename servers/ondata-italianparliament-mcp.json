@@ -6,6 +6,12 @@
   "license": "MIT",
   "stars": 2,
   "category": "pa-finanza-pubblica",
+  "short_description": "Dati del Parlamento italiano",
   "description": "Server MCP per i dati del Parlamento italiano.",
-  "tags": ["parlamento", "camera", "senato", "typescript"]
+  "tags": [
+    "parlamento",
+    "camera",
+    "senato",
+    "typescript"
+  ]
 }

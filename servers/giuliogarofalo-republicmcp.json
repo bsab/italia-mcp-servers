@@ -6,6 +6,13 @@
   "license": "MIT",
   "stars": 1,
   "category": "pa-finanza-pubblica",
+  "short_description": "Query SPARQL sugli open data di Camera e Senato",
   "description": "Query SPARQL sugli open data ufficiali di Camera dei Deputati e Senato della Repubblica.",
-  "tags": ["parlamento", "camera", "senato", "sparql", "open-data"]
+  "tags": [
+    "parlamento",
+    "camera",
+    "senato",
+    "sparql",
+    "open-data"
+  ]
 }

@@ -6,6 +6,12 @@
   "license": "AGPL-3.0",
   "stars": 5,
   "category": "legal-tech",
+  "short_description": "Pseudonimizza documenti legali prima dell'LLM",
   "description": "Server MCP locale che pseudonimizza documenti legali italiani prima di esporli a un LLM (privacy by design).",
-  "tags": ["privacy", "pseudonimizzazione", "legale", "typescript"]
+  "tags": [
+    "privacy",
+    "pseudonimizzazione",
+    "legale",
+    "typescript"
+  ]
 }

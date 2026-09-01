@@ -6,6 +6,12 @@
   "license": "n/a",
   "stars": 3,
   "category": "fatturazione",
+  "short_description": "Aruba Fatturazione Elettronica + SDI",
   "description": "Server MCP per Aruba Fatturazione Elettronica — invia, cerca e traccia le fatture SDI.",
-  "tags": ["fatturazione", "aruba", "sdi", "typescript"]
+  "tags": [
+    "fatturazione",
+    "aruba",
+    "sdi",
+    "typescript"
+  ]
 }

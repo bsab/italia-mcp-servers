@@ -6,6 +6,12 @@
   "license": "MIT",
   "stars": 2,
   "category": "dati-statistiche",
+  "short_description": "Dati statistici ISTAT via libreria Python istatapi",
   "description": "Interfaccia MCP per i dati statistici ISTAT basata sulla libreria Python istatapi.",
-  "tags": ["istat", "istatapi", "statistiche", "open-data"]
+  "tags": [
+    "istat",
+    "istatapi",
+    "statistiche",
+    "open-data"
+  ]
 }
