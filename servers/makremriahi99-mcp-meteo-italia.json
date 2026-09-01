@@ -1,0 +1,11 @@
+{
+  "name": "MCP Meteo Italia",
+  "repository_url": "https://github.com/makremriahi99/MCP-Meteo-Italia",
+  "author": "makremriahi99",
+  "language": "Python",
+  "license": "n/a",
+  "stars": 0,
+  "category": "design-altro",
+  "description": "Server MCP per dati meteo italiani in tempo reale — FastMCP + Gradio, integrabile con Claude.",
+  "tags": ["meteo", "tempo-reale", "gradio", "python"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Italian Parliament MCP",
+  "repository_url": "https://github.com/ondata/italianparliament-mcp",
+  "author": "ondata",
+  "language": "TypeScript",
+  "license": "MIT",
+  "stars": 2,
+  "category": "pa-finanza-pubblica",
+  "description": "Server MCP per i dati del Parlamento italiano.",
+  "tags": ["parlamento", "camera", "senato", "typescript"]
+}

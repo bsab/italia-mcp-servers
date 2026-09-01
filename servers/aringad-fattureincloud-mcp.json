@@ -1,0 +1,11 @@
+{
+  "name": "Fatture in Cloud MCP",
+  "repository_url": "https://github.com/aringad/fattureincloud-mcp",
+  "author": "aringad",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 18,
+  "category": "fatturazione",
+  "description": "Server MCP per le API Fatture in Cloud — gestione fatture elettroniche italiane con Claude AI.",
+  "tags": ["fatturazione", "fatture-in-cloud", "sdi", "python"]
+}

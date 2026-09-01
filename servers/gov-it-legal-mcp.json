@@ -1,0 +1,11 @@
+{
+  "name": "Gov IT Legal MCP",
+  "repository_url": "https://github.com/SimonBerg255/gov-it-legal-mcp",
+  "author": "SimonBerg255",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 10,
+  "category": "legal-tech",
+  "description": "Server MCP per la legislazione italiana (Normattiva) e le sentenze dei tribunali amministrativi (TAR/CdS).",
+  "tags": ["normattiva", "tar", "legislazione", "python"]
+}

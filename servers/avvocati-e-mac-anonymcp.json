@@ -1,0 +1,11 @@
+{
+  "name": "AnonyMCP",
+  "repository_url": "https://github.com/avvocati-e-mac/AnonyMCP",
+  "author": "avvocati-e-mac",
+  "language": "TypeScript",
+  "license": "AGPL-3.0",
+  "stars": 5,
+  "category": "legal-tech",
+  "description": "Server MCP locale che pseudonimizza documenti legali italiani prima di esporli a un LLM (privacy by design).",
+  "tags": ["privacy", "pseudonimizzazione", "legale", "typescript"]
+}

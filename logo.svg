@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200">
+  <defs>
+    <linearGradient id="it" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#009246"/>
+      <stop offset="50%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#CE2B37"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="200" rx="16" fill="#0d1117"/>
+  <text x="350" y="70" text-anchor="middle" font-family="monospace" font-size="18" fill="#58a6ff">&#x1F1EE;&#x1F1F9; Model Context Protocol</text>
+  <text x="350" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="url(#it)">italia MCP servers</text>
+  <text x="350" y="155" text-anchor="middle" font-family="monospace" font-size="16" fill="#8b949e">Catalogo curato dei server MCP italiani</text>
+  <text x="350" y="180" text-anchor="middle" font-family="monospace" font-size="13" fill="#64ffda">dati pubblici &#x2022; legal-tech &#x2022; fatturazione &#x2022; PA &#x2022; meteo</text>
+</svg>

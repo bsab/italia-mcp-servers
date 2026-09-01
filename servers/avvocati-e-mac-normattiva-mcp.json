@@ -1,0 +1,11 @@
+{
+  "name": "Normattiva MCP (CLI)",
+  "repository_url": "https://github.com/avvocati-e-mac/normattiva-mcp",
+  "author": "avvocati-e-mac",
+  "language": "Python",
+  "license": "NOASSERTION",
+  "stars": 0,
+  "category": "legal-tech",
+  "description": "CLI e server MCP per leggere, verificare e citare norme italiane da Normattiva.it.",
+  "tags": ["normattiva", "cli", "citazioni", "python"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "BetterCallClaude Italia",
+  "repository_url": "https://github.com/fedec65/bettercallclaude_italia",
+  "author": "fedec65",
+  "language": "JavaScript",
+  "license": "AGPL-3.0",
+  "stars": 44,
+  "category": "legal-tech",
+  "description": "BetterCallClaude per il quadro normativo italiano, con MCP dedicati esclusivamente al diritto italiano.",
+  "tags": ["diritto", "normativa", "legale", "javascript"]
+}

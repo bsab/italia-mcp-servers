@@ -1,0 +1,11 @@
+{
+  "name": "ISTAT MCP Server",
+  "repository_url": "https://github.com/ondata/istat_mcp_server",
+  "author": "ondata",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 23,
+  "category": "dati-statistiche",
+  "description": "Server MCP per interrogare le statistiche italiane ISTAT via SDMX API. Compatibile con qualsiasi client MCP.",
+  "tags": ["istat", "sdmx", "statistiche", "open-data", "python"]
+}

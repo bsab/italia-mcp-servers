@@ -1,0 +1,11 @@
+{
+  "name": "ISTAT MCP",
+  "repository_url": "https://github.com/SimonBerg255/istat-mcp",
+  "author": "SimonBerg255",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 3,
+  "category": "dati-statistiche",
+  "description": "Server MCP per statistiche ISTAT — 4700+ dataset via SDMX REST API, senza API key.",
+  "tags": ["istat", "sdmx", "statistiche", "python"]
+}

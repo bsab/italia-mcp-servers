@@ -1,0 +1,11 @@
+{
+  "name": "Italian Cybersecurity MCP",
+  "repository_url": "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp",
+  "author": "Ansvar-Systems",
+  "language": "TypeScript",
+  "license": "Apache-2.0",
+  "stars": 0,
+  "category": "cybersecurity-compliance",
+  "description": "Server MCP per le linee guida e gli advisory dell'ACN (Agenzia per la Cybersicurezza Nazionale).",
+  "tags": ["acn", "cybersecurity", "advisory", "typescript"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ISTAT MCP Suite",
+  "repository_url": "https://github.com/ManoloZocco/istat-mcp-suite",
+  "author": "ManoloZocco",
+  "language": "Python",
+  "license": "n/a",
+  "stars": 0,
+  "category": "dati-statistiche",
+  "description": "Server MCP unificato per interrogare e scaricare dataset ISTAT via SDMX REST API.",
+  "tags": ["istat", "sdmx", "python"]
+}

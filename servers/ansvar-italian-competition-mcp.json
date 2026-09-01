@@ -1,0 +1,11 @@
+{
+  "name": "Italian Competition MCP",
+  "repository_url": "https://github.com/Ansvar-Systems/italian-competition-mcp",
+  "author": "Ansvar-Systems",
+  "language": "TypeScript",
+  "license": "Apache-2.0",
+  "stars": 0,
+  "category": "cybersecurity-compliance",
+  "description": "Server MCP per le decisioni dell'AGCM (Autorità Garante della Concorrenza e del Mercato).",
+  "tags": ["agcm", "antitrust", "concorrenza", "typescript"]
+}

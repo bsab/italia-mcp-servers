@@ -1,0 +1,12 @@
+{
+  "name": "DoveVannoINostriSoldi",
+  "repository_url": "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi",
+  "site_url": "https://www.dovevannoinostrisoldi.com",
+  "author": "Italian-Builders-Org",
+  "language": "TypeScript",
+  "license": "AGPL-3.0",
+  "stars": 258,
+  "category": "pa-finanza-pubblica",
+  "description": "Progetto civico per capire come vengono usati i soldi pubblici italiani. Server MCP pubblico con dataset su spesa, debito, PNRR e altro.",
+  "tags": ["spesa-pubblica", "open-data", "civic-tech", "nextjs", "typescript"]
+}

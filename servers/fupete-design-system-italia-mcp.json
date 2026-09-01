@@ -1,0 +1,11 @@
+{
+  "name": "Filo - Design System Italia MCP",
+  "repository_url": "https://github.com/Fupete/design-system-italia-mcp",
+  "author": "Fupete",
+  "language": "TypeScript",
+  "license": "BSD-3-Clause",
+  "stars": 3,
+  "category": "design-altro",
+  "description": "Server MCP sperimentale e non ufficiale per il Design system .italia.",
+  "tags": ["design-system", "pa", "ui", "typescript"]
+}

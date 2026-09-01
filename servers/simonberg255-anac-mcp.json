@@ -1,0 +1,11 @@
+{
+  "name": "ANAC MCP",
+  "repository_url": "https://github.com/SimonBerg255/anac-mcp",
+  "author": "SimonBerg255",
+  "language": "Python",
+  "license": "n/a",
+  "stars": 4,
+  "category": "pa-finanza-pubblica",
+  "description": "ANAC Procurement Intelligence — dati sugli appalti pubblici italiani (BDNCP), senza credenziali.",
+  "tags": ["anac", "appalti", "procurement", "python"]
+}

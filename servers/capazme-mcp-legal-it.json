@@ -1,0 +1,11 @@
+{
+  "name": "MCP Legal IT",
+  "repository_url": "https://github.com/capazme/mcp-legal-it",
+  "author": "capazme",
+  "language": "Python",
+  "license": "Apache-2.0",
+  "stars": 14,
+  "category": "legal-tech",
+  "description": "Server MCP + plugin Claude per il diritto italiano — 200+ tool: statuti verificati, ricerca giurisprudenza, calcoli legali.",
+  "tags": ["diritto", "giurisprudenza", "legale", "python"]
+}

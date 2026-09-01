@@ -1,0 +1,11 @@
+{
+  "name": "FattureInCloudMCP",
+  "repository_url": "https://github.com/badbat75/FattureInCloudMCP",
+  "author": "badbat75",
+  "language": "TypeScript",
+  "license": "n/a",
+  "stars": 0,
+  "category": "fatturazione",
+  "description": "Server MCP (stdio, TypeScript SDK) per le API Fatture in Cloud v2: CRUD su documenti emessi/ricevuti.",
+  "tags": ["fatturazione", "fatture-in-cloud", "typescript"]
+}

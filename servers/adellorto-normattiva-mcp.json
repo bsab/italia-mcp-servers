@@ -1,0 +1,11 @@
+{
+  "name": "Normattiva MCP",
+  "repository_url": "https://github.com/adellorto/normattiva-mcp",
+  "author": "adellorto",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 1,
+  "category": "legal-tech",
+  "description": "Server MCP per le API di Normattiva — legislazione italiana.",
+  "tags": ["normattiva", "legislazione", "python"]
+}

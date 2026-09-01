@@ -1,0 +1,11 @@
+{
+  "name": "OpenData AI",
+  "repository_url": "https://github.com/agent-engineering-studio/opendata-ai",
+  "author": "agent-engineering-studio",
+  "language": "Python",
+  "license": "MIT",
+  "stars": 1,
+  "category": "dati-statistiche",
+  "description": "AI conversazionale multi-source per open data italiani ed europei — CKAN, ISTAT, Eurostat, OECD.",
+  "tags": ["open-data", "istat", "eurostat", "ckan", "python"]
+}

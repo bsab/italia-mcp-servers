@@ -1,0 +1,11 @@
+{
+  "name": "Aruba Fatture MCP",
+  "repository_url": "https://github.com/MarckDev/aruba-fatture-mcp",
+  "author": "MarckDev",
+  "language": "TypeScript",
+  "license": "n/a",
+  "stars": 3,
+  "category": "fatturazione",
+  "description": "Server MCP per Aruba Fatturazione Elettronica — invia, cerca e traccia le fatture SDI.",
+  "tags": ["fatturazione", "aruba", "sdi", "typescript"]
+}

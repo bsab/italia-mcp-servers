@@ -1,0 +1,11 @@
+{
+  "name": "Italian Law MCP",
+  "repository_url": "https://github.com/Ansvar-Systems/italian-law-mcp",
+  "author": "Ansvar-Systems",
+  "language": "TypeScript",
+  "license": "Apache-2.0",
+  "stars": 1,
+  "category": "legal-tech",
+  "description": "Database legislativo italiano: protezione dati (GDPR/Codice Privacy), cybercrime (Codice Penale), compliance.",
+  "tags": ["gdpr", "privacy", "codice-penale", "typescript"]
+}

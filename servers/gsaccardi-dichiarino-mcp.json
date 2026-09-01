@@ -1,0 +1,11 @@
+{
+  "name": "Dichiarino MCP",
+  "repository_url": "https://github.com/gsaccardi/dichiarino-mcp",
+  "author": "gsaccardi",
+  "language": "Python",
+  "license": "NOASSERTION",
+  "stars": 23,
+  "category": "pa-finanza-pubblica",
+  "description": "Assistente MCP intelligente per la compilazione della dichiarazione dei redditi italiana.",
+  "tags": ["dichiarazione-redditi", "fisco", "python"]
+}
