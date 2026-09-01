@@ -4,13 +4,28 @@
 
 1. **Fai un fork** del repository
 2. Crea un file JSON in `servers/` con nome in `kebab-case.json`
-3. Compila tutti i campi richiesti (vedi schema nel README)
-4. Rigenera il README con `python3 scripts/build_readme.py` e includi il file aggiornato nel commit
+3. Compila i campi richiesti da [`schema/server.schema.json`](schema/server.schema.json)
+4. Valida e rigenera il README, includendo il file aggiornato nel commit:
+
+```bash
+python3 -m pip install -r scripts/requirements.txt
+python3 scripts/validate_servers.py
+python3 scripts/build_readme.py
+```
+
 5. Apri una Pull Request con titolo: `feat: added Nome Server`
 
 > Le tabelle del catalogo, i badge e le statistiche nel README sono generati
 > automaticamente dai file in `servers/`: non modificarli a mano, altrimenti le
 > modifiche vengono sovrascritte alla rigenerazione successiva.
+
+## Script di manutenzione
+
+| Comando | Cosa fa |
+|---------|---------|
+| `python3 scripts/validate_servers.py` | Valida `servers/` contro lo schema e controlla nomi di file, duplicati e URL |
+| `python3 scripts/build_readme.py` | Rigenera badge, tabelle e statistiche del README |
+| `python3 scripts/build_readme.py --check` | Verifica l'allineamento senza riscrivere nulla (usato dalla CI) |
 
 ## Criteri
 

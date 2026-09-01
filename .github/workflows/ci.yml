@@ -22,31 +22,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
 
-      - name: Verifica che i file in servers/ siano JSON validi
-        run: |
-          shopt -s nullglob
-          fail=0
-          for file in servers/*.json; do
-            if ! python3 -m json.tool --indent 2 "$file" > /dev/null; then
-              echo "::error file=$file::JSON non valido"
-              fail=1
-            fi
-          done
-          exit $fail
+      - name: Installa le dipendenze
+        run: python3 -m pip install -r scripts/requirements.txt
 
-      - name: Verifica che i nomi dei file siano in kebab-case
-        run: |
-          shopt -s nullglob
-          fail=0
-          for file in servers/*.json; do
-            name=$(basename "$file" .json)
-            if [[ ! "$name" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
-              echo "::error file=$file::il nome del file deve essere in kebab-case"
-              fail=1
-            fi
-          done
-          exit $fail
+      - name: Valida i file in servers/ contro lo schema
+        run: python3 scripts/validate_servers.py
 
       - name: Verifica che il README sia allineato a servers/
         run: python3 scripts/build_readme.py --check
