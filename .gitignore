@@ -1,0 +1,5 @@
+# Sito generato da scripts/build_catalog.py, pubblicato su GitHub Pages.
+site/
+
+__pycache__/
+*.pyc

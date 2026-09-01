@@ -33,3 +33,6 @@ jobs:
 
       - name: Verifica che il README sia allineato a servers/
         run: python3 scripts/build_readme.py --check
+
+      - name: Genera e valida il catalogo pubblicato
+        run: python3 scripts/build_catalog.py --output "$RUNNER_TEMP/site"
