@@ -3,7 +3,7 @@
   "repository_url": "https://github.com/MarckDev/aruba-fatture-mcp",
   "author": "MarckDev",
   "language": "TypeScript",
-  "license": "n/a",
+  "license": "MIT",
   "stars": 3,
   "category": "fatturazione",
   "short_description": "Aruba Fatturazione Elettronica + SDI",

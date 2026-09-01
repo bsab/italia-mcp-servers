@@ -3,7 +3,7 @@
   "repository_url": "https://github.com/makremriahi99/MCP-Meteo-Italia",
   "author": "makremriahi99",
   "language": "Python",
-  "license": "n/a",
+  "license": null,
   "stars": 0,
   "category": "design-altro",
   "short_description": "Meteo in tempo reale con FastMCP + Gradio",

@@ -3,7 +3,7 @@
   "repository_url": "https://github.com/ManoloZocco/istat-mcp-suite",
   "author": "ManoloZocco",
   "language": "Python",
-  "license": "n/a",
+  "license": "MIT",
   "stars": 0,
   "category": "dati-statistiche",
   "short_description": "Server unificato per dataset ISTAT",

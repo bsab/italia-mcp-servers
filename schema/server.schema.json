@@ -61,9 +61,24 @@
       "enum": ["Python", "TypeScript", "JavaScript", "Go", "Rust", "Java", "C#", "Ruby", "PHP"]
     },
     "license": {
-      "description": "Identificativo SPDX della licenza, oppure un valore che indica una licenza non dichiarata.",
-      "type": "string",
-      "minLength": 1
+      "description": "Identificativo SPDX della licenza del codice, oppure null se non e' dichiarata. Per aggiungere una licenza non presente, estendi questo elenco.",
+      "type": ["string", "null"],
+      "enum": [
+        null,
+        "MIT",
+        "Apache-2.0",
+        "AGPL-3.0",
+        "GPL-3.0",
+        "GPL-2.0",
+        "LGPL-3.0",
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "MPL-2.0",
+        "EUPL-1.2",
+        "ISC",
+        "Unlicense",
+        "CC0-1.0"
+      ]
     },
     "stars": {
       "description": "Stelle su GitHub al momento dell'ultimo aggiornamento.",

@@ -3,7 +3,7 @@
   "repository_url": "https://github.com/badbat75/FattureInCloudMCP",
   "author": "badbat75",
   "language": "TypeScript",
-  "license": "n/a",
+  "license": "MIT",
   "stars": 0,
   "category": "fatturazione",
   "short_description": "Fatture in Cloud API v2, CRUD completo",

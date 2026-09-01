@@ -3,7 +3,7 @@
   "repository_url": "https://github.com/SimonBerg255/anac-mcp",
   "author": "SimonBerg255",
   "language": "Python",
-  "license": "n/a",
+  "license": null,
   "stars": 4,
   "category": "pa-finanza-pubblica",
   "short_description": "Appalti pubblici ANAC (BDNCP)",

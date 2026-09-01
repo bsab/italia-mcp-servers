@@ -31,9 +31,6 @@ CATEGORIES = [
 # Abbreviazioni usate nella colonna "Lang" del catalogo.
 LANGUAGE_ABBR = {"TypeScript": "TS", "JavaScript": "JS"}
 
-# Valori di `license` che non identificano una licenza open source riconosciuta.
-NON_OSS_LICENSES = {"n/a", "unknown", "noassertion", ""}
-
 BLOCK_RE_TEMPLATE = r"(<!-- BEGIN:{name} -->\n)(?:.*?)(\n<!-- END:{name} -->)"
 
 
@@ -112,11 +109,8 @@ def render_stats(servers: list[dict]) -> str:
         language = server.get("language", "—")
         languages[language] = languages.get(language, 0) + 1
 
-    oss = sum(
-        1
-        for server in servers
-        if str(server.get("license") or "").strip().lower() not in NON_OSS_LICENSES
-    )
+    # `license` e' null quando il progetto non dichiara una licenza.
+    oss = sum(1 for server in servers if server.get("license"))
 
     lines = [
         "| Metrica | Valore |",
@@ -126,6 +120,8 @@ def render_stats(servers: list[dict]) -> str:
     for language, count in sorted(languages.items(), key=lambda kv: (-kv[1], kv[0])):
         lines.append(f"| {language} | {count} |")
     lines.append(f"| Licenze open source | {oss} |")
+    if len(servers) - oss:
+        lines.append(f"| Senza licenza dichiarata | {len(servers) - oss} |")
     lines.append(f"| Categorie | {len({s['category'] for s in servers})} |")
     return "\n".join(lines)
 
