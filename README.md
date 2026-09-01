@@ -1,36 +1,80 @@
+# Italia MCP Servers 🇮🇹
+
 <p align="center">
-  <img src="logo.svg" alt="italia MCP servers" width="700"/>
+  <img src="logo.svg" alt="Logo Italia MCP Servers" width="560"/>
 </p>
+
+> Catalogo curato di server [Model Context Protocol](https://modelcontextprotocol.io/)
+> dedicati a dati, norme e servizi italiani.
 
 <p align="center">
 <!-- BEGIN:badges -->
+  <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/ci.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/ci.yml/badge.svg" alt="CI"/></a>
+  <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml/badge.svg" alt="Link check"/></a>
+  <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml/badge.svg" alt="GitHub Pages"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"/></a>
   <img src="https://img.shields.io/badge/server%20MCP-30-blue.svg" alt="30 server"/>
   <img src="https://img.shields.io/badge/categorie-6-orange.svg" alt="6 categorie"/>
-  <img src="https://img.shields.io/badge/made%20in-Italy%20%F0%9F%87%AE%F0%9F%87%B9-red.svg" alt="Made in Italy"/>
 <!-- END:badges -->
 </p>
 
----
+[Esplora il catalogo](https://bsab.github.io/italia-mcp-servers/) ·
+[Consulta l'API JSON](https://bsab.github.io/italia-mcp-servers/catalog.json) ·
+[Proponi un server](https://github.com/bsab/italia-mcp-servers/issues/new?template=nuovo-server.yml) ·
+[Contribuisci](CONTRIBUTING.md)
 
-**Catalogo curato dei server [MCP](https://modelcontextprotocol.io/) (Model Context Protocol) italiani**: dati pubblici, legal-tech, fatturazione elettronica, pubblica amministrazione e altro.
+## Cos'è questo repository
 
-Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code Copilot...) di collegarsi a fonti dati e strumenti esterni in modo standardizzato. Questo catalogo raccoglie tutti i server MCP sviluppati per il contesto italiano.
+Il **Model Context Protocol (MCP)** permette ad assistenti AI come GitHub Copilot,
+Claude e Cursor di collegarsi a fonti dati e strumenti esterni attraverso
+un'interfaccia standard.
+
+Questo repository **non è un singolo server MCP**: è un catalogo pubblico di
+progetti pertinenti al contesto italiano, tra cui dati ISTAT e open data,
+normativa e giurisprudenza, fatturazione elettronica, pubblica amministrazione,
+cybersecurity e design system.
+
+## Inizia qui
+
+| Se vuoi… | Vai a… |
+|----------|--------|
+| Cercare un server per categoria | [Catalogo web](https://bsab.github.io/italia-mcp-servers/) |
+| Integrare il catalogo in un'applicazione | [API JSON](https://bsab.github.io/italia-mcp-servers/catalog.json) |
+| Segnalare un progetto mancante | [Proponi un server](https://github.com/bsab/italia-mcp-servers/issues/new?template=nuovo-server.yml) |
+| Correggere informazioni errate | [Apri una segnalazione](https://github.com/bsab/italia-mcp-servers/issues/new?template=segnalazione.yml) |
+| Aggiungere direttamente un server | [Guida alla contribuzione](CONTRIBUTING.md) |
+
+### Come scegliere e usare un server
+
+1. Scegli una categoria e apri il progetto dalla tabella.
+2. Controlla nel README del progetto requisiti, licenza e strumenti disponibili.
+3. Se è presente un **endpoint remoto**, collegalo da un client compatibile con
+   il transport indicato.
+4. Altrimenti installa il server localmente e aggiungi il comando di avvio alla
+   configurazione del tuo client MCP.
+
+> La configurazione varia tra client e server. Questo catalogo raccoglie i
+> riferimenti; le istruzioni operative ufficiali restano quelle del singolo progetto.
+
+## Catalogo
+
+I progetti in **grassetto** sono messi in evidenza dai manutentori. Le stelle
+sono una fotografia indicativa e non rappresentano una valutazione di qualità.
 
 <!-- BEGIN:catalog -->
-## 📊 Dati e Statistiche
+### 📊 Dati e Statistiche
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
 | [**CKAN MCP Server**](https://github.com/ondata/ckan-mcp-server) | 57 | TS | Connettore generico per istanze CKAN (dati.gov.it e portali regionali) |
-| [**ISTAT MCP Server**](https://github.com/ondata/istat_mcp_server) | 23 | Python | Statistiche ISTAT via SDMX API — il più maturo |
+| [**ISTAT MCP Server**](https://github.com/ondata/istat_mcp_server) | 23 | Python | Statistiche ISTAT via SDMX API |
 | [ISTAT MCP](https://github.com/SimonBerg255/istat-mcp) | 3 | Python | 4700+ dataset ISTAT via SDMX, senza API key |
 | [ISTAT MCP Server (istatapi)](https://github.com/Halpph/istat-mcp-server) | 2 | Python | Dati statistici ISTAT via libreria Python istatapi |
 | [Italy OpenData MCP](https://github.com/stucchi/italy-opendata-mcp) | 1 | Python | Comuni, province, regioni, CAP, coordinate e codici ISTAT/ANPR |
 | [OpenData AI](https://github.com/agent-engineering-studio/opendata-ai) | 1 | Python | Multi-source: CKAN, ISTAT, Eurostat, OECD |
 | [ISTAT MCP Suite](https://github.com/ManoloZocco/istat-mcp-suite) | 0 | Python | Server unificato per dataset ISTAT |
 
-## ⚖️ Legal-Tech e Normativa
+### ⚖️ Legal-Tech e Normativa
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
@@ -42,7 +86,7 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | [Normattiva MCP](https://github.com/adellorto/normattiva-mcp) | 1 | Python | API di Normattiva |
 | [Normattiva MCP (CLI)](https://github.com/avvocati-e-mac/normattiva-mcp) | 0 | Python | CLI + MCP per citare norme da Normattiva.it |
 
-## 🧾 Fatturazione Elettronica
+### 🧾 Fatturazione Elettronica
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
@@ -51,7 +95,7 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | [MCP Fattura Elettronica IT](https://github.com/cmendezs/mcp-fattura-elettronica-it) | 1 | Python | Validatore e parser XSD per tracciati XML FatturaPA/SDI |
 | [FattureInCloudMCP](https://github.com/badbat75/FattureInCloudMCP) | 0 | TS | Fatture in Cloud API v2, CRUD completo |
 
-## 🏛️ PA, Parlamento e Finanza Pubblica
+### 🏛️ PA, Parlamento e Finanza Pubblica
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
@@ -63,14 +107,14 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | [RepublicMCP](https://github.com/giuliogarofalo/RepublicMCP) | 1 | TS | Query SPARQL sugli open data di Camera e Senato |
 | [Cruscotto Italia MCP](https://cruscotto-italia-mcp.agid.workers.dev/mcp) | 0 | TS | Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità |
 
-## 🛡️ Cybersecurity e Compliance
+### 🛡️ Cybersecurity e Compliance
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
 | [Italian Competition MCP](https://github.com/Ansvar-Systems/italian-competition-mcp) | 0 | TS | AGCM — decisioni antitrust |
 | [Italian Cybersecurity MCP](https://github.com/Ansvar-Systems/italian-cybersecurity-mcp) | 0 | TS | ACN — linee guida e advisory |
 
-## 🎨 Design e Altro
+### 🎨 Design e Altro
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
@@ -79,9 +123,7 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | [MCP Meteo Italia](https://github.com/makremriahi99/MCP-Meteo-Italia) | 0 | Python | Meteo in tempo reale con FastMCP + Gradio |
 <!-- END:catalog -->
 
----
-
-## 📈 Statistiche
+### Catalogo in numeri
 
 <!-- BEGIN:stats -->
 | Metrica | Valore |
@@ -95,13 +137,14 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | Categorie | 6 |
 <!-- END:stats -->
 
-## 🔌 Catalogo in formato JSON
+## Dati e API
 
-Il catalogo è pubblicato anche in forma leggibile dalle macchine, rigenerato
-automaticamente a ogni aggiornamento:
+Il catalogo è disponibile anche in formato machine-readable e viene rigenerato
+a ogni aggiornamento di `main`.
 
 ```bash
-curl -s https://bsab.github.io/italia-mcp-servers/catalog.json | jq '.servers[] | .name'
+curl -s https://bsab.github.io/italia-mcp-servers/catalog.json \
+  | jq '.servers[] | {name, category, url}'
 ```
 
 | Risorsa | URL |
@@ -115,44 +158,33 @@ Il campo `version` indica la versione della struttura del documento e cambia sol
 per modifiche incompatibili. Ogni voce di `servers` contiene i campi del file in
 `servers/` più `url`, il link canonico del progetto.
 
-## 🤝 Come contribuire
+## Qualità e trasparenza
 
-Conosci un server MCP italiano non presente in questo catalogo? Apri una PR!
+L'inclusione nel catalogo **non costituisce una certificazione o approvazione**
+del progetto. Prima dell'uso verifica sempre codice, autorizzazioni richieste,
+trattamento dei dati e licenza.
 
-1. Crea un file JSON in `servers/` con il nome in `kebab-case.json`
-2. Segui lo schema — la definizione formale è in
-   [`schema/server.schema.json`](schema/server.schema.json):
+Per essere incluso, un server deve:
 
-```json
-{
-  "name": "Nome del Server",
-  "repository_url": "https://github.com/owner/repo",
-  "site_url": "https://...",
-  "mcp_endpoint": "https://.../mcp",
-  "transport": "streamable-http",
-  "author": "owner",
-  "language": "Python",
-  "license": "MIT",
-  "stars": 0,  "category": "dati-statistiche",
-  "short_description": "Descrizione compatta per la tabella del catalogo.",
-  "description": "Breve descrizione del server (max 200 caratteri).",
-  "tags": ["tag1", "tag2", "tag3"]
-}
-```
+- implementare il **Model Context Protocol**;
+- essere pertinente a dati, norme o servizi italiani;
+- fornire almeno un riferimento pubblico tra repository, sito o endpoint MCP;
+- avere documentazione d'uso sufficiente.
 
-I campi `site_url`, `mcp_endpoint`, `transport`, `short_description`, `featured` e
-`tools` sono opzionali: `short_description` sostituisce `description` nelle tabelle
-del catalogo, `mcp_endpoint` aggiunge il link all'endpoint remoto e `featured: true`
-mette il progetto in evidenza in cima alla sua categoria. Almeno uno tra
-`repository_url`, `site_url` e `mcp_endpoint` è obbligatorio.
+Le stelle GitHub sono informative e possono non essere aggiornate in tempo
+reale. La struttura dei dati viene validata dalla CI; i collegamenti esterni
+sono controllati settimanalmente.
 
-Il campo `license` accetta un identificativo [SPDX](https://spdx.org/licenses/) —
-`"MIT"`, `"Apache-2.0"`, `"AGPL-3.0"`… — oppure `null` se il progetto non dichiara
-alcuna licenza. Valori come `"n/a"` o `"unknown"` vengono rifiutati dalla
-validazione: usa `null`.
+## Contribuire
 
-3. **Valida e rigenera il README** — le tabelle, i badge e le statistiche sono
-   generati dai file in `servers/` e non vanno modificati a mano:
+Il modo più semplice è
+[proporre un server tramite issue](https://github.com/bsab/italia-mcp-servers/issues/new?template=nuovo-server.yml).
+Per aggiungerlo direttamente:
+
+1. crea un file `kebab-case.json` in `servers/`;
+2. compilalo secondo [`schema/server.schema.json`](schema/server.schema.json);
+3. esegui validazione e generazione;
+4. apri una pull request.
 
 ```bash
 python3 -m pip install -r scripts/requirements.txt
@@ -160,30 +192,11 @@ python3 scripts/validate_servers.py
 python3 scripts/build_readme.py
 ```
 
-La CI esegue gli stessi controlli su ogni pull request, con
-`python3 scripts/build_readme.py --check` per verificare l'allineamento del README.
+Le tabelle, i badge e le statistiche racchiusi nei marker `BEGIN`/`END` sono
+generati automaticamente: non modificarli a mano. I campi disponibili, le
+categorie e i controlli locali sono documentati in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-### Categorie ammesse
-
-<!-- BEGIN:categories -->
-| Categoria | Descrizione |
-|-----------|-------------|
-| `dati-statistiche` | ISTAT, Eurostat, open data |
-| `legal-tech` | Normativa, giurisprudenza, privacy |
-| `fatturazione` | Fatture elettroniche, SDI |
-| `pa-finanza-pubblica` | PA, parlamento, fisco, appalti |
-| `cybersecurity-compliance` | ACN, AGCM, compliance |
-| `design-altro` | Design system, meteo, altro |
-<!-- END:categories -->
-
-### Criteri di inclusione
-
-- Il server deve implementare il **Model Context Protocol**
-- Deve essere **pertinente al contesto italiano** (dati, normativa, servizi italiani)
-- Il repository deve essere **pubblico** su GitHub
-- Deve avere un README con istruzioni di utilizzo
-
-## 📜 Licenza
+## Licenza
 
 Questo catalogo è distribuito sotto licenza [MIT](LICENSE).
 
@@ -192,5 +205,5 @@ I singoli server elencati sono sotto le rispettive licenze indicate.
 ---
 
 <p align="center">
-  <i>Fatto con ❤️ in Italia — per rendere i dati italiani accessibili all'AI</i>
+  <i>Fatto in Italia, per rendere dati e servizi italiani accessibili agli assistenti AI.</i>
 </p>

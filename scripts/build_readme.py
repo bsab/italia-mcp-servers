@@ -110,7 +110,7 @@ def render_catalog(servers: list[dict]) -> str:
             continue
         body = "\n".join(render_row(server) for server in rows)
         sections.append(
-            f"## {category.heading}\n\n"
+            f"### {category.heading}\n\n"
             "| Progetto | ⭐ | Lang | Descrizione |\n"
             "|----------|---:|------|-------------|\n"
             f"{body}"
@@ -144,22 +144,22 @@ def render_stats(servers: list[dict]) -> str:
 def render_badges(servers: list[dict]) -> str:
     categories = len({s["category"] for s in servers})
     return (
+        '  <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/ci.yml">'
+        '<img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/ci.yml/badge.svg" '
+        'alt="CI"/></a>\n'
+        '  <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml">'
+        '<img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml/badge.svg" '
+        'alt="Link check"/></a>\n'
+        '  <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml">'
+        '<img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml/badge.svg" '
+        'alt="GitHub Pages"/></a>\n'
         '  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" '
         'alt="MIT License"/></a>\n'
         f'  <img src="https://img.shields.io/badge/server%20MCP-{len(servers)}-blue.svg" '
         f'alt="{len(servers)} server"/>\n'
         f'  <img src="https://img.shields.io/badge/categorie-{categories}-orange.svg" '
-        f'alt="{categories} categorie"/>\n'
-        '  <img src="https://img.shields.io/badge/made%20in-Italy%20%F0%9F%87%AE%F0%9F%87%B9-red.svg" '
-        'alt="Made in Italy"/>'
+        f'alt="{categories} categorie"/>'
     )
-
-
-def render_category_table() -> str:
-    lines = ["| Categoria | Descrizione |", "|-----------|-------------|"]
-    for category in CATEGORIES:
-        lines.append(f"| `{category.slug}` | {category.description} |")
-    return "\n".join(lines)
 
 
 def replace_block(content: str, name: str, body: str) -> str:
@@ -174,7 +174,6 @@ def build(content: str, servers: list[dict]) -> str:
     content = replace_block(content, "badges", render_badges(servers))
     content = replace_block(content, "catalog", render_catalog(servers))
     content = replace_block(content, "stats", render_stats(servers))
-    content = replace_block(content, "categories", render_category_table())
     return content
 
 
