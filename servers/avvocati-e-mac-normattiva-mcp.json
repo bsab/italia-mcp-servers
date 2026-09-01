@@ -3,7 +3,7 @@
   "repository_url": "https://github.com/avvocati-e-mac/normattiva-mcp",
   "author": "avvocati-e-mac",
   "language": "Python",
-  "license": "NOASSERTION",
+  "license": "MIT",
   "stars": 0,
   "category": "legal-tech",
   "short_description": "CLI + MCP per citare norme da Normattiva.it",

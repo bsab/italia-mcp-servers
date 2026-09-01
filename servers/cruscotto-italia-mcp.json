@@ -5,7 +5,7 @@
   "transport": "streamable-http",
   "author": "agid",
   "language": "TypeScript",
-  "license": "unknown",
+  "license": null,
   "stars": 0,
   "category": "pa-finanza-pubblica",
   "short_description": "Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità",

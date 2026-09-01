@@ -90,7 +90,8 @@ Il Model Context Protocol permette agli assistenti AI (Claude, Cursor, VS Code C
 | Python | 16 |
 | TypeScript | 13 |
 | JavaScript | 1 |
-| Licenze open source | 22 |
+| Licenze open source | 27 |
+| Senza licenza dichiarata | 3 |
 | Categorie | 6 |
 <!-- END:stats -->
 
@@ -112,8 +113,7 @@ Conosci un server MCP italiano non presente in questo catalogo? Apri una PR!
   "author": "owner",
   "language": "Python",
   "license": "MIT",
-  "stars": 0,
-  "category": "dati-statistiche",
+  "stars": 0,  "category": "dati-statistiche",
   "short_description": "Descrizione compatta per la tabella del catalogo.",
   "description": "Breve descrizione del server (max 200 caratteri).",
   "tags": ["tag1", "tag2", "tag3"]
@@ -125,6 +125,11 @@ I campi `site_url`, `mcp_endpoint`, `transport`, `short_description`, `featured`
 del catalogo, `mcp_endpoint` aggiunge il link all'endpoint remoto e `featured: true`
 mette il progetto in evidenza in cima alla sua categoria. Almeno uno tra
 `repository_url`, `site_url` e `mcp_endpoint` è obbligatorio.
+
+Il campo `license` accetta un identificativo [SPDX](https://spdx.org/licenses/) —
+`"MIT"`, `"Apache-2.0"`, `"AGPL-3.0"`… — oppure `null` se il progetto non dichiara
+alcuna licenza. Valori come `"n/a"` o `"unknown"` vengono rifiutati dalla
+validazione: usa `null`.
 
 3. **Valida e rigenera il README** — le tabelle, i badge e le statistiche sono
    generati dai file in `servers/` e non vanno modificati a mano:
