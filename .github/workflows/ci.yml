@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalogo:
+    name: Valida catalogo e README
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verifica che i file in servers/ siano JSON validi
+        run: |
+          shopt -s nullglob
+          fail=0
+          for file in servers/*.json; do
+            if ! python3 -m json.tool --indent 2 "$file" > /dev/null; then
+              echo "::error file=$file::JSON non valido"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Verifica che i nomi dei file siano in kebab-case
+        run: |
+          shopt -s nullglob
+          fail=0
+          for file in servers/*.json; do
+            name=$(basename "$file" .json)
+            if [[ ! "$name" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
+              echo "::error file=$file::il nome del file deve essere in kebab-case"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Verifica che il README sia allineato a servers/
+        run: python3 scripts/build_readme.py --check

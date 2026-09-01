@@ -1,0 +1,72 @@
+name: Proponi un server MCP
+description: Segnala un server MCP italiano da aggiungere al catalogo
+title: "[nuovo server] "
+labels: ["nuovo server"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per il contributo! Se preferisci, puoi aprire direttamente una PR
+        aggiungendo un file JSON in `servers/` — vedi
+        [CONTRIBUTING.md](https://github.com/bsab/italia-mcp-servers/blob/main/CONTRIBUTING.md).
+
+  - type: input
+    id: name
+    attributes:
+      label: Nome del server
+      placeholder: ISTAT MCP Server
+    validations:
+      required: true
+
+  - type: input
+    id: repository_url
+    attributes:
+      label: URL del repository
+      description: Per i server remoti senza repository pubblico, indica l'endpoint MCP.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      options:
+        - dati-statistiche
+        - legal-tech
+        - fatturazione
+        - pa-finanza-pubblica
+        - cybersecurity-compliance
+        - design-altro
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Linguaggio principale
+      placeholder: Python
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione
+      description: Massimo 200 caratteri.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Criteri di inclusione
+      options:
+        - label: Implementa il Model Context Protocol
+          required: true
+        - label: È pertinente al contesto italiano (dati, normativa, servizi)
+          required: true
+        - label: Il repository è pubblico oppure l'endpoint MCP è accessibile
+          required: true
+        - label: Ha documentazione d'uso
+          required: true

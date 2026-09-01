@@ -1,0 +1,33 @@
+name: Segnala un problema
+description: Link non funzionanti, informazioni errate o obsolete, server non più mantenuti
+title: "[problema] "
+labels: ["manutenzione"]
+body:
+  - type: input
+    id: server
+    attributes:
+      label: Server interessato
+      description: Nome del server o percorso del file in `servers/`.
+      placeholder: servers/ondata-istat-mcp-server.json
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Tipo di problema
+      options:
+        - Link non funzionante
+        - Informazione errata o obsoleta
+        - Server non più mantenuto o archiviato
+        - Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Dettagli
+      description: Descrivi il problema e, se possibile, indica il valore corretto.
+    validations:
+      required: true
