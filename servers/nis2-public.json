@@ -1,0 +1,29 @@
+{
+  "name": "NIS2-public",
+  "repository_url": "https://github.com/fabriziosalmi/nis2-public",
+  "site_url": "https://fabriziosalmi.github.io/nis2-public/",
+  "transport": "stdio",
+  "author": "fabriziosalmi",
+  "language": "Python",
+  "license": "AGPL-3.0",
+  "stars": 28,
+  "category": "cybersecurity-compliance",
+  "short_description": "Postura e remediation NIS2 per D.Lgs. 138/2024 e ACN",
+  "description": "Piattaforma self-hosted per postura e remediation NIS2 continua, con governance, scansioni tecniche e moduli per il D.Lgs. 138/2024 e le determine ACN.",
+  "tags": [
+    "nis2",
+    "cybersecurity",
+    "compliance",
+    "acn",
+    "grc",
+    "python"
+  ],
+  "tools": [
+    "check_certificate",
+    "scan_target",
+    "search_playbooks",
+    "get_playbook",
+    "estimate_remediation",
+    "list_governance_items"
+  ]
+}

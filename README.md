@@ -13,7 +13,7 @@
   <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml/badge.svg" alt="Link check"/></a>
   <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml/badge.svg" alt="GitHub Pages"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"/></a>
-  <img src="https://img.shields.io/badge/server%20MCP-30-blue.svg" alt="30 server"/>
+  <img src="https://img.shields.io/badge/server%20MCP-31-blue.svg" alt="31 server"/>
   <img src="https://img.shields.io/badge/categorie-6-orange.svg" alt="6 categorie"/>
 <!-- END:badges -->
 </p>
@@ -111,6 +111,7 @@ sono una fotografia indicativa e non rappresentano una valutazione di qualità.
 
 | Progetto | ⭐ | Lang | Descrizione |
 |----------|---:|------|-------------|
+| [NIS2-public](https://github.com/fabriziosalmi/nis2-public) | 28 | Python | Postura e remediation NIS2 per D.Lgs. 138/2024 e ACN |
 | [Italian Competition MCP](https://github.com/Ansvar-Systems/italian-competition-mcp) | 0 | TS | AGCM — decisioni antitrust |
 | [Italian Cybersecurity MCP](https://github.com/Ansvar-Systems/italian-cybersecurity-mcp) | 0 | TS | ACN — linee guida e advisory |
 
@@ -128,11 +129,11 @@ sono una fotografia indicativa e non rappresentano una valutazione di qualità.
 <!-- BEGIN:stats -->
 | Metrica | Valore |
 |---------|--------|
-| Server totali | **30** |
-| Python | 16 |
+| Server totali | **31** |
+| Python | 17 |
 | TypeScript | 13 |
 | JavaScript | 1 |
-| Licenze open source | 27 |
+| Licenze open source | 28 |
 | Senza licenza dichiarata | 3 |
 | Categorie | 6 |
 <!-- END:stats -->
