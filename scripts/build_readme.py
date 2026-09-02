@@ -88,9 +88,8 @@ def render_row(server: dict) -> str:
     if endpoint:
         escaped_endpoint = html.escape(endpoint, quote=True)
         connect = (
-            f'<a href="{escaped_endpoint}">'
-            '<img src="https://img.shields.io/badge/Connetti-0969da?style=flat-square" '
-            'alt="Connetti"></a>'
+            f'<a href="{escaped_endpoint}" target="_blank" rel="noopener noreferrer" '
+            f'title="Apri endpoint MCP: {name}"><kbd>Connetti</kbd></a>'
         )
 
     return (
@@ -125,7 +124,7 @@ def render_catalog(servers: list[dict]) -> str:
             '      <th width="8%" align="right">⭐</th>\n'
             '      <th width="10%">Lang</th>\n'
             '      <th width="46%">Descrizione</th>\n'
-            '      <th width="12%">Connetti</th>\n'
+            '      <th width="12%">Link</th>\n'
             "    </tr>\n"
             "  </thead>\n"
             "  <tbody>\n"
@@ -134,29 +133,6 @@ def render_catalog(servers: list[dict]) -> str:
             "</table>"
         )
     return "\n\n".join(sections)
-
-
-def render_stats(servers: list[dict]) -> str:
-    languages: dict[str, int] = {}
-    for server in servers:
-        language = server.get("language", "—")
-        languages[language] = languages.get(language, 0) + 1
-
-    # `license` e' null quando il progetto non dichiara una licenza.
-    oss = sum(1 for server in servers if server.get("license"))
-
-    lines = [
-        "| Metrica | Valore |",
-        "|---------|--------|",
-        f"| Server totali | **{len(servers)}** |",
-    ]
-    for language, count in sorted(languages.items(), key=lambda kv: (-kv[1], kv[0])):
-        lines.append(f"| {language} | {count} |")
-    lines.append(f"| Licenze open source | {oss} |")
-    if len(servers) - oss:
-        lines.append(f"| Senza licenza dichiarata | {len(servers) - oss} |")
-    lines.append(f"| Categorie | {len({s['category'] for s in servers})} |")
-    return "\n".join(lines)
 
 
 def render_badges(servers: list[dict]) -> str:
@@ -191,7 +167,6 @@ def replace_block(content: str, name: str, body: str) -> str:
 def build(content: str, servers: list[dict]) -> str:
     content = replace_block(content, "badges", render_badges(servers))
     content = replace_block(content, "catalog", render_catalog(servers))
-    content = replace_block(content, "stats", render_stats(servers))
     return content
 
 

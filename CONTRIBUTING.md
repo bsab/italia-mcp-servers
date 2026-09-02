@@ -15,7 +15,7 @@ python3 scripts/build_readme.py
 
 5. Apri una Pull Request con titolo: `feat: added Nome Server`
 
-> Le tabelle del catalogo, i badge e le statistiche nel README sono generati
+> Le tabelle del catalogo e i badge nel README sono generati
 > automaticamente dai file in `servers/`: non modificarli a mano, altrimenti le
 > modifiche vengono sovrascritte alla rigenerazione successiva.
 
@@ -24,7 +24,7 @@ python3 scripts/build_readme.py
 | Comando | Cosa fa |
 |---------|---------|
 | `python3 scripts/validate_servers.py` | Valida `servers/` contro lo schema e controlla nomi di file, duplicati e URL |
-| `python3 scripts/build_readme.py` | Rigenera badge, tabelle e statistiche del README |
+| `python3 scripts/build_readme.py` | Rigenera badge e tabelle del README |
 | `python3 scripts/build_readme.py --check` | Verifica l'allineamento senza riscrivere nulla (usato dalla CI) |
 | `python3 scripts/build_catalog.py` | Genera `site/` con `catalog.json` e la pagina di consultazione |
 
