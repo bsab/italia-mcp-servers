@@ -1,0 +1,20 @@
+{
+  "name": "Open Parlamento MCP",
+  "repository_url": "https://github.com/giuliogarofalo/open-parlamento-mcp",
+  "author": "giuliogarofalo",
+  "language": "Python",
+  "license": "Apache-2.0",
+  "stars": 0,
+  "category": "legal-tech",
+  "short_description": "Diritto IT/UE, giurisprudenza, Normattiva, dati pubblici e Parlamento",
+  "description": "24 tool su diritto italiano ed europeo, giurisprudenza, relazioni di modifica Normattiva, dati pubblici (CKAN), Eurostat, Parlamento (OpenPolis), PNRR.",
+  "tags": [
+    "diritto",
+    "normattiva",
+    "giurisprudenza",
+    "eurostat",
+    "ckan",
+    "parlamento",
+    "pnrr"
+  ]
+}
