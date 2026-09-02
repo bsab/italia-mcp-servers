@@ -68,7 +68,7 @@ cybersecurity e design system.
       <th width="8%" align="right">⭐</th>
       <th width="10%">Lang</th>
       <th width="46%">Descrizione</th>
-      <th width="12%">Connetti</th>
+      <th width="12%">Link</th>
     </tr>
   </thead>
   <tbody>
@@ -77,7 +77,7 @@ cybersecurity e design system.
     <td align="right">57</td>
     <td>TS</td>
     <td>Connettore generico per istanze CKAN (dati.gov.it e portali regionali)</td>
-    <td align="center"><a href="https://ckan-mcp-server.andy-pr.workers.dev/mcp"><img src="https://img.shields.io/badge/Connetti-0969da?style=flat-square" alt="Connetti"></a></td>
+    <td align="center"><a href="https://ckan-mcp-server.andy-pr.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: CKAN MCP Server"><kbd>Connetti</kbd></a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/ondata/istat_mcp_server"><strong>ISTAT MCP Server</strong></a></td>
@@ -133,7 +133,7 @@ cybersecurity e design system.
       <th width="8%" align="right">⭐</th>
       <th width="10%">Lang</th>
       <th width="46%">Descrizione</th>
-      <th width="12%">Connetti</th>
+      <th width="12%">Link</th>
     </tr>
   </thead>
   <tbody>
@@ -198,7 +198,7 @@ cybersecurity e design system.
       <th width="8%" align="right">⭐</th>
       <th width="10%">Lang</th>
       <th width="46%">Descrizione</th>
-      <th width="12%">Connetti</th>
+      <th width="12%">Link</th>
     </tr>
   </thead>
   <tbody>
@@ -242,7 +242,7 @@ cybersecurity e design system.
       <th width="8%" align="right">⭐</th>
       <th width="10%">Lang</th>
       <th width="46%">Descrizione</th>
-      <th width="12%">Connetti</th>
+      <th width="12%">Link</th>
     </tr>
   </thead>
   <tbody>
@@ -251,7 +251,7 @@ cybersecurity e design system.
     <td align="right">258</td>
     <td>TS</td>
     <td>Spesa pubblica: SIOPE, debito, PNRR, IRPEF e altro</td>
-    <td align="center"><a href="https://www.dovevannoinostrisoldi.com/api/mcp"><img src="https://img.shields.io/badge/Connetti-0969da?style=flat-square" alt="Connetti"></a></td>
+    <td align="center"><a href="https://www.dovevannoinostrisoldi.com/api/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: DoveVannoINostriSoldi"><kbd>Connetti</kbd></a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/gsaccardi/dichiarino-mcp"><strong>Dichiarino MCP</strong></a></td>
@@ -279,7 +279,7 @@ cybersecurity e design system.
     <td align="right">2</td>
     <td>TS</td>
     <td>Dati del Parlamento italiano</td>
-    <td align="center"><a href="https://italianparliament-mcp.andy-pr.workers.dev/mcp"><img src="https://img.shields.io/badge/Connetti-0969da?style=flat-square" alt="Connetti"></a></td>
+    <td align="center"><a href="https://italianparliament-mcp.andy-pr.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: Italian Parliament MCP"><kbd>Connetti</kbd></a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/giuliogarofalo/RepublicMCP">RepublicMCP</a></td>
@@ -293,7 +293,7 @@ cybersecurity e design system.
     <td align="right">0</td>
     <td>TS</td>
     <td>Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità</td>
-    <td align="center"><a href="https://cruscotto-italia-mcp.agid.workers.dev/mcp"><img src="https://img.shields.io/badge/Connetti-0969da?style=flat-square" alt="Connetti"></a></td>
+    <td align="center"><a href="https://cruscotto-italia-mcp.agid.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: Cruscotto Italia MCP"><kbd>Connetti</kbd></a></td>
   </tr>
   </tbody>
 </table>
@@ -307,7 +307,7 @@ cybersecurity e design system.
       <th width="8%" align="right">⭐</th>
       <th width="10%">Lang</th>
       <th width="46%">Descrizione</th>
-      <th width="12%">Connetti</th>
+      <th width="12%">Link</th>
     </tr>
   </thead>
   <tbody>
@@ -344,7 +344,7 @@ cybersecurity e design system.
       <th width="8%" align="right">⭐</th>
       <th width="10%">Lang</th>
       <th width="46%">Descrizione</th>
-      <th width="12%">Connetti</th>
+      <th width="12%">Link</th>
     </tr>
   </thead>
   <tbody>
@@ -372,20 +372,6 @@ cybersecurity e design system.
   </tbody>
 </table>
 <!-- END:catalog -->
-
-### Catalogo in numeri
-
-<!-- BEGIN:stats -->
-| Metrica | Valore |
-|---------|--------|
-| Server totali | **31** |
-| Python | 17 |
-| TypeScript | 13 |
-| JavaScript | 1 |
-| Licenze open source | 28 |
-| Senza licenza dichiarata | 3 |
-| Categorie | 6 |
-<!-- END:stats -->
 
 ## Dati e API
 
@@ -442,8 +428,8 @@ python3 scripts/validate_servers.py
 python3 scripts/build_readme.py
 ```
 
-Le tabelle, i badge e le statistiche racchiusi nei marker `BEGIN`/`END` sono
-generati automaticamente: non modificarli a mano. I campi disponibili, le
+Le tabelle e i badge racchiusi nei marker `BEGIN`/`END` sono generati
+automaticamente: non modificarli a mano. I campi disponibili, le
 categorie e i controlli locali sono documentati in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licenza

@@ -7,7 +7,7 @@
 - [ ] Ho aggiunto o modificato un file JSON in `servers/` con nome in `kebab-case.json`
 - [ ] Ho eseguito `python3 scripts/validate_servers.py` e passa
 - [ ] Ho eseguito `python3 scripts/build_readme.py` e incluso il README aggiornato
-- [ ] Non ho modificato a mano le tabelle del catalogo, i badge o le statistiche nel README
+- [ ] Non ho modificato a mano le tabelle del catalogo o i badge nel README
 - [ ] Il server implementa il Model Context Protocol ed è pertinente al contesto italiano
 
 <!--
