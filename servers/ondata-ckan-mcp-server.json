@@ -1,6 +1,8 @@
 {
   "name": "CKAN MCP Server",
   "repository_url": "https://github.com/ondata/ckan-mcp-server",
+  "mcp_endpoint": "https://ckan-mcp-server.andy-pr.workers.dev/mcp",
+  "transport": "streamable-http",
   "author": "ondata",
   "language": "TypeScript",
   "license": "MIT",
@@ -13,6 +15,7 @@
     "ckan",
     "open-data",
     "dati-gov-it",
-    "portali-regionali"
+    "portali-regionali",
+    "remote-mcp"
   ]
 }

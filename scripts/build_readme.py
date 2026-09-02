@@ -9,6 +9,7 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import sys
@@ -76,24 +77,30 @@ def sort_key(server: dict):
     return (not server.get("featured", False), -server.get("stars", 0), server["name"].lower())
 
 
-def escape_cell(text: str) -> str:
-    return text.replace("|", "\\|")
-
-
 def render_row(server: dict) -> str:
-    name = escape_cell(server["name"])
-    label = f"**{name}**" if server.get("featured") else name
-    url = primary_url(server)
-    description = escape_cell(server.get("short_description") or server["description"])
-
+    name = html.escape(server["name"])
+    label = f"<strong>{name}</strong>" if server.get("featured") else name
+    url = html.escape(primary_url(server), quote=True)
+    description = html.escape(server.get("short_description") or server["description"])
     endpoint = server.get("mcp_endpoint")
-    if endpoint and endpoint != url:
-        description += f" — [endpoint remoto]({endpoint})"
-
     language = server.get("language", "—")
+    connect = "—"
+    if endpoint:
+        escaped_endpoint = html.escape(endpoint, quote=True)
+        connect = (
+            f'<a href="{escaped_endpoint}">'
+            '<img src="https://img.shields.io/badge/Connetti-0969da?style=flat-square" '
+            'alt="Connetti"></a>'
+        )
+
     return (
-        f"| [{label}]({url}) | {server.get('stars', 0)} | "
-        f"{escape_cell(LANGUAGE_ABBR.get(language, language))} | {description} |"
+        "  <tr>\n"
+        f'    <td><a href="{url}">{label}</a></td>\n'
+        f'    <td align="right">{server.get("stars", 0)}</td>\n'
+        f"    <td>{html.escape(LANGUAGE_ABBR.get(language, language))}</td>\n"
+        f"    <td>{description}</td>\n"
+        f"    <td align=\"center\">{connect}</td>\n"
+        "  </tr>"
     )
 
 
@@ -111,9 +118,20 @@ def render_catalog(servers: list[dict]) -> str:
         body = "\n".join(render_row(server) for server in rows)
         sections.append(
             f"### {category.heading}\n\n"
-            "| Progetto | ⭐ | Lang | Descrizione |\n"
-            "|----------|---:|------|-------------|\n"
-            f"{body}"
+            '<table width="100%">\n'
+            "  <thead>\n"
+            "    <tr>\n"
+            '      <th width="24%">Progetto</th>\n'
+            '      <th width="8%" align="right">⭐</th>\n'
+            '      <th width="10%">Lang</th>\n'
+            '      <th width="46%">Descrizione</th>\n'
+            '      <th width="12%">Connetti</th>\n'
+            "    </tr>\n"
+            "  </thead>\n"
+            "  <tbody>\n"
+            f"{body}\n"
+            "  </tbody>\n"
+            "</table>"
         )
     return "\n\n".join(sections)
 
