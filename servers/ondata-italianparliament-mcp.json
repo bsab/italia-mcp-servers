@@ -1,6 +1,8 @@
 {
   "name": "Italian Parliament MCP",
   "repository_url": "https://github.com/ondata/italianparliament-mcp",
+  "mcp_endpoint": "https://italianparliament-mcp.andy-pr.workers.dev/mcp",
+  "transport": "streamable-http",
   "author": "ondata",
   "language": "TypeScript",
   "license": "MIT",
@@ -12,6 +14,7 @@
     "parlamento",
     "camera",
     "senato",
-    "typescript"
+    "typescript",
+    "remote-mcp"
   ]
 }
