@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
+  <title id="title">Italia MCP Servers</title>
+  <desc id="description">Social preview for the curated catalog of Italian Model Context Protocol servers.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#151b23"/>
+    </linearGradient>
+    <linearGradient id="flag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#009246"/>
+      <stop offset="0.333" stop-color="#009246"/>
+      <stop offset="0.333" stop-color="#f0f6fc"/>
+      <stop offset="0.666" stop-color="#f0f6fc"/>
+      <stop offset="0.666" stop-color="#ce2b37"/>
+      <stop offset="1" stop-color="#ce2b37"/>
+    </linearGradient>
+    <radialGradient id="green-glow">
+      <stop offset="0" stop-color="#009246" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#009246" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="red-glow">
+      <stop offset="0" stop-color="#ce2b37" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ce2b37" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <circle cx="90" cy="100" r="310" fill="url(#green-glow)"/>
+  <circle cx="1200" cy="580" r="360" fill="url(#red-glow)"/>
+  <rect width="1280" height="8" fill="url(#flag)"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <g transform="translate(88 82)">
+      <rect width="296" height="42" rx="21" fill="#161b22" stroke="#30363d"/>
+      <circle cx="24" cy="21" r="6" fill="#009246"/>
+      <circle cx="42" cy="21" r="6" fill="#f0f6fc"/>
+      <circle cx="60" cy="21" r="6" fill="#ce2b37"/>
+      <text x="82" y="28" fill="#8c959f" font-size="17" font-weight="600" letter-spacing="1.5">MODEL CONTEXT PROTOCOL</text>
+    </g>
+
+    <text x="88" y="252" fill="#f0f6fc" font-size="92" font-weight="750" letter-spacing="-3">Italia</text>
+    <text x="88" y="344" fill="#58a6ff" font-size="76" font-weight="750" letter-spacing="-2">MCP Servers</text>
+    <text x="92" y="409" fill="#b1bac4" font-size="27">Il catalogo dei server MCP italiani</text>
+
+    <g transform="translate(88 466)" font-size="17" font-weight="600">
+      <g>
+        <rect width="150" height="44" rx="22" fill="#17231d" stroke="#286c45"/>
+        <text x="75" y="28" fill="#7ee2a8" text-anchor="middle">Dati pubblici</text>
+      </g>
+      <g transform="translate(164)">
+        <rect width="76" height="44" rx="22" fill="#172130" stroke="#28466c"/>
+        <text x="38" y="28" fill="#79c0ff" text-anchor="middle">PA</text>
+      </g>
+      <g transform="translate(254)">
+        <rect width="126" height="44" rx="22" fill="#24202c" stroke="#5a426d"/>
+        <text x="63" y="28" fill="#d2a8ff" text-anchor="middle">Legal-tech</text>
+      </g>
+      <g transform="translate(394)">
+        <rect width="104" height="44" rx="22" fill="#2a1c1e" stroke="#74353d"/>
+        <text x="52" y="28" fill="#ff9b9b" text-anchor="middle">Servizi</text>
+      </g>
+    </g>
+
+    <text x="90" y="569" fill="#6e7681" font-size="18" letter-spacing="0.5">github.com/bsab/italia-mcp-servers</text>
+  </g>
+
+  <g transform="translate(824 94)" filter="url(#shadow)">
+    <rect width="358" height="452" rx="32" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="1" y="1" width="356" height="72" rx="31" fill="#1c2128"/>
+    <path d="M1 72H357" stroke="#30363d"/>
+    <circle cx="34" cy="36" r="7" fill="#009246"/>
+    <circle cx="58" cy="36" r="7" fill="#f0f6fc"/>
+    <circle cx="82" cy="36" r="7" fill="#ce2b37"/>
+    <text x="326" y="43" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600" fill="#8c959f">CATALOGO</text>
+
+    <g stroke="#484f58" stroke-width="3">
+      <path d="M179 226L89 147"/>
+      <path d="M179 226L269 147"/>
+      <path d="M179 226L91 326"/>
+      <path d="M179 226L269 326"/>
+    </g>
+
+    <g>
+      <circle cx="89" cy="147" r="27" fill="#13251b" stroke="#009246" stroke-width="3"/>
+      <path d="M78 147h22M89 136v22" stroke="#7ee2a8" stroke-width="3" stroke-linecap="round"/>
+
+      <circle cx="269" cy="147" r="27" fill="#242930" stroke="#f0f6fc" stroke-width="3"/>
+      <path d="M258 140h22M258 148h22M258 156h15" stroke="#f0f6fc" stroke-width="3" stroke-linecap="round"/>
+
+      <circle cx="91" cy="326" r="27" fill="#172130" stroke="#58a6ff" stroke-width="3"/>
+      <path d="M80 334l8-15 8 15 8-15" fill="none" stroke="#79c0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <circle cx="269" cy="326" r="27" fill="#2a1c1e" stroke="#ce2b37" stroke-width="3"/>
+      <path d="M258 326h22M269 315v22" stroke="#ff9b9b" stroke-width="3" stroke-linecap="round" transform="rotate(45 269 326)"/>
+    </g>
+
+    <g transform="translate(109 177)">
+      <rect width="140" height="98" rx="24" fill="#0d1117" stroke="#58a6ff" stroke-width="3"/>
+      <text x="70" y="64" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750" fill="#f0f6fc">MCP</text>
+    </g>
+
+    <text x="179" y="409" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#8c959f" letter-spacing="1.3">SCOPRI &#183; CONNETTI &#183; COSTRUISCI</text>
+  </g>
+</svg>
