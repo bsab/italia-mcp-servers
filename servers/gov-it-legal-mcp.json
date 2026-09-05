@@ -13,5 +13,57 @@
     "tar",
     "legislazione",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L21-L37"
+        ],
+        "notes": "La procedura include clone, ambiente virtuale, installazione di requirements.txt, avvio Uvicorn e URL MCP locale. I passaggi necessari all'avvio sono forniti in sequenza."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L21-L37",
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L54-L76"
+        ],
+        "notes": "Il README richiede Python 3.10+, indica come installare le dipendenze e come scegliere host e porta. Dichiara esplicitamente l'assenza di autenticazione, database e persistenza della cache."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L10-L19",
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L46-L52"
+        ],
+        "notes": "Sono spiegati i sei tool MCP e forniti esempi di citazioni e parole chiave legali italiane. Non è mostrata una chiamata a un tool con argomenti né un prompt completo rivolto al client; gli esempi riguardano singoli valori di ricerca."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L21-L37"
+        ],
+        "notes": "L'esposizione MCP via HTTP è documentata con avvio Uvicorn e URL locale /mcp. Non sono però indicati un client MCP per nome e la relativa configurazione di connessione, né la variante precisa del trasporto HTTP."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/LICENSE",
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L78-L80"
+        ],
+        "notes": "Il README dichiara la licenza MIT e il file LICENSE contiene il testo completo con attribuzione all'autore del server."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/gov-it-legal-mcp/blob/369dd73908fdb267e81c8ca124e9aecb61eb24f7/README.md#L46-L64"
+        ],
+        "notes": "Le ricerche richiedono terminologia giuridica italiana. Sono quantificati i tetti di testo e risultati: massimo 20 sentenze per ricerca e aggregazioni su un campione massimo di 2.000, con avvertenze sulla copertura."
+      }
+    }
+  }
 }

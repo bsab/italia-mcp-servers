@@ -14,5 +14,61 @@
     "anpr",
     "cap",
     "open-data"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L23-L28",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L29-L49"
+        ],
+        "notes": "È documentato l’avvio diretto con uvx italy-opendata-mcp, con un esempio .mcp.json che lancia lo stesso comando. Per lavorare da sorgente sono forniti clone, ambiente uv e installazione editabile."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L5-L12",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L29-L49",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L111-L121"
+        ],
+        "notes": "Il README descrive uvx/pip, download iniziale e percorsi di cache per sistema operativo. Non specifica però il runtime richiesto né una configurazione delle variabili o una dichiarazione esplicita sull’assenza di credenziali."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L50-L77",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L88-L110"
+        ],
+        "notes": "Sono descritti sette tool MCP con parametri. La navigazione Lombardia-Milano e la chiamata get_comune per Roma mostrano esempi concreti, incluso il risultato strutturato."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L5-L12",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L29-L49"
+        ],
+        "notes": "Sono presenti un esempio .mcp.json e il riferimento all’avvio con Claude. Il trasporto MCP non è dichiarato esplicitamente e non viene inferito dall’uso di command e args."
+      },
+      "license": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L134-L138"
+        ],
+        "notes": "La sezione License indica MIT, ma nel repository esaminato non è disponibile il testo completo né un file LICENSE applicabile al codice. La dichiarazione del nome da sola resta documentazione parziale."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L122-L133",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L5-L12",
+          "https://github.com/stucchi/italy-opendata-mcp/blob/6b6fb1df4339a213ecc2a23999dc42787317d212/README.md#L111-L121"
+        ],
+        "notes": "La tabella di copertura mostra che coordinate, dati geografici e CAP non coprono tutti i comuni. È inoltre chiarito che l’uso offline è possibile soltanto dopo il primo download e che i dati si aggiornano con refresh_dataset."
+      }
+    }
+  }
 }

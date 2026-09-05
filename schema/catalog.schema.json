@@ -6,6 +6,17 @@
   "type": "object",
   "additionalProperties": false,
   "required": ["version", "generated_at", "source", "count", "categories", "servers"],
+  "$defs": {
+    "criterionStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "factor"],
+      "properties": {
+        "label": {"type": "string"},
+        "factor": {"enum": [0, 0.5, 1]}
+      }
+    }
+  },
   "properties": {
     "$schema": {
       "type": "string",
@@ -29,6 +40,41 @@
     "license": {
       "description": "Licenza del catalogo, distinta da quelle dei singoli server.",
       "type": "string"
+    },
+    "quality_rubric": {
+      "description": "Rubrica statica condivisa da punteggio e interfaccia; stelle e featured sono esclusi.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "name", "criteria", "statuses"],
+      "properties": {
+        "version": {"const": 1},
+        "name": {"type": "string"},
+        "criteria": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "label", "weight"],
+            "properties": {
+              "id": {"enum": ["installation", "configuration", "tools", "compatibility", "license", "limitations"]},
+              "label": {"type": "string"},
+              "weight": {"type": "integer", "minimum": 0, "maximum": 100}
+            }
+          }
+        },
+        "statuses": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["absent", "partial", "complete"],
+          "properties": {
+            "absent": {"$ref": "#/$defs/criterionStatus"},
+            "partial": {"$ref": "#/$defs/criterionStatus"},
+            "complete": {"$ref": "#/$defs/criterionStatus"}
+          }
+        }
+      }
     },
     "count": {
       "description": "Numero di voci in servers.",
@@ -56,6 +102,13 @@
         "$ref": "server.schema.json#/$defs/server",
         "required": ["url"],
         "properties": {
+          "readiness_score": {
+            "description": "Somma pesata dei sei criteri documentali, da 0 a 100; null se non valutato. Calcolato in generazione, mai assegnato in servers/.",
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 100,
+            "multipleOf": 0.5
+          },
           "url": {
             "description": "Link canonico del server: repository_url, altrimenti site_url, altrimenti mcp_endpoint. Presente solo nel catalogo aggregato, non nei file in servers/.",
             "type": "string",

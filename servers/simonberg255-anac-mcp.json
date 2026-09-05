@@ -13,5 +13,61 @@
     "appalti",
     "procurement",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L37-L45",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L46-L57",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L58-L66"
+        ],
+        "notes": "Il README descrive clone, installazione delle dipendenze, copia di .env.example e avvio con uvicorn, con porta ed endpoint. Le istruzioni Intric spiegano come aggiungere l’URL del server al workspace senza API key."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L29-L36",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/.env.example",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/requirements.txt",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/runtime.txt"
+        ],
+        "notes": "Il README e .env.example dichiarano che non servono chiavi o registrazione. Sono documentati host, porta, timeout e frequenza massima; requirements.txt elenca le dipendenze e runtime.txt specifica Python 3.12.8."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L109-L118",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L67-L108"
+        ],
+        "notes": "Sono descritti cinque tool e tre risorse MCP. I prompt di esempio mostrano analisi di mercato, ricerca per ente e CPV e dettaglio per CIG, associandoli a chiamate con argomenti concreti."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L58-L66"
+        ],
+        "notes": "È fornita una procedura di collegamento a Intric tramite URL /mcp. Il README non identifica però esplicitamente il tipo di trasporto MCP; non viene dedotto dallo schema http dell’indirizzo."
+      },
+      "license": {
+        "status": "absent",
+        "evidence": [
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L148-L162"
+        ],
+        "notes": "Il README dichiara CC-BY 4.0 per i dati ANAC e gli output, non per il software. Nei documenti pubblici del repository esaminato non è indicata una licenza del codice né è presente un testo LICENSE applicabile al server."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L129-L147",
+          "https://github.com/SimonBerg255/anac-mcp/blob/c840fc3b1e2ed0e7ae8eb9acde4b89a863c34bd9/README.md#L163-L165"
+        ],
+        "notes": "Sono documentati blocchi 403 per alcuni intervalli IP, con restituzione dell’URL del dataset CSV come alternativa, e un limite automatico di venti richieste al minuto."
+      }
+    }
+  }
 }

@@ -22,6 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from build_readme import CATEGORIES, load_servers, primary_url, sort_key  # noqa: E402
+from quality import quality_rubric, readiness_score  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_DIR = ROOT / "schema"
@@ -45,6 +46,7 @@ def build_catalog(servers: list[dict]) -> dict:
     for server in sorted(servers, key=sort_key):
         entry = {key: value for key, value in server.items() if not key.startswith("_")}
         entry["url"] = primary_url(server)
+        entry["readiness_score"] = readiness_score(server)
         entries.append(entry)
 
     return {
@@ -53,6 +55,7 @@ def build_catalog(servers: list[dict]) -> dict:
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": "https://github.com/bsab/italia-mcp-servers",
         "license": "MIT",
+        "quality_rubric": quality_rubric(),
         "count": len(entries),
         "categories": [
             {
@@ -75,7 +78,7 @@ def validate_catalog(catalog: dict) -> None:
     catalog.schema.json referenzia server.schema.json per URL e non lo scarica.
     """
     try:
-        from jsonschema import Draft202012Validator
+        from jsonschema import Draft202012Validator, FormatChecker
         from referencing import Registry, Resource
     except ImportError:
         print(
@@ -91,7 +94,9 @@ def validate_catalog(catalog: dict) -> None:
         uri=server_schema["$id"], resource=Resource.from_contents(server_schema)
     )
 
-    validator = Draft202012Validator(catalog_schema, registry=registry)
+    validator = Draft202012Validator(
+        catalog_schema, registry=registry, format_checker=FormatChecker()
+    )
     errors = sorted(validator.iter_errors(catalog), key=lambda e: list(e.absolute_path))
     if errors:
         for error in errors:

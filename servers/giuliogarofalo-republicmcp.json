@@ -14,5 +14,58 @@
     "senato",
     "sparql",
     "open-data"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/README.md#L42-L75",
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/docs/INSTALLATION.md#L42-L77"
+        ],
+        "notes": "Il README documenta installazione npm e avvio tramite NPX in Claude Desktop. Il collegamento a INSTALLATION.md in radice restituisce 404, ma la guida è presente sotto docs/INSTALLATION.md e descrive configurazione e avvio locale."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/README.md#L44-L73",
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/README.md#L140-L150",
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/docs/INSTALLATION.md#L110-L112"
+        ],
+        "notes": "Sono dichiarati Node.js 18+, npm o yarn, un client MCP e accesso di rete agli endpoint parlamentari. Per OpenPolis viene spiegato l'accesso anonimo e l'uso opzionale di OPENPOLIS_TOKEN per aumentare la quota."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/README.md#L77-L150"
+        ],
+        "notes": "Il catalogo MCP distingue Camera, Senato e OpenPolis, descrivendo gli strumenti. Le domande sull'iter di un DDL, sulle votazioni e sui decreti in scadenza sono associate ai nomi dei tool da usare."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/docs/INSTALLATION.md#L42-L77"
+        ],
+        "notes": "La guida recuperata sotto docs dichiara esplicitamente stdio e l'ascolto su stdin/stdout. Nella stessa guida sono presenti percorsi del file di configurazione e JSON completo per Claude Desktop."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/LICENSE"
+        ],
+        "notes": "Il testo completo della licenza Apache 2.0 è accessibile nel repository del server. Le licenze dei dati parlamentari e OpenPolis sono distinte da quella del codice."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/README.md#L35-L40",
+          "https://github.com/giuliogarofalo/RepublicMCP/blob/3d37542b40f49529c7323cfd4cf683922547e0b1/README.md#L140-L142"
+        ],
+        "notes": "Il README chiarisce ritardo dei dati, assenza di voti individuali in parte dello storico e mancanza del testo integrale degli atti in SPARQL, indicando dove cercarlo. Sono documentati anche quota anonima e vincolo non commerciale di OpenPolis."
+      }
+    }
+  }
 }

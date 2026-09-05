@@ -13,5 +13,59 @@
     "aruba",
     "sdi",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L96-L102",
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L118-L151"
+        ],
+        "notes": "Sono presenti npm install e npm run build; le configurazioni Claude Code e Claude Desktop mostrano come avviare dist/index.js con Node e passare le credenziali."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L91-L95",
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L103-L151"
+        ],
+        "notes": "Il README richiede Node.js 18 o superiore e credenziali Aruba; distingue ambiente demo e produzione, cartella dell’archivio e identificativi fiscali opzionali. È chiarito il requisito Premium per alcune API ufficiali."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md",
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L216-L231"
+        ],
+        "notes": "Sono descritti separatamente i tool del pannello, delle API ufficiali e dell’archivio locale, con parametri e comportamento. Sono forniti prompt concreti su fatturato, IVA, notifiche e download delle fatture."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L118-L151"
+        ],
+        "notes": "Il trasporto stdio è dichiarato esplicitamente; sono disponibili un comando per Claude Code e un blocco mcpServers per Claude Desktop con command, args ed env."
+      },
+      "license": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md"
+        ],
+        "notes": "Il README mostra un badge MIT, ma nel repository esaminato non è disponibile un file LICENSE né il testo dei termini applicabili al codice. Il solo badge non documenta integralmente la licenza."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L49-L60",
+          "https://github.com/MarckDev/aruba-fatture-mcp/blob/f381259b226876b1131f7cb45e55568b5fc08746/README.md#L152-L160",
+          "https://fatturazioneelettronica.aruba.it/apidoc/v2/docs.html"
+        ],
+        "notes": "Sono documentati i limiti delle utenze base, i possibili cambiamenti dell’API privata e le soglie di richiesta con risposta 429. Il caricamento tramite pannello crea una bozza: per inviare a SDI serve il passaggio umano con OTP."
+      }
+    }
+  }
 }

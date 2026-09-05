@@ -14,5 +14,63 @@
     "giurisprudenza",
     "legale",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/README.md#L37-L119",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/docs/deployment.md#L19-L69"
+        ],
+        "notes": "Sono documentati installazione MCPB per Claude Desktop, comandi marketplace per Claude Code, Docker e setup manuale con configurazione del client. La guida di deploy dettaglia anche installazione automatica e profili."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/README.md#L37-L43",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/docs/deployment.md#L230-L239",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/CLAUDE.md#L424-L431",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/CLAUDE.md#L452-L455",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/CLAUDE.md#L723-L728"
+        ],
+        "notes": "Il README specifica uv, gestione di Python e dipendenze; la guida elenca trasporto, host, porta, profilo e cache. Le note tecniche dichiarano l’accesso senza autenticazione alle fonti pubbliche descritte e nell’esempio di connessione all’API del server."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/docs/tools-catalog.md#L48-L80",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/docs/plugin.md#L18-L25",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/plugin/README.md#L103-L118"
+        ],
+        "notes": "Il catalogo fornisce nomi, firme e funzioni dei tool MCP. La guida del plugin chiarisce che i workflow li orchestrano e include richieste concrete, come calcolare interessi su un credito e analizzare l’articolo 2043 del codice civile."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/docs/deployment.md#L49-L55",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/README.md#L80-L119"
+        ],
+        "notes": "Sono espliciti stdio per Claude Desktop e Claude Code e SSE per Docker/remoto; gli esempi mostrano configurazione del processo locale e URL del server SSE."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/LICENSE#L1-L190"
+        ],
+        "notes": "Il repository contiene il testo completo Apache 2.0 con attribuzione a capazme, applicabile al codice del server distribuito."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/README.md#L45-L69",
+          "https://github.com/capazme/mcp-legal-it/blob/a64bda1fa1ff60c4c8a9f4f2ecd8e79a95bd2b6f/docs/tools-catalog.md#L67-L72"
+        ],
+        "notes": "Il README dichiara che il plugin locale non funziona nell’agente cloud Cowork e indica il bundle desktop come alternativa. Descrive inoltre timeout del primo avvio e rimedi; il catalogo segnala il troncamento dei testi OCR della Cassazione."
+      }
+    }
+  }
 }

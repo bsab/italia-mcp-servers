@@ -5,7 +5,7 @@
   "transport": "streamable-http",
   "author": "agid",
   "language": "TypeScript",
-  "license": null,
+  "license": "AGPL-3.0",
   "stars": 0,
   "category": "pa-finanza-pubblica",
   "short_description": "Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità",
@@ -22,5 +22,61 @@
     "search_comune",
     "comune_kpi",
     "comune_dashboard"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L169-L173",
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/frontend/assets/guide/mcp-claude.svg"
+        ],
+        "notes": "La procedura remota indica i passaggi nelle impostazioni di Claude, l'URL da incollare e l'attivazione del connettore in chat; non richiede di installare il server."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/frontend/assets/guide/mcp-claude.svg",
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/frontend/assets/guide/mcp-chatgpt.svg"
+        ],
+        "notes": "Le guide identificano i client e le impostazioni necessarie, inclusa la modalità sviluppatore di ChatGPT, e dichiarano esplicitamente che non serve autenticazione. Per il servizio remoto non sono richiesti runtime o credenziali locali del server."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L144-L159",
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L183-L195"
+        ],
+        "notes": "Sono descritti sei tool MCP, dalla ricerca del comune ai KPI e alle sezioni censuarie, con domande concrete su Lecce, PNRR, demografia e sanità utilizzabili dall'assistente collegato."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L136-L173",
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/frontend/assets/guide/mcp-claude.svg",
+          "https://cruscotto-italia.dati.gov.it/about.html#accesso-mcp"
+        ],
+        "notes": "Sono presenti istruzioni concrete per Claude e ChatGPT e un URL MCP remoto. Le pagine consultate non identificano esplicitamente il trasporto MCP come Streamable HTTP o SSE: non lo si ricava dalla sola URL HTTPS né dai metadati del catalogo."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/LICENSE",
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L364-L386"
+        ],
+        "notes": "Il README attribuisce esplicitamente AGPL-3.0 al codice, distinguendola dalle licenze delle fonti dati; il testo completo della licenza è accessibile nel repository ufficiale collegato dal sito."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L197-L205",
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L167"
+        ],
+        "notes": "Sono documentati il limite di 60 richieste al minuto per IP, l'accesso in sola lettura e la necessità di più chiamate per confronti tra comuni. La cartografia catastale non è esposta dai tool MCP e viene indicato il percorso REST alternativo."
+      }
+    }
+  }
 }

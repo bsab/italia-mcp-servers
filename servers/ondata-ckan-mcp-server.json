@@ -17,5 +17,62 @@
     "dati-gov-it",
     "portali-regionali",
     "remote-mcp"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/docker/README.md",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/docs/guide/chatgpt/chatgpt_web.md",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/README.md#L254-L294"
+        ],
+        "notes": "Sono disponibili installazione e avvio con npm/npx, clone con build e avvio Node, oltre alla procedura Docker. Le guide dei client descrivono anche la connessione al servizio pubblico senza installazione locale."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/docs/DEPLOYMENT.md",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/docs/guide/chatgpt/chatgpt_web.md",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/docker/README.md"
+        ],
+        "notes": "Le guide specificano Node.js e i prerequisiti dei client; per il collegamento pubblico indicano No Auth. Per il processo HTTP sono documentati porta, interfaccia e allowlist obbligatoria dei domini, con nomi delle variabili ed esempi."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/EXAMPLES.md",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/README.md#L295-L344",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/README.md#L371-L485"
+        ],
+        "notes": "Il catalogo descrive tool per dataset, organizzazioni, DataStore e altre risorse. README ed EXAMPLES.md forniscono sia prompt naturali sia chiamate concrete con server_url, filtri e paginazione."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/docs/guide/perplexity/perplexity.md",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/README.md#L135-L156",
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/README.md#L852-L874"
+        ],
+        "notes": "Sono dichiarati stdio e HTTP; la guida Perplexity specifica HTTP Streamable e mostra impostazioni di connessione. Il README contiene inoltre comandi Claude Code e configurazioni dei client desktop."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/LICENSE"
+        ],
+        "notes": "Il README dichiara MIT e il file LICENSE contiene i termini completi applicabili al codice, con attribuzione all’associazione onData."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/ckan-mcp-server/blob/298f87a432c0b3f1732afe7b0e4bc3457ceb6626/README.md#L42-L61"
+        ],
+        "notes": "Sono documentati quota condivisa della demo, limite di 50.000 caratteri e massimi di righe o risultati. Il testo spiega come riconoscere le risposte troncate e usare paginazione o query più ristrette."
+      }
+    }
+  }
 }

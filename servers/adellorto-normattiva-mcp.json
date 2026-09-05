@@ -12,5 +12,58 @@
     "normattiva",
     "legislazione",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L41-L77",
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L85-L115"
+        ],
+        "notes": "Sono forniti il comando npx, configurazioni copiabili per Claude e Cursor e la procedura alternativa per collegarsi al servizio HTTP ospitato."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L79-L89",
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L117-L126"
+        ],
+        "notes": "Sono indicati Node.js 20 o superiore per la compilazione e l’API di produzione; è dichiarato esplicitamente che non occorrono autenticazione o iscrizione, anche per l’endpoint ospitato."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L13-L39"
+        ],
+        "notes": "La tabella descrive i tool MCP, i parametri principali, le risorse e i prompt. Include il caso concreto della domanda su cosa sia stato pubblicato recentemente, da gestire con search_acts e i filtri di pubblicazione, distinguendolo da recent_updates."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L49-L77",
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L85-L115"
+        ],
+        "notes": "Il README dichiara sia stdio sia Streamable HTTP e mostra configurazioni di connessione per Claude Desktop, Claude Code e Cursor."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/LICENSE#L1-L21",
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L146-L150"
+        ],
+        "notes": "Il testo MIT è accessibile e il README ne specifica l’applicazione al codice del server, distinguendolo dai contenuti normativi soggetti a CC BY 4.0."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/adellorto/normattiva-mcp/blob/90af05371bafdbb72ae870255e1ee2f9788b27cc/README.md#L135-L144"
+        ],
+        "notes": "Sono spiegati limiti operativi concreti: enumerazione incompleta degli articoli, gruppi non individuabili automaticamente, letture troncate e finestra massima degli aggiornamenti; sono indicate strategie di ripresa o consultazione alternativa."
+      }
+    }
+  }
 }

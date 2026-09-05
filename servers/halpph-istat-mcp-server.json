@@ -13,5 +13,57 @@
     "istatapi",
     "statistiche",
     "open-data"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L35-L118"
+        ],
+        "notes": "Sono disponibili comandi di installazione e avvio con uvx, pip o sorgenti, oltre ai percorsi di configurazione e al JSON per Claude Desktop. Il percorso principale è documentato senza richiedere di ricostruire i passaggi mancanti."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/CONTRIBUTING.md#L34-L59",
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L120-L131"
+        ],
+        "notes": "Sono documentati Python 3.10+, installazione delle dipendenze, directory di salvataggio, MCP_STORAGE_DIR e MCP_DEBUG. Non è però esplicitato se occorrano credenziali per il servizio o se l'intero utilizzo avvenga senza credenziali."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L133-L193"
+        ],
+        "notes": "Il README descrive i tool per ricerca, consultazione e download dei dataset, con prompt sulla disoccupazione e una chiamata concreta a search_datasets. La guida aggiuntiva docs/ISTATAPI_REFERENCE.md citata nell'albero del README non è reperibile, ma gli esempi MCP principali sono nel README."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L71-L118",
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L174-L193"
+        ],
+        "notes": "Sono forniti esempi di configurazione per Claude Desktop. Il trasporto stdio è esplicito nell'esempio programmatico, che usa StdioServerParameters e stdio_client, non dedotto dal solo comando di avvio."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/LICENSE",
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L242-L244"
+        ],
+        "notes": "La licenza MIT è dichiarata nel README e i termini completi applicabili al codice sono consultabili nel file LICENSE."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Halpph/istat-mcp-server/blob/bb97fe5ec81f7a4a3be7575df25769a7e2b75f67/README.md#L286-L301"
+        ],
+        "notes": "Dataset molto grandi o timeout dell'API possono produrre un URL anziché i dati. La FAQ indica come proseguire con download_dataset e dove vengono salvati i file, includendo la possibilità di cambiare directory."
+      }
+    }
+  }
 }

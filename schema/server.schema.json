@@ -6,6 +6,76 @@
   "$ref": "#/$defs/server",
   "unevaluatedProperties": false,
   "$defs": {
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://[^/\\s]+\\S*$"
+      }
+    },
+    "criterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidence", "notes"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["absent", "partial", "complete"]
+        },
+        "evidence": {"$ref": "#/$defs/evidence"},
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "quality": {
+      "description": "Revisione statica della documentazione. Il punteggio e' derivato, non inserito manualmente. L'assenza del campo significa non valutato.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rubric_version", "reviewed_at", "status"],
+      "properties": {
+        "rubric_version": {"const": 1},
+        "reviewed_at": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "status": {"enum": ["assessed", "unassessed"]},
+        "criteria": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["installation", "configuration", "tools", "compatibility", "license", "limitations"],
+          "properties": {
+            "installation": {"$ref": "#/$defs/criterion"},
+            "configuration": {"$ref": "#/$defs/criterion"},
+            "tools": {"$ref": "#/$defs/criterion"},
+            "compatibility": {"$ref": "#/$defs/criterion"},
+            "license": {"$ref": "#/$defs/criterion"},
+            "limitations": {"$ref": "#/$defs/criterion"}
+          }
+        },
+        "reason": {"type": "string", "minLength": 1, "maxLength": 1000, "pattern": "\\S"},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "oneOf": [
+        {
+          "properties": {"status": {"const": "assessed"}},
+          "required": ["criteria"],
+          "not": {"anyOf": [{"required": ["reason"]}, {"required": ["evidence"]}]}
+        },
+        {
+          "properties": {"status": {"const": "unassessed"}},
+          "required": ["reason", "evidence"],
+          "not": {"required": ["criteria"]}
+        }
+      ]
+    },
     "server": {
       "title": "Voce del catalogo",
       "description": "Campi comuni a un file in servers/ e a una voce di catalog.json.",
@@ -132,9 +202,10 @@
           ]
         },
         "featured": {
-          "description": "Se true, il server compare in evidenza in cima alla sua categoria.",
+          "description": "Evidenza editoriale: nome in grassetto nel README e badge nel sito. Non contribuisce al punteggio o all'ordinamento.",
           "type": "boolean"
         },
+        "quality": {"$ref": "#/$defs/quality"},
         "short_description": {
           "description": "Descrizione compatta usata nelle tabelle del README. In assenza viene usata description.",
           "type": "string",

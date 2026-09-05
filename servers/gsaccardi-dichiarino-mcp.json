@@ -13,5 +13,59 @@
     "dichiarazione-redditi",
     "fisco",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L11-L63"
+        ],
+        "notes": "La guida conduce dal clone e uv sync alla configurazione di Claude Desktop, specificando percorso assoluto, comando di avvio e riavvio del client. Non dipende dalla pubblicazione su PyPI, indicata separatamente come eventuale."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L11-L63",
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/README.md#L67-L125"
+        ],
+        "notes": "Python 3.11+, uv, installazione delle dipendenze e percorsi del progetto sono spiegati. Nelle istruzioni consultate manca però una dichiarazione esplicita sulle credenziali o variabili necessarie, oppure sull'assenza di tali requisiti."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/README.md#L26-L48",
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L167-L183"
+        ],
+        "notes": "Sono descritti i tool fiscali e le risorse MCP. La guida propone domande concrete, tra cui il calcolo IRPEF per 35.000 euro nel 2024 e la detrazione di 800 euro di spese mediche, spiegando che attivano i tool Dichiarino."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L101-L122",
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L27-L63"
+        ],
+        "notes": "La configurazione per VS Code con GitHub Copilot dichiara type: stdio e specifica comando e argomenti. È fornita anche una procedura completa per Claude Desktop."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/LICENSE",
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L203-L207"
+        ],
+        "notes": "I termini completi Apache 2.0 sono accessibili nel file LICENSE. Le istruzioni richiamano inoltre gli obblighi di attribuzione per la redistribuzione."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/README.md#L20-L24",
+          "https://github.com/gsaccardi/dichiarino-mcp/blob/7c39f9cda7bebbe3523188318154270556d6ba11/INSTRUCTIONS.md#L197-L199"
+        ],
+        "notes": "Il server non invia la dichiarazione, perché manca un'API pubblica del 730 precompilato. È specificata la copertura dell'anno fiscale 2024, Modello 730/2025, con invito a controllare l'anno richiesto quando i calcoli non corrispondono."
+      }
+    }
+  }
 }

@@ -22,5 +22,62 @@
   "tools": [
     "list_datasets",
     "query_dataset"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/README.md#L109-L143",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP_DISTRIBUTION.md#L3-L16"
+        ],
+        "notes": "Il README fornisce avvio locale e configurazione JSON per l'endpoint remoto. La guida descrive anche il collegamento del server già pubblicato in Manufact, con percorso dei menu e URL canonico."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/README.md#L109-L141",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP.md#L86-L96"
+        ],
+        "notes": "Sono indicati Node.js 22.19+ per l'avvio locale, le variabili per origini e host ammessi nei deployment e l'assenza di autenticazione richiesta per la superficie pubblica in sola lettura."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP.md#L16-L30",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP_DISTRIBUTION.md#L61-L72"
+        ],
+        "notes": "La documentazione spiega list_datasets e query_dataset, filtri, paginazione e provenienza dei risultati. Cinque prompt concreti mostrano interrogazioni su pagamenti comunali, catalogo territoriale e IRPEF regionale."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP.md#L10-L14",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP_DISTRIBUTION.md#L12-L16",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP_DISTRIBUTION.md#L53-L58"
+        ],
+        "notes": "Il trasporto Streamable HTTP è nominato esplicitamente; sono documentati il collegamento a Manufact e l'uso come connettore remoto personalizzato di Claude, sul medesimo endpoint."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/LICENSE",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/README.md#L257-L263"
+        ],
+        "notes": "Il codice è esplicitamente distribuito sotto AGPL v3 o successiva e il testo integrale è accessibile. La documentazione distingue la licenza del software dalle condizioni dei dati di terzi e dall'offerta commerciale alternativa."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP.md#L18-L21",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/docs/MCP.md#L98-L102",
+          "https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi/blob/b644823594b86d9151df123d3e90bcfc24d5c867/README.md#L92-L105"
+        ],
+        "notes": "Sono descritti limiti di pagina e risposta, timeout e protezioni dalle richieste concorrenti con il loro ambito per istanza. Sono inoltre esplicitati perimetri incompleti, tra cui PNRR limitato agli asili e assenza di ricerca ANAC live per singolo CIG."
+      }
+    }
+  }
 }

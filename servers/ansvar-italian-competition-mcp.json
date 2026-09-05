@@ -13,5 +13,58 @@
     "antitrust",
     "concorrenza",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L9-L32"
+        ],
+        "notes": "La connessione remota è descritta con comando Claude Code, JSON per altri client, percorso nell’interfaccia Claude.ai e autorizzazione OAuth. Questo percorso è seguibile anche se le indicazioni per ricostruire localmente il corpus sono più generiche."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L9-L45",
+          "https://ansvar.eu/docs/quickstart"
+        ],
+        "notes": "Per il percorso ospitato sono spiegati i prerequisiti: client con connettori MCP personalizzati, account Ansvar e consenso OAuth. La guida chiarisce che non serve una chiave API; piano e quota determinano l’accesso ai corpus."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L61-L72",
+          "https://ansvar.eu/docs/quickstart"
+        ],
+        "notes": "Sono elencati sei tool specifici per decisioni AGCM, concentrazioni e settori, ma alcune descrizioni sono troncate. Non è mostrata una chiamata o domanda concreta relativa a questo corpus; gli esempi generali del gateway riguardano altre fonti."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L9-L30"
+        ],
+        "notes": "Il comando per Claude Code specifica esplicitamente il trasporto HTTP; sono inoltre presenti esempi di configurazione per Claude Desktop, Cursor e Claude.ai."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/LICENSE#L1-L190",
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L166-L172"
+        ],
+        "notes": "È disponibile il testo della licenza Apache 2.0 applicata al codice; il README tratta separatamente le condizioni delle pubblicazioni regolatorie utilizzate come dati."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L36-L45",
+          "https://github.com/Ansvar-Systems/italian-competition-mcp/blob/9e057bb7c48f1a8573d90e4701f879c6d57a5d66/README.md#L76-L88"
+        ],
+        "notes": "Il database precostruito non viene redistribuito per vincoli sulle fonti, quindi il self-hosting richiede una propria ingestione. È inoltre documentato il possibile ritardo degli aggiornamenti rispetto alle pubblicazioni ufficiali."
+      }
+    }
+  }
 }

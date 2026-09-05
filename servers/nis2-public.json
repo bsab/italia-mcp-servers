@@ -25,5 +25,61 @@
     "get_playbook",
     "estimate_remediation",
     "list_governance_items"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/docs/guide/getting-started.md",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/docs/reference/api.md"
+        ],
+        "notes": "La documentazione fornisce prerequisiti, clone, creazione del file .env e make dev/prod per avviare la piattaforma; il riferimento API identifica le rotte MCP esposte dal servizio. È documentato l’avvio dell’insieme, non una procedura separata per il processo stdio."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/docs/guide/configuration.md",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/docs/reference/api.md",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/README.md#L140-L162"
+        ],
+        "notes": "Sono elencati Docker Compose, Make e Python, oltre alle variabili per database, Redis, segreti, dominio e servizi opzionali. Il riferimento API indica esplicitamente le rotte MCP come prive di autenticazione; non è una verifica del comportamento effettivo."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://fabriziosalmi.github.io/nis2-public/",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/docs/reference/api.md"
+        ],
+        "notes": "Il sito descrive l’uso MCP per interrogare la postura di conformità e il riferimento API documenta elenco e invocazione dei tool. Non sono forniti nella documentazione consultata esempi concreti di chiamata MCP o prompt associati ai singoli strumenti; gli esempi REST della piattaforma non li sostituiscono."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://fabriziosalmi.github.io/nis2-public/",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/README.md#L264-L275"
+        ],
+        "notes": "La tabella tecnica dichiara stdio e HTTP e il sito nomina Claude e Cursor. Non è però fornito un esempio operativo di connessione o configurazione di uno di questi client MCP."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/LICENSE",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/README.md#L317-L323"
+        ],
+        "notes": "Il README applica AGPL-3.0 alla piattaforma e rinvia al file LICENSE, il cui testo completo è accessibile. È anche menzionata una licenza commerciale alternativa, senza sostituire i termini AGPL pubblicati."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/README.md#L81-L92",
+          "https://github.com/fabriziosalmi/nis2-public/blob/714f128694289e81157479f84acc51a53d723ca5/README.md#L303-L310"
+        ],
+        "notes": "Sono esplicitati limiti sostanziali: lo scanner copre solo superfici osservabili e non verifica controlli organizzativi; la checklist non sostituisce un audit formale. La trasmissione degli artefatti a CSIRT Italia resta manuale."
+      }
+    }
+  }
 }

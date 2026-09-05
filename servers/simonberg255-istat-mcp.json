@@ -13,5 +13,60 @@
     "sdmx",
     "statistiche",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L81-L93"
+        ],
+        "notes": "La sezione di avvio locale contiene pip install -r requirements.txt e il comando uvicorn con host e porta; sono identificati l’endpoint MCP e quello di health check."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L28-L33",
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L115-L126",
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/requirements.txt",
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/.env.example"
+        ],
+        "notes": "Il README identifica FastMCP su Python e dichiara esplicitamente che non occorrono registrazione o credenziali. Le dipendenze sono elencate in requirements.txt e .env.example documenta una porta opzionale senza autenticazione."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L48-L71",
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L94-L106"
+        ],
+        "notes": "Sono descritti quattro tool per catalogo, struttura, valori delle dimensioni e dati, oltre a due risorse. È fornita una sequenza concreta di chiamate con dataset, territorio e key_filter, accompagnata da domande in linguaggio naturale."
+      },
+      "compatibility": {
+        "status": "absent",
+        "evidence": [
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md"
+        ],
+        "notes": "La guida riporta un URL locale /mcp e menziona genericamente assistenti compatibili, ma non dichiara il trasporto MCP né fornisce istruzioni di configurazione per un client nominato. Il solo URL non è assunto come dichiarazione del trasporto."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/LICENSE",
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L139-L141"
+        ],
+        "notes": "La licenza MIT è dichiarata nel README e il file LICENSE contiene i termini completi applicabili al software."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L34-L47",
+          "https://github.com/SimonBerg255/istat-mcp/blob/c92cec315d343aa746849b28f93455e6aa05011a/README.md#L107-L114"
+        ],
+        "notes": "Sono indicati un limite di cinque richieste al minuto con possibile blocco IP, rallentamenti della fonte con timeout e un comportamento anomalo di endPeriod che aggiunge un anno. La guida spiega accodamento, caching e correzione del periodo applicata dal server."
+      }
+    }
+  }
 }

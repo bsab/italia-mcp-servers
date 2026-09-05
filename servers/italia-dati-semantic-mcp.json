@@ -14,5 +14,60 @@
     "developers-italia",
     "schema-gov-it",
     "open-data"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L109-L170",
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L175-L198"
+        ],
+        "notes": "Sono documentati avvio NPX, installazione locale con build e avvio Docker, seguiti dalla connessione del client. Alcuni collegamenti a docker-compose.yaml usano un percorso assoluto dell'autore, ma i comandi Docker e NPX offrono procedure autonome utilizzabili."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L109-L170",
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L314-L340",
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L80-L88"
+        ],
+        "notes": "Sono spiegati i percorsi di esecuzione Docker e Node, l'installazione delle dipendenze e le variabili MCP_TRANSPORT, PORT, HOST e MCP_PUBLIC_URL. L'assenza di autenticazione è dichiarata per la sola integrazione OKG: non è chiarito esplicitamente il requisito di credenziali per l'intero server e le altre sorgenti."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L11-L105",
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L294-L312"
+        ],
+        "notes": "Il catalogo descrive i tool MCP per ontologie, vocabolari, query e dati locali con parametri e criteri di scelta. I numerosi prompt concreti sono associati ai tool, ad esempio ricerca dei comuni lombardi e dei codici Belfiore."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L175-L253"
+        ],
+        "notes": "Il README distingue esplicitamente stdio da HTTP/SSE e offre comandi di connessione e JSON per Claude Code e VS Code/Cursor. Il percorso stdio locale è documentato senza dover inferire il trasporto dal comando."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/LICENSE",
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L360-L362"
+        ],
+        "notes": "La licenza MIT è dichiarata per il server e il file LICENSE ne contiene i termini completi. Le condizioni dei dataset consultati restano distinte dalla licenza software."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L215-L219",
+          "https://github.com/italia/dati-semantic-mcp/blob/c6304213c297d230512d5695b7d902c1039845d1/README.md#L340-L354"
+        ],
+        "notes": "file_path legge il filesystem del server, non quello del client: per file remoti viene indicato l'upload HTTP e per stdio contenuto inline o cambio modalità. Sono spiegati anche troncamento delle risposte esterne, necessità di LIMIT e assenza di query raw sul grafo ibrido locale-remoto."
+      }
+    }
+  }
 }
