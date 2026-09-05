@@ -6,13 +6,15 @@
   "license": "Apache-2.0",
   "stars": 1,
   "category": "fatturazione",
-  "short_description": "Validatore e parser XSD per tracciati XML FatturaPA/SDI",
-  "description": "Validatore e parser XSD per tracciati XML FatturaPA/SDI (ordinaria e semplificata).",
+  "short_description": "FatturaPA: generazione, validazione XSD, firma digitale, invio diretto SDI e supporto alla conservazione",
+  "description": "Generazione e validazione XSD di fatture FatturaPA B2B, B2G e transfrontaliere, firma XAdES/CAdES, invio diretto a SDI via SDICoop e supporto alla conservazione sostitutiva.",
   "tags": [
     "fattura-elettronica",
     "fatturapa",
     "sdi",
     "xml",
-    "xsd"
+    "xsd",
+    "firma-digitale",
+    "conservazione-sostitutiva"
   ]
 }

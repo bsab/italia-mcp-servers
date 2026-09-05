@@ -227,7 +227,7 @@ cybersecurity e design system.
     <td><a href="https://github.com/cmendezs/mcp-fattura-elettronica-it">MCP Fattura Elettronica IT</a></td>
     <td align="right">1</td>
     <td>Python</td>
-    <td>Validatore e parser XSD per tracciati XML FatturaPA/SDI</td>
+    <td>FatturaPA: generazione, validazione XSD, firma digitale, invio diretto SDI e supporto alla conservazione</td>
     <td align="center">—</td>
   </tr>
   <tr>
