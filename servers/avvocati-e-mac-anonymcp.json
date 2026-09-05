@@ -13,5 +13,61 @@
     "pseudonimizzazione",
     "legale",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L74-L157",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L214-L279"
+        ],
+        "notes": "Il README descrive installazione e primo avvio della beta sui tre sistemi operativi, oltre a clone, dipendenze, compilazione, configurazione delle cartelle e collegamento del server sorgente a Claude Desktop."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L214-L251",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L259-L284"
+        ],
+        "notes": "Sono indicati Node.js 20+, struttura del file di configurazione e variabili ANONYMCP_CONFIG e ANONYMCP_CACHE_KEY. È spiegato anche l’effetto dell’assenza della passphrase: pseudonimi coerenti soltanto nella sessione corrente."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L58-L72",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/ARCHITETTURA.md#L103-L139",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/docs/guida-app-avvocato.md#L246-L259"
+        ],
+        "notes": "Sono descritti sei tool, le risorse e i flussi di scansione e scrittura. Gli schemi usano parametri astratti e la guida visuale riguarda l’app locale; non ho trovato un prompt concreto o una chiamata MCP con dati d’esempio."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L37-L42",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L259-L279"
+        ],
+        "notes": "Il trasporto stdio è dichiarato espressamente e il README mostra la configurazione JSON di Claude Desktop, inclusi percorsi e variabili d’ambiente."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/LICENSE#L1-L661",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L333-L336"
+        ],
+        "notes": "Il README indica AGPL-3.0-or-later per il progetto e rinvia al testo AGPL completo disponibile nel repository."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L281-L284",
+          "https://github.com/avvocati-e-mac/AnonyMCP/blob/9c8799730be5f19538b1f738d83ef27f15ea6369/README.md#L288-L328"
+        ],
+        "notes": "Sono esplicitati limiti con effetti concreti: documenti non esposti prima dell’approvazione, contenuti sensibili bloccati dalla policy, supporto iniziale a TXT/Markdown e parser PDF/DOCX/OCR ancora previsti in seguito. La beta non è indicata per pratiche reali."
+      }
+    }
+  }
 }

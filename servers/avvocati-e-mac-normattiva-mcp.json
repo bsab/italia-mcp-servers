@@ -13,5 +13,58 @@
     "cli",
     "citazioni",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L37-L65"
+        ],
+        "notes": "Il README fornisce il comando uv per installare dal sorgente, identifica gli eseguibili prodotti e mostra una configurazione Claude Desktop con percorso del server e riavvio del client."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L37-L47",
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L119-L136"
+        ],
+        "notes": "Sono documentati uv, Python 3.12–3.14 e le variabili facoltative per database, modalità offline e quote. Nelle guide consultate manca però una dichiarazione esplicita sull’eventuale necessità, o assenza, di credenziali per l’API Normattiva."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L26-L35",
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/skills/normattiva-mcp/references/mcp-tools.md#L1-L35",
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/skills/normattiva-mcp/references/test-protocol.md#L6-L19"
+        ],
+        "notes": "Il README e la guida descrivono i cinque tool MCP. Il protocollo di collaudo contiene chiamate concrete per trovare la Costituzione, produrre un link e leggere l’articolo 1, distinguendo accesso locale, rete e cache."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L49-L65"
+        ],
+        "notes": "È dichiarato il solo trasporto stdio, senza porta di rete, insieme a un esempio JSON completo per Claude Desktop."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/LICENSE#L1-L31",
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L163-L172"
+        ],
+        "notes": "Il testo MIT è accessibile e specifica che copre il codice; i dati Normattiva sono trattati separatamente con attribuzione CC BY 4.0."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/avvocati-e-mac/normattiva-mcp/blob/fc61a6e91e5532d2bd811b2322b2b5a18d3c49ff/README.md#L105-L156"
+        ],
+        "notes": "Il README quantifica le cautele locali: richieste serializzate, intervalli minimi, quote mobili e cooldown diversi per errore. Spiega l’arresto dei workflow in stato critico e il funzionamento offline limitato alla cache."
+      }
+    }
+  }
 }

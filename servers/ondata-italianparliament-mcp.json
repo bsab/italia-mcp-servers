@@ -16,5 +16,57 @@
     "senato",
     "typescript",
     "remote-mcp"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/README.md#L27-L59"
+        ],
+        "notes": "Il README fornisce il comando npm per installare il pacchetto globale e identifica italianparliament-mcp come comando da avviare localmente. Sono descritti anche clone, dipendenze e build da sorgente."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/README.md#L27-L59"
+        ],
+        "notes": "Sono indicati npm e i programmi aggiuntivi agent-browser e lit per scaricare i testi del Senato, ma manca una sezione completa sui prerequisiti del runtime MCP e su eventuali variabili o credenziali, o sulla loro esplicita assenza."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/skills/italian-parliament-mcp/SKILL.md",
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/skills/italian-parliament-mcp/references/tools.md"
+        ],
+        "notes": "La skill MCP collegata al README descrive gli strumenti effettivi per parlamentari, voti, atti e governi. Include domande concrete, una tabella intento-tool e un riferimento con parametri ed esempi; non si basa soltanto sui comandi CLI."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/README.md#L45-L49"
+        ],
+        "notes": "Il README dichiara stdio, nomina Claude Desktop e Claude Code e indica comando locale e URL remoto. Non mostra però un blocco di configurazione o una procedura concreta di registrazione del server in uno di questi client."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/LICENSE"
+        ],
+        "notes": "È disponibile il file LICENSE con il testo completo MIT applicabile al repository e l’attribuzione ad Andrea Borruso."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/skills/italian-parliament-mcp/SKILL.md",
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/README.md#L413-L434",
+          "https://github.com/ondata/italianparliament-mcp/blob/15948cb4f8ca0f4ea075da4d386abcd68a841cc3/README.md#L123-L131"
+        ],
+        "notes": "È dichiarata una copertura storica meno verificata rispetto alla XIX legislatura. Il recupero integrale dei testi Senato è limitato alla CLI locale con browser per via del WAF; il Worker restituisce soltanto i link per tali testi."
+      }
+    }
+  }
 }

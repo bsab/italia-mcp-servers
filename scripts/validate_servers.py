@@ -18,7 +18,7 @@ from collections import defaultdict
 from pathlib import Path
 
 try:
-    from jsonschema import Draft202012Validator
+    from jsonschema import Draft202012Validator, FormatChecker
 except ImportError:
     sys.exit(
         "Manca la dipendenza jsonschema. Installala con:\n"
@@ -52,7 +52,7 @@ def describe(error) -> str:
 def main() -> int:
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     Draft202012Validator.check_schema(schema)
-    validator = Draft202012Validator(schema)
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
 
     paths = sorted(SERVERS_DIR.glob("*.json"))
     if not paths:

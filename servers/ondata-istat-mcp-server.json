@@ -15,5 +15,61 @@
     "statistiche",
     "open-data",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/CLAUDE_DESKTOP_CONFIG.md",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L50-L65"
+        ],
+        "notes": "La guida include clone, Python 3.11 o superiore, ambiente virtuale e installazione con uv oppure pip. Il README e la guida Claude mostrano come avviare il modulo Python dopo l’installazione."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/.env.example",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L50-L65",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L243-L251",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L346-L364"
+        ],
+        "notes": "Sono documentati Python e dipendenze, .env opzionale con valori predefiniti, timeout, cache, log e blacklist. Nella documentazione consultata manca però una dichiarazione esplicita sulle credenziali necessarie o sulla loro assenza; la presenza di .env.example e dei valori predefiniti non consente di dedurla."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L14-L49",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L267-L289"
+        ],
+        "notes": "Il README descrive gli otto tool MCP e una sequenza di lavoro dalla ricerca dei dataflow ai vincoli e ai dati. Fornisce prompt concreti su popolazione e agricoltura, con identificativi e filtri di esempio."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/CONFIGURAZIONE_CLAUDE.md",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L92-L223"
+        ],
+        "notes": "Sono disponibili configurazioni per Claude Desktop, Claude Code e altri client. La guida di configurazione riporta esplicitamente l’avvio su stdio nel messaggio atteso, quindi il trasporto non è dedotto dalla sola sintassi del comando."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/LICENSE.txt"
+        ],
+        "notes": "Il README dichiara MIT e il testo completo è consultabile nel file LICENSE.txt del repository."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L401-L430",
+          "https://github.com/ondata/istat_mcp_server/blob/c95c41cd401f809f7da77ea24c53ae8b54ab3746/README.md#L243-L251"
+        ],
+        "notes": "La documentazione indica tre chiamate API al minuto con accodamento automatico e descrive blacklist e timeout configurabile per richieste di vincoli lente. È spiegato anche che header Accept generici possono produrre risposte vuote."
+      }
+    }
+  }
 }

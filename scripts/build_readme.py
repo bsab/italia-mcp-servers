@@ -16,6 +16,8 @@ import sys
 from pathlib import Path
 from typing import NamedTuple
 
+from quality import readiness_label, readiness_score
+
 ROOT = Path(__file__).resolve().parent.parent
 SERVERS_DIR = ROOT / "servers"
 README = ROOT / "README.md"
@@ -74,7 +76,8 @@ def primary_url(server: dict) -> str:
 
 
 def sort_key(server: dict):
-    return (not server.get("featured", False), -server.get("stars", 0), server["name"].lower())
+    score = readiness_score(server)
+    return (score is None, -score if score is not None else 0, server["name"].casefold())
 
 
 def render_row(server: dict) -> str:
@@ -84,6 +87,14 @@ def render_row(server: dict) -> str:
     description = html.escape(server.get("short_description") or server["description"])
     endpoint = server.get("mcp_endpoint")
     language = server.get("language", "—")
+    quality = readiness_label(server)
+    if server.get("quality"):
+        assessment_path = html.escape(f"servers/{server['_path'].name}", quote=True)
+        reviewed_at = html.escape(server["quality"]["reviewed_at"], quote=True)
+        quality = (
+            f'<a href="{assessment_path}" '
+            f'title="Revisione documentale: {reviewed_at}; criteri e fonti">{quality}</a>'
+        )
     connect = "—"
     if endpoint:
         escaped_endpoint = html.escape(endpoint, quote=True)
@@ -95,6 +106,7 @@ def render_row(server: dict) -> str:
     return (
         "  <tr>\n"
         f'    <td><a href="{url}">{label}</a></td>\n'
+        f'    <td align="right">{quality}</td>\n'
         f'    <td align="right">{server.get("stars", 0)}</td>\n'
         f"    <td>{html.escape(LANGUAGE_ABBR.get(language, language))}</td>\n"
         f"    <td>{description}</td>\n"
@@ -120,11 +132,12 @@ def render_catalog(servers: list[dict]) -> str:
             '<table width="100%">\n'
             "  <thead>\n"
             "    <tr>\n"
-            '      <th width="24%">Progetto</th>\n'
-            '      <th width="8%" align="right">⭐</th>\n'
-            '      <th width="10%">Lang</th>\n'
-            '      <th width="46%">Descrizione</th>\n'
-            '      <th width="12%">Link</th>\n'
+            '      <th width="23%">Progetto</th>\n'
+            '      <th width="13%" align="right">Prontezza /100</th>\n'
+            '      <th width="6%" align="right">⭐</th>\n'
+            '      <th width="8%">Lang</th>\n'
+            '      <th width="40%">Descrizione</th>\n'
+            '      <th width="10%">Link</th>\n'
             "    </tr>\n"
             "  </thead>\n"
             "  <tbody>\n"

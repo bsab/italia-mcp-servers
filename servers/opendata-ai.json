@@ -14,5 +14,63 @@
     "eurostat",
     "ckan",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/ods-mcp-server/README.md",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/README.md#L668-L724",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/README.md#L725-L727"
+        ],
+        "notes": "Il README presenta configurazioni Docker avviate dal client, installazione da sorgente e comandi di avvio dello stack locale. I README dei singoli server dettagliano il percorso MCP indipendentemente dall’interfaccia web della piattaforma."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/opendata-mcp-server/README.md",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/infra/aruba/README.md",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/README.md#L512-L528",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/README.md#L668-L724"
+        ],
+        "notes": "Sono documentati runtime containerizzati, dipendenze dello stack e variabili specifiche dei server. È esplicitata l’assenza di autenticazione per i server dati interni; il proxy di prodotto documenta invece URL del backend, API key, timeout e alternativa di sviluppo senza autenticazione."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/ckan-mcp-server/README.md",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/ispra-mcp-server/README.md"
+        ],
+        "notes": "La raccolta espone veri tool MCP oltre alle funzionalità generali del prodotto: i README dei connettori ne descrivono parametri e risultati. Sono inclusi esempi di chiamata, come ricerca di dataset per qualità dell’aria e interrogazione di indicatori comunali."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/opendata-mcp-server/README.md",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/README.md#L668-L724"
+        ],
+        "notes": "Il README dichiara stdio e streamable-HTTP e fornisce configurazioni Docker per Claude Desktop, comandi Claude Code e istruzioni per il bridge mcp-remote. Il proxy di prodotto aggiunge un esempio di configurazione per OpenClaw e Claude Desktop."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/LICENSE",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/ods-mcp-server/README.md"
+        ],
+        "notes": "Il file LICENSE pubblica i termini completi MIT per il codice del monorepo. I README distinguono questa licenza dalle licenze dei dataset delle singole fonti."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/ods-mcp-server/README.md",
+          "https://github.com/agent-engineering-studio/opendata-ai/blob/158bde1c48d176addbea56bbe59fb960f1e3ae53/README.md#L431-L482"
+        ],
+        "notes": "Sono documentati limiti specifici per i connettori: OpenDataSoft è in sola lettura, non supporta ricerca federata tra portali né dataset privati; CKAN su ANAC consente scoperta dei dataset ma non interrogazioni puntuali per CIG sui dump bulk."
+      }
+    }
+  }
 }

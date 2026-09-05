@@ -14,5 +14,59 @@
     "fatture-in-cloud",
     "sdi",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L46-L82"
+        ],
+        "notes": "Sono presenti due percorsi operativi: installazione del bundle MCPB in Claude Desktop e installazione PyPI con comando di avvio integrato nella configurazione del client e indicazione di riavvio."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L48-L94"
+        ],
+        "notes": "Il percorso MCPB dichiara che non richiede configurazione Python; quello manuale mostra Python e il pacchetto da installare. Sono spiegati token, ID azienda, email per l’invio e opzioni di cache, con istruzioni per ottenere le credenziali."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L16-L44",
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L96-L124"
+        ],
+        "notes": "Il README elenca i tool MCP e mostra richieste concrete per creare una bozza di fattura, analizzare i ricavi e duplicare documenti, collegando ogni esempio alla sequenza di strumenti coinvolti."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/server.json#L10-L17",
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L56-L82"
+        ],
+        "notes": "Il manifest pubblico del server dichiara esplicitamente il trasporto stdio; il README contiene un esempio completo di configurazione per Claude Desktop e istruzioni per gli altri client MCP."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/LICENSE#L1-L21",
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L176-L178"
+        ],
+        "notes": "La dichiarazione MIT del README rinvia a un file LICENSE accessibile con i termini completi e l’attribuzione a Mediaform."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L44",
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/README.md#L138-L158",
+          "https://github.com/aringad/fattureincloud-mcp/blob/847d6fe003d4dad4e7cbcd496fa0da67c77ec8a3/docs/KNOWN_ISSUES.md#L3-L9"
+        ],
+        "notes": "Sono documentate operazioni non esposte, come segnare i pagamenti come saldati, e problemi di duplicazione per alcuni clienti; il pannello web è indicato come alternativa. I centri di costo devono già esistere prima dell’assegnazione."
+      }
+    }
+  }
 }

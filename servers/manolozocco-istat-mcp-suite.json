@@ -12,5 +12,58 @@
     "istat",
     "sdmx",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L40-L61"
+        ],
+        "notes": "La procedura indica Python 3.11 o superiore, clone, uv sync e comando di avvio; sono separati gli esempi per stdio e SSE/HTTP."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L40-L61",
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L309-L334"
+        ],
+        "notes": "Sono specificati runtime, dipendenze con uv e impostazioni via ambiente o .env, inclusi endpoint, timeout, rate limit, cache e percorsi di download. Nella documentazione consultata manca però una dichiarazione esplicita sulle credenziali necessarie o sulla loro assenza; l’elenco delle variabili non permette di dedurla."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L99-L185",
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L186-L226"
+        ],
+        "notes": "I tool per ricerca, metadati, estrazione e codici territoriali sono descritti con parametri. Il flusso esemplificato parte da verde urbano e arriva a get_data con una chiave SDMX concreta."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L59-L61",
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L71-L98"
+        ],
+        "notes": "Il README dichiara stdio e SSE/HTTP e include sia il JSON di Claude Desktop sia il comando claude mcp add per Claude Code."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/LICENSE"
+        ],
+        "notes": "La licenza MIT è dichiarata e il file LICENSE contiene il testo completo applicabile al codice del repository, con attribuzione all’autore."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L227-L264",
+          "https://github.com/ManoloZocco/istat-mcp-suite/blob/436000e863433a9bdb406b7424dc8cad822e1feb/README.md#L265-L308"
+        ],
+        "notes": "Sono spiegati timeout di availableconstraint, troncamento delle codelist e rischio di blocco IP dopo uso intenso. Vengono proposti cache, query ristrette e download su file per ridurre richieste e dimensione delle risposte."
+      }
+    }
+  }
 }

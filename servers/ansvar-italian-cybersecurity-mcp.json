@@ -13,5 +13,58 @@
     "cybersecurity",
     "advisory",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L6-L29"
+        ],
+        "notes": "Sono documentati l’endpoint ospitato, il comando di collegamento per Claude Code, gli esempi JSON e il flusso di iscrizione OAuth; è possibile seguire il percorso remoto senza ricostruire il database locale."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L4-L29",
+          "https://ansvar.eu/docs/quickstart"
+        ],
+        "notes": "La guida del gateway specifica account Ansvar, client abilitato ai connettori personalizzati e autorizzazione OAuth, senza chiave API o SDK da installare. Il README chiarisce che l’accesso dipende dal piano dell’account."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L58-L69",
+          "https://ansvar.eu/docs/quickstart"
+        ],
+        "notes": "La tabella descrive sei tool MCP per linee guida, advisory e framework ACN, con alcune celle incomplete. Mancano esempi concreti di interrogazione di questo server; i prompt del quickstart sono riferiti al gateway e ad altri corpus."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L6-L27"
+        ],
+        "notes": "Il trasporto HTTP è esplicito nel comando Claude Code; il README fornisce anche configurazioni e istruzioni di connessione per Claude Desktop, Cursor e Claude.ai."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/LICENSE#L1-L190",
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L163-L169"
+        ],
+        "notes": "Il file LICENSE contiene i termini Apache 2.0 per il codice, distinti nel README dalle licenze delle fonti regolatorie."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L33-L43",
+          "https://github.com/Ansvar-Systems/italian-cybersecurity-mcp/blob/2f1d6629c9a5bf2aca7ffb5c34db6a0fdaf2cfea/README.md#L73-L85"
+        ],
+        "notes": "Sono documentati l’assenza del corpus precostruito nella distribuzione pubblica e il conseguente onere di ingestione per il self-hosting. Gli aggiornamenti periodici possono inoltre essere successivi alle pubblicazioni ACN."
+      }
+    }
+  }
 }

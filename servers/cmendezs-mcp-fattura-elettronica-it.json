@@ -16,5 +16,60 @@
     "xsd",
     "firma-digitale",
     "conservazione-sostitutiva"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L22-L50",
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L69-L111"
+        ],
+        "notes": "Sono forniti installazione PyPI, avvio diretto con uvx, setup da sorgente e configurazioni copiabili per Claude Desktop e Cursor."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L24-L67",
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L197-L233"
+        ],
+        "notes": "Sono spiegati ambiente Python, dipendenze installate automaticamente, extra per la firma, variabili di runtime, certificato PKCS#12, passphrase e accreditamento SDI. La conservazione locale è distinta dai requisiti del servizio di produzione."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L144-L229",
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L235-L305",
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/docs/TOOLS.md#L7-L28"
+        ],
+        "notes": "Il README descrive i tool MCP per generazione, validazione, firma, invio e archivio. Sono presenti sequenze concrete di chiamate per una fattura B2B e ulteriori esempi per ritenute e codici IVA; la guida generata dettaglia i parametri."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L69-L113"
+        ],
+        "notes": "La sezione Cursor dichiara esplicitamente il trasporto stdio e fornisce configurazione JSON e istruzioni di ricaricamento; è presente anche l’esempio per Claude Desktop."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/LICENSE#L1-L201",
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L368-L370"
+        ],
+        "notes": "La licenza Apache 2.0 è dichiarata nel README e il file LICENSE accessibile ne contiene i termini completi con attribuzione a cmendezs."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L191-L206",
+          "https://github.com/cmendezs/mcp-fattura-elettronica-it/blob/0e6c3531fc330d5f995e577ebe3e19f26c235ffc/README.md#L218-L233"
+        ],
+        "notes": "Sono documentati il tetto di 400 euro per la fattura semplificata, i requisiti di certificato e accreditamento per firma e invio, e il limite del backend locale di conservazione, utilizzabile solo in sviluppo e da sostituire in produzione."
+      }
+    }
+  }
 }

@@ -16,5 +16,56 @@
     "ckan",
     "parlamento",
     "pnrr"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L20-L40"
+        ],
+        "notes": "Sono forniti il comando pip per installare il pacchetto, il comando di esecuzione del modulo e un JSON di avvio per Claude Desktop: la procedura base del server è riproducibile dalla documentazione."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L20-L46",
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L102-L108"
+        ],
+        "notes": "Sono spiegati LIGHTRAG_URL, variabili OpenPolis, token opzionale e percorsi dei corpora. Non sono però indicati il requisito di versione Python né una procedura per ottenere e preparare i corpora necessari ai tool giuridici dipendenti da dati locali e LightRAG."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L48-L100"
+        ],
+        "notes": "I 24 tool MCP sono descritti per dominio e con i parametri principali. Nel README consultato non compare però un esempio concreto di chiamata con valori o una domanda completa di utilizzo; le firme e le descrizioni costituiscono un catalogo delle funzioni."
+      },
+      "compatibility": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L28-L40"
+        ],
+        "notes": "È disponibile una configurazione esplicita per Claude Desktop. Il README non nomina il trasporto MCP: stdio non viene dedotto dal fatto che il client esegua un comando locale."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/LICENSE",
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L122-L124"
+        ],
+        "notes": "Apache-2.0 è dichiarata per il progetto e il file LICENSE contiene i termini completi. Questa licenza del codice non va confusa con le condizioni non commerciali applicate ad alcuni dati OpenPolis."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/giuliogarofalo/open-parlamento-mcp/blob/2a3d0b08d9211af178961107c07de1970cd13d6a/README.md#L102-L108"
+        ],
+        "notes": "I limiti sono specifici: cerca_legge copre il corpus Costituzione e Codice Penale, la Cassazione ha una finestra pubblica di circa sei anni e alcuni tool restituiscono risultati vuoti senza corpora configurati. È segnalato anche il vincolo non commerciale dei dati OpenPolis."
+      }
+    }
+  }
 }

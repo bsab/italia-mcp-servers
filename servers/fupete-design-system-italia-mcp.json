@@ -13,5 +13,56 @@
     "pa",
     "ui",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L141-L206"
+        ],
+        "notes": "Il README presenta una configurazione NPX completa per i client e i comandi Docker per scaricare e avviare il server. Include indicazioni operative per correggere la risoluzione di Node tramite nvm su macOS."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L143-L206"
+        ],
+        "notes": "Sono documentati il runtime Node con esempio di versione e percorso, l'alternativa con Docker installato e TRANSPORT. GITHUB_TOKEN è dichiarato opzionale, con finalità, permessi pubblici in lettura e differenza di quota rispetto all'accesso anonimo."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L44-L93"
+        ],
+        "notes": "Ogni gruppo di tool MCP ha descrizioni e parametri; i prompt su varianti dell'Accordion e colori di header e footer sono accompagnati dal flusso di chiamate per componenti, markup e token."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L141-L179"
+        ],
+        "notes": "Il blocco di configurazione per Claude Desktop, Cursor e VS Code specifica esplicitamente TRANSPORT=stdio insieme al comando NPX e agli argomenti del pacchetto."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/LICENSE"
+        ],
+        "notes": "La licenza BSD a tre clausole è accompagnata dal testo integrale nel file LICENSE, con condizioni di redistribuzione e attribuzione ai contributori del progetto."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L44-L74",
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L89-L91",
+          "https://github.com/Fupete/design-system-italia-mcp/blob/3345c843c94b83a8a2daf39c4b2ad315518daaa8/README.md#L204-L206"
+        ],
+        "notes": "Non c'è più un aggregatore full: il client deve comporre chiamate mirate, e ogni richiesta di markup restituisce una sola variante. Sono esplicitate esclusioni come le board GitHub Projects e le quote GitHub con e senza token."
+      }
+    }
+  }
 }

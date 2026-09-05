@@ -14,5 +14,59 @@
     "sismologia",
     "geofisica",
     "open-data"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L22-L68"
+        ],
+        "notes": "Il README fornisce comandi concreti per scaricare l'immagine Docker e avviare il server interattivo su stdio, oltre all'alternativa di build dai sorgenti. Docker è indicato come prerequisito."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L24-L38",
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L94-L118",
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L306-L325"
+        ],
+        "notes": "Sono spiegati prerequisiti Docker e Python per sviluppo locale, datacenter predefinito e parametro per cambiarlo. Il server è dichiarato senza credenziali; per il wrapper mcpo sono documentati assenza iniziale di autenticazione e uso opzionale di una API key anche nel client OpenWebUI."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L92-L197",
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L215-L230"
+        ],
+        "notes": "I sei tool MCP sono descritti con parametri, formati dei risultati e datacenter. Sono presenti argomenti JSON concreti per ricerche geografiche e prompt, ad esempio sui terremoti italiani della giornata."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L15-L20",
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L199-L213"
+        ],
+        "notes": "Il trasporto è dichiarato esplicitamente come JSON-RPC su stdin/stdout. Il README nomina Claude Desktop e fornisce la relativa configurazione MCP con Docker, mantenendo aperto stdin tramite -i."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/LICENSE",
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L358-L361"
+        ],
+        "notes": "Il progetto dichiara AGPL-3.0-or-later e rende accessibile il testo completo della GNU Affero General Public License versione 3 nel file LICENSE."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/INGV/mcp-fdsnws-event/blob/bbcf0d7698451421186f300bb57b4f167d3d2b30/README.md#L98-L125"
+        ],
+        "notes": "Il README documenta il mancato supporto corrente del servizio eventi IRIS/EarthScope e propone USGS come alternativa. Spiega inoltre il massimo di 1.000 eventi per pagina, la paginazione e l'incompatibilità tra filtri rettangolari e radiali nella stessa ricerca."
+      }
+    }
+  }
 }

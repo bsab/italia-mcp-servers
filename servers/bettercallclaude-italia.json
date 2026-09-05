@@ -14,5 +14,63 @@
     "normativa",
     "legale",
     "javascript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/README.md#L28-L36",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/INSTALLAZIONE.md#L14-L90"
+        ],
+        "notes": "Il marketplace e la guida illustrata descrivono aggiunta del repository, installazione del plugin, attivazione dei connettori e verifica finale in Cowork Desktop; la connessione ai server remoti è automatica."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/INSTALLAZIONE.md#L7-L10",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/README.md#L24-L56",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/README.md#L78-L86",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/cassazione-cookie.md#L7-L39"
+        ],
+        "notes": "Sono indicati Cowork Desktop e account Claude Pro o superiore, senza Node.js o chiavi API per iniziare. Le guide spiegano l’eccezione del cookie ItalGiure per Cassazione, il suo rinnovo e la persistenza dello User ID dei workflow."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/README.md#L10-L12",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/INSTALLAZIONE.md#L54-L66",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/cassazione-cookie.md#L62-L73"
+        ],
+        "notes": "Le guide identificano i server MCP e le rispettive capacità. L’esempio di ricerca delle massime sulla responsabilità medica collega esplicitamente una domanda naturale al tool cassazione_search_massime e descrive l’esito con e senza cookie valido."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/README.md#L28-L36",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/INSTALLAZIONE.md#L14-L90"
+        ],
+        "notes": "Il README dichiara la connessione HTTP ai server MCP e la guida fornisce una procedura operativa per il client nominato Cowork Desktop, fino all’abilitazione e alla verifica dei connettori."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/LICENSE#L1-L661",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/README.md#L48-L50"
+        ],
+        "notes": "Il repository pubblica il testo completo AGPL-3.0 e lo richiama come licenza del progetto distribuito. Questa evidenza riguarda il codice pubblicato, non concede diritti sulle banche dati esterne interrogate dai connettori."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/docs/cassazione-cookie.md#L33-L58",
+          "https://github.com/fedec65/bettercallclaude_italia/blob/7db16708a9085685ac79d70c4df63afba9525dec/bettercallclaude_italia/README.md#L24-L56"
+        ],
+        "notes": "Senza cookie ItalGiure valido il connettore restituisce soltanto link di fallback, non i risultati completi; sono spiegati rinnovo e alternative. Il README descrive inoltre la perdita dell’ID locale a ogni riavvio Cowork e come renderlo persistente."
+      }
+    }
+  }
 }

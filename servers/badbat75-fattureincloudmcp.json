@@ -12,5 +12,65 @@
     "fatturazione",
     "fatture-in-cloud",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/README.md#L34-L77",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/deploy.md#L21-L40"
+        ],
+        "notes": "Sono forniti i comandi di installazione e compilazione e l’avvio tramite Claude Code o configurazione Claude Desktop. La guida remota aggiunge comando di deploy, parametri e prerequisiti dell’host."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/package.json#L22-L29",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/README.md#L41-L48",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/api.md#L7-L33",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/deploy.md#L36-L40"
+        ],
+        "notes": "Il manifest richiede Node.js 18+; le guide spiegano token manuale, ID azienda, variabili o header per i due trasporti e permessi distinti di lettura e scrittura. Sono elencati anche i prerequisiti del deploy remoto."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/README.md#L8-L32",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/api.md#L35-L118"
+        ],
+        "notes": "Il catalogo descrive i tool MCP, i parametri, le risposte e il flusso degli allegati. Gli esempi disponibili riguardano filtri o frammenti di payload: manca una richiesta naturale concreta o una chiamata MCP completa con valori d’esempio."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/README.md#L6",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/README.md#L52-L81",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/examples/README.md#L6-L24",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/examples/claude-desktop.http.json#L1-L25"
+        ],
+        "notes": "Sono dichiarati stdio e Streamable HTTP; sono presenti configurazioni per Claude Code, Claude Desktop e opencode. La documentazione spiega il bridge mcp-remote necessario a Claude Desktop per trasmettere gli header richiesti."
+      },
+      "license": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/package.json#L22-L25",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/README.md#L1-L85"
+        ],
+        "notes": "Il manifest upstream dichiara MIT, ma nel repository e nelle guide consultate non è disponibile un testo di licenza né un collegamento ai termini. La dichiarazione non è quindi accompagnata dalle condizioni di riuso accessibili."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/api.md#L96-L104",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/api.md#L129-L131",
+          "https://github.com/badbat75/FattureInCloudMCP/blob/fa39cfbb9b7a3b8ae9e8065b5ac31fef8fec1a6b/docs/deploy.md#L121-L125"
+        ],
+        "notes": "Sono elencate le API non implementate, il malfunzionamento upstream nella cancellazione degli allegati con alternative e il limite dell’upload remoto, che legge soltanto file presenti sul filesystem del server."
+      }
+    }
+  }
 }

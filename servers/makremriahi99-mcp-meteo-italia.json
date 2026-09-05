@@ -13,5 +13,55 @@
     "tempo-reale",
     "gradio",
     "python"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/README.md#L12-L19"
+        ],
+        "notes": "Il README fornisce il comando pip per le dipendenze e distingue l’avvio del server MCP con python meteo_mcp.py dall’interfaccia Gradio con python app.py."
+      },
+      "configuration": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/README.md",
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/requirements.txt"
+        ],
+        "notes": "Sono elencate dipendenze Python e tecnologie, ma non la versione del runtime né eventuali variabili, credenziali o la loro esplicita assenza. Il comando pip e requirements.txt riportano inoltre dipendenze diverse."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/README.md#L5-L11"
+        ],
+        "notes": "È descritta la capacità MCP di recuperare il meteo delle città italiane, ma mancano esempi concreti di domanda o chiamata MCP. I comandi di avvio non sono esempi d’uso dei tool."
+      },
+      "compatibility": {
+        "status": "absent",
+        "evidence": [
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/README.md"
+        ],
+        "notes": "Il README cita Claude, ma non documenta un trasporto MCP né istruzioni o un esempio di configurazione per un client. Il trasporto non è dedotto dai comandi Python."
+      },
+      "license": {
+        "status": "absent",
+        "evidence": [
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/README.md"
+        ],
+        "notes": "Nel README e nei documenti pubblici del repository esaminato non è indicata una licenza applicabile al codice; non è presente un testo LICENSE. La valutazione riguarda la documentazione, non lo stato giuridico del progetto."
+      },
+      "limitations": {
+        "status": "absent",
+        "evidence": [
+          "https://github.com/makremriahi99/MCP-Meteo-Italia/blob/58db35dd2fd32d069eddb0c775e6ac3df8671530/README.md"
+        ],
+        "notes": "Il README illustra le funzionalità, ma non documenta limiti di copertura, frequenza delle richieste, disponibilità della fonte meteo o operazioni non supportate."
+      }
+    }
+  }
 }

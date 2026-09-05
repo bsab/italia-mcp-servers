@@ -13,5 +13,61 @@
     "privacy",
     "codice-penale",
     "typescript"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L6-L29",
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L154-L199"
+        ],
+        "notes": "Il README offre una procedura remota con OAuth e, per il self-hosting, comandi di clone, installazione, compilazione e creazione del database, oltre alla configurazione del client."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L154-L199",
+          "https://ansvar.eu/docs/quickstart"
+        ],
+        "notes": "Sono indicati Node.js 20+, spazio disco per il database e la variabile PORT per HTTP. Il percorso remoto documenta account, client compatibile e OAuth, senza chiave API da configurare."
+      },
+      "tools": {
+        "status": "partial",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L126-L142",
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/TOOLS.md#L7-L101"
+        ],
+        "notes": "README e TOOLS.md spiegano ricerca, recupero di articoli, citazioni e collegamenti al diritto UE, con parametri e risposte. Non presentano però un prompt concreto o una chiamata compilata per la normativa italiana; gli scenari generali non sostituiscono tale esempio."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L6-L27",
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L185-L199"
+        ],
+        "notes": "Sono presenti il trasporto HTTP esplicito e un comando completo per Claude Code, con ulteriori esempi per Claude Desktop e Cursor. È descritto anche l’entrypoint HTTP locale con porta e percorso."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/LICENSE#L1-L190",
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L144-L152"
+        ],
+        "notes": "La licenza Apache 2.0 è esplicitamente attribuita al server self-hosted ed è disponibile con testo completo; non viene estesa automaticamente alle raccolte di dati esterne."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L65-L77",
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L176-L183",
+          "https://github.com/Ansvar-Systems/italian-law-mcp/blob/6b5b87fdc2bccfc1bdeda17dcdabe5e6599333a9/README.md#L226-L240"
+        ],
+        "notes": "Il README distingue il corpus obiettivo dallo snapshot parziale della versione gratuita, segnala che i dati locali invecchiano senza nuova ingestione ed esclude la giurisprudenza dall’attuale copertura statutaria."
+      }
+    }
+  }
 }

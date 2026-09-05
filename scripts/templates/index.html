@@ -53,6 +53,13 @@
     border: 1px solid var(--line); border-radius: 999px;
     padding: .05rem .5rem; margin: 0 .25rem .25rem 0;
   }
+  .quality { margin: .75rem 0; }
+  .score { font-weight: 600; }
+  details { margin-top: .5rem; }
+  summary { cursor: pointer; }
+  .criteria { padding-left: 1.25rem; }
+  .criteria li { border: 0; padding: .4rem 0; margin: 0; }
+  .criteria p { margin: .2rem 0; }
   footer { margin-top: 2.5rem; color: var(--muted); font-size: .875rem; }
 </style>
 </head>
@@ -67,13 +74,30 @@
   sorgente: <a href="https://github.com/bsab/italia-mcp-servers">GitHub</a>
 </div>
 
-<div class="controls">
-  <input type="search" id="q" placeholder="Cerca per nome, descrizione o tag…" autocomplete="off">
-  <select id="category"><option value="">Tutte le categorie</option></select>
-  <select id="language"><option value="">Tutti i linguaggi</option></select>
+<div class="api">
+  <strong>Prontezza d’uso documentata, non certificazione.</strong>
+  Il punteggio statico valuta le istruzioni pubbliche: non verifica funzionamento,
+  sicurezza o disponibilità. Stelle, accesso remoto e scelte editoriali non danno punti.
+  <a href="https://github.com/bsab/italia-mcp-servers/blob/main/CONTRIBUTING.md#valutazione-statica-della-documentazione">Metodo e checklist</a>.
+  <details><summary>Come si calcola il punteggio</summary><p id="rubric"></p></details>
 </div>
 
-<p id="count">Caricamento…</p>
+<div class="controls">
+  <input type="search" id="q" aria-label="Cerca server" placeholder="Cerca per nome, descrizione o tag…" autocomplete="off">
+  <select id="category" aria-label="Categoria"><option value="">Tutte le categorie</option></select>
+  <select id="language" aria-label="Linguaggio"><option value="">Tutti i linguaggi</option></select>
+  <select id="assessment" aria-label="Valutazione documentale">
+    <option value="">Tutte le valutazioni</option>
+    <option value="assessed">Valutati</option>
+    <option value="unassessed">Non valutati</option>
+  </select>
+  <select id="sort" aria-label="Ordinamento">
+    <option value="readiness">Prontezza documentata ↓</option>
+    <option value="name">Nome A–Z</option>
+  </select>
+</div>
+
+<p id="count" aria-live="polite">Caricamento…</p>
 <ul id="list"></ul>
 
 <footer>Fatto con ❤️ in Italia — per rendere i dati italiani accessibili all'AI</footer>
@@ -81,23 +105,60 @@
 <script>
 const el = (id) => document.getElementById(id);
 let servers = [];
+let rubric;
 
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (c) => (
   { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
 ));
 
+const formatScore = (score) => Number(score).toLocaleString('it-IT');
+
+function evidenceLinks(urls) {
+  return urls.map((url, i) => `<a href="${escapeHtml(url)}">Fonte ${i + 1}</a>`).join(' · ');
+}
+
+function renderQuality(server) {
+  const quality = server.quality;
+  const date = quality ? `Revisione documentale: ${escapeHtml(quality.reviewed_at)}` : '';
+  if (server.readiness_score == null) {
+    return `<div class="quality"><span class="score">Non valutato</span>
+      ${quality ? `<details><summary>Motivo e fonti</summary>
+        <p>${escapeHtml(quality.reason)}</p><p>${evidenceLinks(quality.evidence)}</p>
+        <p class="meta">${date}</p></details>` : ''}</div>`;
+  }
+  return `<div class="quality">
+    <span class="score">Prontezza documentata: ${formatScore(server.readiness_score)}/100</span>
+    <span class="meta"> · ${date} · rubrica v${quality.rubric_version}</span>
+    <details><summary>Criteri, motivazioni e fonti</summary>
+      <ul class="criteria">${rubric.criteria.map((criterion) => {
+        const result = quality.criteria[criterion.id];
+        const status = rubric.statuses[result.status];
+        return `<li><strong>${escapeHtml(criterion.label)}</strong>:
+          ${escapeHtml(status.label)} — ${formatScore(criterion.weight * status.factor)}/${criterion.weight}
+          <p>${escapeHtml(result.notes)}</p><p>${evidenceLinks(result.evidence)}</p></li>`;
+      }).join('')}</ul>
+    </details></div>`;
+}
+
 function render() {
   const query = el('q').value.trim().toLowerCase();
   const category = el('category').value;
   const language = el('language').value;
+  const assessment = el('assessment').value;
 
   const matches = servers.filter((s) => {
     if (category && s.category !== category) return false;
     if (language && s.language !== language) return false;
+    if (assessment === 'assessed' && s.readiness_score == null) return false;
+    if (assessment === 'unassessed' && s.readiness_score != null) return false;
     if (!query) return true;
     const haystack = [s.name, s.description, s.author, ...(s.tags || [])].join(' ').toLowerCase();
     return haystack.includes(query);
   });
+  // Il catalogo arriva gia' ordinato per punteggio; non trasformare null in zero.
+  if (el('sort').value === 'name') {
+    matches.sort((a, b) => a.name.localeCompare(b.name, 'it'));
+  }
 
   el('count').textContent = `${matches.length} server su ${servers.length}`;
   el('list').innerHTML = matches.map((s) => `
@@ -107,7 +168,12 @@ function render() {
         <span class="meta">${escapeHtml(s.language)} · ★ ${s.stars} · ${escapeHtml(s.license || 'nessuna licenza dichiarata')}</span>
       </div>
       <p class="desc">${escapeHtml(s.description)}</p>
-      <div>${(s.tags || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
+      ${renderQuality(s)}
+      <div>
+        ${s.featured ? '<span class="tag">Scelta editoriale</span>' : ''}
+        ${s.mcp_endpoint ? `<a class="tag" href="${escapeHtml(s.mcp_endpoint)}">Remoto${s.transport ? ` · ${escapeHtml(s.transport)}` : ''}</a>` : ''}
+        ${(s.tags || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('')}
+      </div>
     </li>`).join('');
 }
 
@@ -127,9 +193,12 @@ fetch('catalog.json')
   })
   .then((catalog) => {
     servers = catalog.servers;
+    rubric = catalog.quality_rubric;
+    el('rubric').textContent = rubric.criteria.map((c) => `${c.label}: ${c.weight} punti`).join(' · ')
+      + '. Non documentato = 0; parziale = metà peso; completo = peso intero. Non valutato non significa zero.';
     fillSelect(el('category'), catalog.categories);
     fillSelect(el('language'), [...new Set(servers.map((s) => s.language))].sort());
-    for (const id of ['q', 'category', 'language']) el(id).addEventListener('input', render);
+    for (const id of ['q', 'category', 'language', 'assessment', 'sort']) el(id).addEventListener('input', render);
     render();
   })
   .catch((error) => {

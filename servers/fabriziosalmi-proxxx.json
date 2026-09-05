@@ -46,5 +46,59 @@
     "list_cluster_events",
     "list_backup_jobs",
     "get_replication_status"
-  ]
+  ],
+  "quality": {
+    "rubric_version": 1,
+    "reviewed_at": "2026-09-05",
+    "status": "assessed",
+    "criteria": {
+      "installation": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/README.md#L86-L169",
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/integrations/mcp.md#L76-L119"
+        ],
+        "notes": "Sono presenti comandi per installare il binario con Homebrew, pacchetto Debian o compilazione, inizializzare la configurazione e avviare il server MCP; è fornito anche il JSON per Claude Desktop."
+      },
+      "configuration": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/README.md#L86-L149",
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/guide/configuration.md#L1-L76",
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/guide/quickstart-llm-mcp.md#L58-L94"
+        ],
+        "notes": "Piattaforme e requisito Rust per la compilazione sono dichiarati. La guida spiega file TOML, URL del cluster, token o password, variabili e TLS; per le operazioni MCP distruttive documenta anche policy e credenziali Telegram necessarie all'approvazione."
+      },
+      "tools": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/integrations/mcp.md#L16-L63",
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/guide/quickstart-llm-mcp.md#L120-L126"
+        ],
+        "notes": "I 25 tool MCP sono descritti individualmente con parametri, tempi massimi e distinzione delle operazioni distruttive. Un prompt concreto mostra come elencare le VM e arrestare quella di staging attraverso list_guests e stop_guest."
+      },
+      "compatibility": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/guide/quickstart-llm-mcp.md#L105-L126",
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/guide/quickstart-llm-mcp.md#L143-L160"
+        ],
+        "notes": "La documentazione distingue esplicitamente stdio da Streamable HTTP/SSE e fornisce la configurazione di Claude Desktop con comando, argomenti e profilo. Sono spiegati anche endpoint HTTP e autenticazione Bearer."
+      },
+      "license": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/LICENSE"
+        ],
+        "notes": "Il repository contiene il testo completo della licenza MIT con attribuzione a Fabrizio Salmi, applicabile al software del progetto, incluso il server MCP."
+      },
+      "limitations": {
+        "status": "complete",
+        "evidence": [
+          "https://github.com/fabriziosalmi/proxxx/blob/32e10020d8fee357004c190292bd65b2c5cd0b34/docs/integrations/mcp.md#L137-L208"
+        ],
+        "notes": "Sono spiegati timeout per tool, possibili esecuzioni parziali e controllo dello stato prima di riprovare. move_disk è escluso dalla superficie MCP e richiede intervento umano via CLI; le chiamate distruttive senza policy sono rifiutate."
+      }
+    }
+  }
 }

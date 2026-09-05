@@ -58,67 +58,82 @@ cybersecurity e design system.
 
 ## Catalogo
 
+La colonna **Prontezza /100** misura la documentazione d'uso, non la popolarità o
+l'affidabilità runtime. Clicca sul punteggio per consultare criteri, motivazioni,
+fonti e data della revisione. **Non valutato** non significa zero.
+Le voci sono ordinate per punteggio decrescente, poi per nome, con i non valutati
+in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
+[Metodo e limiti della valutazione](#qualità-e-trasparenza).
+
 <!-- BEGIN:catalog -->
 ### 📊 Dati e Statistiche
 
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%">Progetto</th>
-      <th width="8%" align="right">⭐</th>
-      <th width="10%">Lang</th>
-      <th width="46%">Descrizione</th>
-      <th width="12%">Link</th>
+      <th width="23%">Progetto</th>
+      <th width="13%" align="right">Prontezza /100</th>
+      <th width="6%" align="right">⭐</th>
+      <th width="8%">Lang</th>
+      <th width="40%">Descrizione</th>
+      <th width="10%">Link</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="https://github.com/ondata/ckan-mcp-server"><strong>CKAN MCP Server</strong></a></td>
+    <td align="right"><a href="servers/ondata-ckan-mcp-server.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">57</td>
     <td>TS</td>
     <td>Connettore generico per istanze CKAN (dati.gov.it e portali regionali)</td>
     <td align="center"><a href="https://ckan-mcp-server.andy-pr.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: CKAN MCP Server"><kbd>Connetti</kbd></a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/ondata/istat_mcp_server"><strong>ISTAT MCP Server</strong></a></td>
-    <td align="right">23</td>
-    <td>Python</td>
-    <td>Statistiche ISTAT via SDMX API</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/SimonBerg255/istat-mcp">ISTAT MCP</a></td>
-    <td align="right">3</td>
-    <td>Python</td>
-    <td>4700+ dataset ISTAT via SDMX, senza API key</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/Halpph/istat-mcp-server">ISTAT MCP Server (istatapi)</a></td>
-    <td align="right">2</td>
-    <td>Python</td>
-    <td>Dati statistici ISTAT via libreria Python istatapi</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/stucchi/italy-opendata-mcp">Italy OpenData MCP</a></td>
-    <td align="right">1</td>
-    <td>Python</td>
-    <td>Comuni, province, regioni, CAP, coordinate e codici ISTAT/ANPR</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
     <td><a href="https://github.com/agent-engineering-studio/opendata-ai">OpenData AI</a></td>
+    <td align="right"><a href="servers/opendata-ai.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">1</td>
     <td>Python</td>
     <td>Multi-source: CKAN, ISTAT, Eurostat, OECD</td>
     <td align="center">—</td>
   </tr>
   <tr>
+    <td><a href="https://github.com/ondata/istat_mcp_server"><strong>ISTAT MCP Server</strong></a></td>
+    <td align="right"><a href="servers/ondata-istat-mcp-server.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
+    <td align="right">23</td>
+    <td>Python</td>
+    <td>Statistiche ISTAT via SDMX API</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Halpph/istat-mcp-server">ISTAT MCP Server (istatapi)</a></td>
+    <td align="right"><a href="servers/halpph-istat-mcp-server.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
+    <td align="right">2</td>
+    <td>Python</td>
+    <td>Dati statistici ISTAT via libreria Python istatapi</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/ManoloZocco/istat-mcp-suite">ISTAT MCP Suite</a></td>
+    <td align="right"><a href="servers/manolozocco-istat-mcp-suite.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
     <td align="right">0</td>
     <td>Python</td>
     <td>Server unificato per dataset ISTAT</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/SimonBerg255/istat-mcp">ISTAT MCP</a></td>
+    <td align="right"><a href="servers/simonberg255-istat-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">85/100</a></td>
+    <td align="right">3</td>
+    <td>Python</td>
+    <td>4700+ dataset ISTAT via SDMX, senza API key</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/stucchi/italy-opendata-mcp">Italy OpenData MCP</a></td>
+    <td align="right"><a href="servers/stucchi-italy-opendata-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">77.5/100</a></td>
+    <td align="right">1</td>
+    <td>Python</td>
+    <td>Comuni, province, regioni, CAP, coordinate e codici ISTAT/ANPR</td>
     <td align="center">—</td>
   </tr>
   </tbody>
@@ -129,16 +144,18 @@ cybersecurity e design system.
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%">Progetto</th>
-      <th width="8%" align="right">⭐</th>
-      <th width="10%">Lang</th>
-      <th width="46%">Descrizione</th>
-      <th width="12%">Link</th>
+      <th width="23%">Progetto</th>
+      <th width="13%" align="right">Prontezza /100</th>
+      <th width="6%" align="right">⭐</th>
+      <th width="8%">Lang</th>
+      <th width="40%">Descrizione</th>
+      <th width="10%">Link</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="https://github.com/fedec65/bettercallclaude_italia"><strong>BetterCallClaude Italia</strong></a></td>
+    <td align="right"><a href="servers/bettercallclaude-italia.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">44</td>
     <td>JS</td>
     <td>Quadro normativo italiano completo</td>
@@ -146,20 +163,23 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://github.com/capazme/mcp-legal-it"><strong>MCP Legal IT</strong></a></td>
+    <td align="right"><a href="servers/capazme-mcp-legal-it.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">14</td>
     <td>Python</td>
     <td>200+ tool: statuti, giurisprudenza, calcoli legali</td>
     <td align="center">—</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/SimonBerg255/gov-it-legal-mcp">Gov IT Legal MCP</a></td>
-    <td align="right">10</td>
+    <td><a href="https://github.com/adellorto/normattiva-mcp">Normattiva MCP</a></td>
+    <td align="right"><a href="servers/adellorto-normattiva-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
+    <td align="right">1</td>
     <td>Python</td>
-    <td>Normattiva + sentenze TAR/CdS</td>
+    <td>API di Normattiva</td>
     <td align="center">—</td>
   </tr>
   <tr>
     <td><a href="https://github.com/avvocati-e-mac/AnonyMCP">AnonyMCP</a></td>
+    <td align="right"><a href="servers/avvocati-e-mac-anonymcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
     <td align="right">5</td>
     <td>TS</td>
     <td>Pseudonimizza documenti legali prima dell&#x27;LLM</td>
@@ -167,27 +187,31 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://github.com/Ansvar-Systems/italian-law-mcp">Italian Law MCP</a></td>
+    <td align="right"><a href="servers/ansvar-italian-law-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
     <td align="right">1</td>
     <td>TS</td>
     <td>GDPR, Codice Privacy, cybercrime</td>
     <td align="center">—</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/adellorto/normattiva-mcp">Normattiva MCP</a></td>
-    <td align="right">1</td>
-    <td>Python</td>
-    <td>API di Normattiva</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
     <td><a href="https://github.com/avvocati-e-mac/normattiva-mcp">Normattiva MCP (CLI)</a></td>
+    <td align="right"><a href="servers/avvocati-e-mac-normattiva-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
     <td align="right">0</td>
     <td>Python</td>
     <td>CLI + MCP per citare norme da Normattiva.it</td>
     <td align="center">—</td>
   </tr>
   <tr>
+    <td><a href="https://github.com/SimonBerg255/gov-it-legal-mcp">Gov IT Legal MCP</a></td>
+    <td align="right"><a href="servers/gov-it-legal-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">82.5/100</a></td>
+    <td align="right">10</td>
+    <td>Python</td>
+    <td>Normattiva + sentenze TAR/CdS</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/giuliogarofalo/open-parlamento-mcp">Open Parlamento MCP</a></td>
+    <td align="right"><a href="servers/giuliogarofalo-open-parlamento-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">72.5/100</a></td>
     <td align="right">0</td>
     <td>Python</td>
     <td>Diritto IT/UE, giurisprudenza, Normattiva, dati pubblici e Parlamento</td>
@@ -201,37 +225,42 @@ cybersecurity e design system.
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%">Progetto</th>
-      <th width="8%" align="right">⭐</th>
-      <th width="10%">Lang</th>
-      <th width="46%">Descrizione</th>
-      <th width="12%">Link</th>
+      <th width="23%">Progetto</th>
+      <th width="13%" align="right">Prontezza /100</th>
+      <th width="6%" align="right">⭐</th>
+      <th width="8%">Lang</th>
+      <th width="40%">Descrizione</th>
+      <th width="10%">Link</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="https://github.com/aringad/fattureincloud-mcp"><strong>Fatture in Cloud MCP</strong></a></td>
+    <td align="right"><a href="servers/aringad-fattureincloud-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">18</td>
     <td>Python</td>
     <td>Fatture in Cloud API con Claude AI</td>
     <td align="center">—</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/MarckDev/aruba-fatture-mcp">Aruba Fatture MCP</a></td>
-    <td align="right">3</td>
-    <td>TS</td>
-    <td>Aruba Fatturazione Elettronica + SDI</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
     <td><a href="https://github.com/cmendezs/mcp-fattura-elettronica-it">MCP Fattura Elettronica IT</a></td>
+    <td align="right"><a href="servers/cmendezs-mcp-fattura-elettronica-it.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">1</td>
     <td>Python</td>
     <td>FatturaPA: generazione, validazione XSD, firma digitale, invio diretto SDI e supporto alla conservazione</td>
     <td align="center">—</td>
   </tr>
   <tr>
+    <td><a href="https://github.com/MarckDev/aruba-fatture-mcp">Aruba Fatture MCP</a></td>
+    <td align="right"><a href="servers/marckdev-aruba-fatture-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">95/100</a></td>
+    <td align="right">3</td>
+    <td>TS</td>
+    <td>Aruba Fatturazione Elettronica + SDI</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/badbat75/FattureInCloudMCP">FattureInCloudMCP</a></td>
+    <td align="right"><a href="servers/badbat75-fattureincloudmcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">85/100</a></td>
     <td align="right">0</td>
     <td>TS</td>
     <td>Fatture in Cloud API v2, CRUD completo</td>
@@ -245,51 +274,26 @@ cybersecurity e design system.
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%">Progetto</th>
-      <th width="8%" align="right">⭐</th>
-      <th width="10%">Lang</th>
-      <th width="46%">Descrizione</th>
-      <th width="12%">Link</th>
+      <th width="23%">Progetto</th>
+      <th width="13%" align="right">Prontezza /100</th>
+      <th width="6%" align="right">⭐</th>
+      <th width="8%">Lang</th>
+      <th width="40%">Descrizione</th>
+      <th width="10%">Link</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="https://github.com/Italian-Builders-Org/DoveVannoINostriSoldi"><strong>DoveVannoINostriSoldi</strong></a></td>
+    <td align="right"><a href="servers/dovevannoinostrisoldi.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">258</td>
     <td>TS</td>
     <td>Spesa pubblica: SIOPE, debito, PNRR, IRPEF e altro</td>
     <td align="center"><a href="https://www.dovevannoinostrisoldi.com/api/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: DoveVannoINostriSoldi"><kbd>Connetti</kbd></a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/gsaccardi/dichiarino-mcp"><strong>Dichiarino MCP</strong></a></td>
-    <td align="right">23</td>
-    <td>Python</td>
-    <td>Assistente per la dichiarazione dei redditi</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/italia/dati-semantic-mcp">Dati Semantic MCP</a></td>
-    <td align="right">9</td>
-    <td>TS</td>
-    <td>Catalogo semantico Developers Italia, vocabolari e ontologie PA via SPARQL</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/SimonBerg255/anac-mcp">ANAC MCP</a></td>
-    <td align="right">4</td>
-    <td>Python</td>
-    <td>Appalti pubblici ANAC (BDNCP)</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/ondata/italianparliament-mcp">Italian Parliament MCP</a></td>
-    <td align="right">2</td>
-    <td>TS</td>
-    <td>Dati del Parlamento italiano</td>
-    <td align="center"><a href="https://italianparliament-mcp.andy-pr.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: Italian Parliament MCP"><kbd>Connetti</kbd></a></td>
-  </tr>
-  <tr>
     <td><a href="https://github.com/giuliogarofalo/RepublicMCP">RepublicMCP</a></td>
+    <td align="right"><a href="servers/giuliogarofalo-republicmcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">1</td>
     <td>TS</td>
     <td>Query SPARQL sugli open data di Camera e Senato</td>
@@ -297,10 +301,43 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://cruscotto-italia-mcp.agid.workers.dev/mcp">Cruscotto Italia MCP</a></td>
+    <td align="right"><a href="servers/cruscotto-italia-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">92.5/100</a></td>
     <td align="right">0</td>
     <td>TS</td>
     <td>Dati comunali per codice ISTAT: demografia, SIOPE, PNRR, sanità</td>
     <td align="center"><a href="https://cruscotto-italia-mcp.agid.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: Cruscotto Italia MCP"><kbd>Connetti</kbd></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/italia/dati-semantic-mcp">Dati Semantic MCP</a></td>
+    <td align="right"><a href="servers/italia-dati-semantic-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
+    <td align="right">9</td>
+    <td>TS</td>
+    <td>Catalogo semantico Developers Italia, vocabolari e ontologie PA via SPARQL</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/gsaccardi/dichiarino-mcp"><strong>Dichiarino MCP</strong></a></td>
+    <td align="right"><a href="servers/gsaccardi-dichiarino-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
+    <td align="right">23</td>
+    <td>Python</td>
+    <td>Assistente per la dichiarazione dei redditi</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/SimonBerg255/anac-mcp">ANAC MCP</a></td>
+    <td align="right"><a href="servers/simonberg255-anac-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">82.5/100</a></td>
+    <td align="right">4</td>
+    <td>Python</td>
+    <td>Appalti pubblici ANAC (BDNCP)</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ondata/italianparliament-mcp">Italian Parliament MCP</a></td>
+    <td align="right"><a href="servers/ondata-italianparliament-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">82.5/100</a></td>
+    <td align="right">2</td>
+    <td>TS</td>
+    <td>Dati del Parlamento italiano</td>
+    <td align="center"><a href="https://italianparliament-mcp.andy-pr.workers.dev/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: Italian Parliament MCP"><kbd>Connetti</kbd></a></td>
   </tr>
   </tbody>
 </table>
@@ -310,23 +347,18 @@ cybersecurity e design system.
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%">Progetto</th>
-      <th width="8%" align="right">⭐</th>
-      <th width="10%">Lang</th>
-      <th width="46%">Descrizione</th>
-      <th width="12%">Link</th>
+      <th width="23%">Progetto</th>
+      <th width="13%" align="right">Prontezza /100</th>
+      <th width="6%" align="right">⭐</th>
+      <th width="8%">Lang</th>
+      <th width="40%">Descrizione</th>
+      <th width="10%">Link</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td><a href="https://github.com/fabriziosalmi/nis2-public">NIS2-public</a></td>
-    <td align="right">28</td>
-    <td>Python</td>
-    <td>Postura e remediation NIS2 per D.Lgs. 138/2024 e ACN</td>
-    <td align="center">—</td>
-  </tr>
-  <tr>
     <td><a href="https://github.com/fabriziosalmi/proxxx">proxxx</a></td>
+    <td align="right"><a href="servers/fabriziosalmi-proxxx.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">23</td>
     <td>Rust</td>
     <td>Cockpit Proxmox VE/PBS con MCP, audit e approvazione HITL</td>
@@ -334,6 +366,7 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://github.com/Ansvar-Systems/italian-competition-mcp">Italian Competition MCP</a></td>
+    <td align="right"><a href="servers/ansvar-italian-competition-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
     <td align="right">0</td>
     <td>TS</td>
     <td>AGCM — decisioni antitrust</td>
@@ -341,9 +374,18 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://github.com/Ansvar-Systems/italian-cybersecurity-mcp">Italian Cybersecurity MCP</a></td>
+    <td align="right"><a href="servers/ansvar-italian-cybersecurity-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">90/100</a></td>
     <td align="right">0</td>
     <td>TS</td>
     <td>ACN — linee guida e advisory</td>
+    <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/fabriziosalmi/nis2-public">NIS2-public</a></td>
+    <td align="right"><a href="servers/nis2-public.json" title="Revisione documentale: 2026-09-05; criteri e fonti">82.5/100</a></td>
+    <td align="right">28</td>
+    <td>Python</td>
+    <td>Postura e remediation NIS2 per D.Lgs. 138/2024 e ACN</td>
     <td align="center">—</td>
   </tr>
   </tbody>
@@ -354,16 +396,18 @@ cybersecurity e design system.
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%">Progetto</th>
-      <th width="8%" align="right">⭐</th>
-      <th width="10%">Lang</th>
-      <th width="46%">Descrizione</th>
-      <th width="12%">Link</th>
+      <th width="23%">Progetto</th>
+      <th width="13%" align="right">Prontezza /100</th>
+      <th width="6%" align="right">⭐</th>
+      <th width="8%">Lang</th>
+      <th width="40%">Descrizione</th>
+      <th width="10%">Link</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="https://github.com/Fupete/design-system-italia-mcp">Filo — Design System Italia</a></td>
+    <td align="right"><a href="servers/fupete-design-system-italia-mcp.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">3</td>
     <td>TS</td>
     <td>Design system .italia (sperimentale)</td>
@@ -371,6 +415,7 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://github.com/INGV/mcp-fdsnws-event">INGV MCP FDSNWS Event</a></td>
+    <td align="right"><a href="servers/ingv-mcp-fdsnws-event.json" title="Revisione documentale: 2026-09-05; criteri e fonti">100/100</a></td>
     <td align="right">1</td>
     <td>Python</td>
     <td>Dati sismici e eventi in tempo reale via web service INGV</td>
@@ -378,6 +423,7 @@ cybersecurity e design system.
   </tr>
   <tr>
     <td><a href="https://github.com/makremriahi99/MCP-Meteo-Italia">MCP Meteo Italia</a></td>
+    <td align="right"><a href="servers/makremriahi99-mcp-meteo-italia.json" title="Revisione documentale: 2026-09-05; criteri e fonti">50/100</a></td>
     <td align="right">0</td>
     <td>Python</td>
     <td>Meteo in tempo reale con FastMCP + Gradio</td>
@@ -406,7 +452,9 @@ curl -s https://bsab.github.io/italia-mcp-servers/catalog.json \
 
 Il campo `version` indica la versione della struttura del documento e cambia solo
 per modifiche incompatibili. Ogni voce di `servers` contiene i campi del file in
-`servers/` più `url`, il link canonico del progetto.
+`servers/` più `url`, il link canonico del progetto, e `readiness_score`, il punteggio
+statico derivato oppure `null` se non valutato. `quality` contiene l'eventuale revisione
+con fonti e data; `quality_rubric` descrive il metodo a livello di catalogo.
 
 ## Qualità e trasparenza
 
@@ -421,9 +469,38 @@ Per essere incluso, un server deve:
 - fornire almeno un riferimento pubblico tra repository, sito o endpoint MCP;
 - avere documentazione d'uso sufficiente.
 
-Le stelle GitHub sono informative e possono non essere aggiornate in tempo
-reale. La struttura dei dati viene validata dalla CI; i collegamenti esterni
-sono controllati settimanalmente.
+### Prontezza d'uso documentata
+
+La rubrica statica v1 valuta le evidenze nella documentazione pubblica:
+
+| Criterio | Peso |
+|----------|-----:|
+| Installazione o accesso descritti con passaggi concreti | 30 |
+| Configurazione, credenziali e prerequisiti espliciti | 20 |
+| Tool e funzionalità MCP documentati, con esempi | 20 |
+| Transport e client compatibili dichiarati | 15 |
+| Licenza esplicita con termini consultabili | 10 |
+| Limiti noti documentati | 5 |
+
+Ogni criterio vale zero se non documentato nelle fonti consultate, metà peso se
+parziale, il peso intero se completo. Il punteggio è la somma, da 0 a 100.
+**Non valutato** indica invece una revisione mancante o fonti non consultabili:
+non equivale a zero. Le motivazioni e le fonti, preferibilmente fissate al commit,
+sono pubbliche e correggibili via PR. La data è quella della revisione documentale.
+Le valutazioni iniziali sono state compilate con assistenza AI e restano aperte
+a correzioni basate sulle fonti.
+
+Non vengono eseguiti server o tool MCP: il punteggio **non certifica funzionamento,
+sicurezza, disponibilità o manutenzione attiva**. Un server con buona documentazione
+può comunque non funzionare. I pesi sono una scelta del catalogo, non una metrica
+validata sperimentalmente. La valutazione non è un filtro di ammissione.
+
+[Checklist completa e istruzioni per contribuire alle valutazioni](CONTRIBUTING.md#valutazione-statica-della-documentazione).
+
+Le stelle GitHub sono solo informative e possono non essere aggiornate in tempo
+reale. Stelle, `featured`, accesso remoto e attività recente non contribuiscono
+al punteggio. La struttura dei dati viene validata dalla CI; i collegamenti
+esterni sono controllati settimanalmente, separatamente dalla valutazione statica.
 
 ## Contribuire
 
