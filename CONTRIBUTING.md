@@ -57,8 +57,8 @@ espone la rubrica condivisa.
 
 ## Valutazione statica della documentazione
 
-La **prontezza d'uso documentata** è un indice da 0 a 100, non una misura di
-popolarità, sicurezza o affidabilità runtime. La revisione legge documentazione
+Il **Ready score** è un indice di prontezza d'uso documentata da 0 a 100, non una
+misura di popolarità, sicurezza o affidabilità runtime. La revisione legge documentazione
 pubblica: non esegue server, non chiama tool MCP e non certifica che le istruzioni
 funzionino. Non è un nuovo requisito di ammissione al catalogo.
 

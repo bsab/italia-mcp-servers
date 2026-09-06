@@ -58,7 +58,7 @@ cybersecurity e design system.
 
 ## Catalogo
 
-La colonna **Prontezza /100** misura la documentazione d'uso, non la popolarità o
+La colonna **🎯 Ready score /100** misura la documentazione d'uso, non la popolarità o
 l'affidabilità runtime. Clicca sul punteggio per consultare criteri, motivazioni,
 fonti e data della revisione. **Non valutato** non significa zero.
 Le voci sono ordinate per punteggio decrescente, poi per nome, con i non valutati
@@ -72,7 +72,7 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
   <thead>
     <tr>
       <th width="23%">Progetto</th>
-      <th width="13%" align="right">Prontezza /100</th>
+      <th width="13%" align="right">🎯 Ready score /100</th>
       <th width="6%" align="right">⭐</th>
       <th width="8%">Lang</th>
       <th width="40%">Descrizione</th>
@@ -145,7 +145,7 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
   <thead>
     <tr>
       <th width="23%">Progetto</th>
-      <th width="13%" align="right">Prontezza /100</th>
+      <th width="13%" align="right">🎯 Ready score /100</th>
       <th width="6%" align="right">⭐</th>
       <th width="8%">Lang</th>
       <th width="40%">Descrizione</th>
@@ -226,7 +226,7 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
   <thead>
     <tr>
       <th width="23%">Progetto</th>
-      <th width="13%" align="right">Prontezza /100</th>
+      <th width="13%" align="right">🎯 Ready score /100</th>
       <th width="6%" align="right">⭐</th>
       <th width="8%">Lang</th>
       <th width="40%">Descrizione</th>
@@ -275,7 +275,7 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
   <thead>
     <tr>
       <th width="23%">Progetto</th>
-      <th width="13%" align="right">Prontezza /100</th>
+      <th width="13%" align="right">🎯 Ready score /100</th>
       <th width="6%" align="right">⭐</th>
       <th width="8%">Lang</th>
       <th width="40%">Descrizione</th>
@@ -348,7 +348,7 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
   <thead>
     <tr>
       <th width="23%">Progetto</th>
-      <th width="13%" align="right">Prontezza /100</th>
+      <th width="13%" align="right">🎯 Ready score /100</th>
       <th width="6%" align="right">⭐</th>
       <th width="8%">Lang</th>
       <th width="40%">Descrizione</th>
@@ -397,7 +397,7 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
   <thead>
     <tr>
       <th width="23%">Progetto</th>
-      <th width="13%" align="right">Prontezza /100</th>
+      <th width="13%" align="right">🎯 Ready score /100</th>
       <th width="6%" align="right">⭐</th>
       <th width="8%">Lang</th>
       <th width="40%">Descrizione</th>
@@ -469,8 +469,9 @@ Per essere incluso, un server deve:
 - fornire almeno un riferimento pubblico tra repository, sito o endpoint MCP;
 - avere documentazione d'uso sufficiente.
 
-### Prontezza d'uso documentata
+### 🎯 Ready score
 
+Il **Ready score** misura la prontezza d'uso documentata, da 0 a 100.
 La rubrica statica v1 valuta le evidenze nella documentazione pubblica:
 
 | Criterio | Peso |
