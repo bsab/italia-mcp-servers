@@ -8,7 +8,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
 
 from build_catalog import build_catalog, validate_catalog
-from build_readme import render_row, sort_key
+from build_readme import render_catalog, render_row, sort_key
 from quality import CRITERIA, quality_rubric, readiness_label, readiness_score
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -97,6 +97,13 @@ class QualityTests(unittest.TestCase):
         beta["name"] = "Beta"
         result = sorted([unknown, zero, high, beta], key=sort_key)
         self.assertEqual(result, [beta, high, zero, unknown])
+
+    def test_ready_score_name_and_icon(self):
+        self.assertEqual(quality_rubric()["name"], "Ready score")
+        self.assertIn("🎯 Ready score /100</th>", render_catalog([BASE_SERVER]))
+        template = (ROOT / "scripts/templates/index.html").read_text(encoding="utf-8")
+        self.assertIn('<option value="readiness">🎯 Ready score ↓</option>', template)
+        self.assertIn('<span class="score">🎯 Ready score:', template)
 
     def test_readme_links_to_evidence_and_displays_review_date(self):
         server = assessed("partial")

@@ -75,7 +75,7 @@
 </div>
 
 <div class="api">
-  <strong>Prontezza d’uso documentata, non certificazione.</strong>
+  <strong>🎯 Ready score: prontezza d’uso documentata, non certificazione.</strong>
   Il punteggio statico valuta le istruzioni pubbliche: non verifica funzionamento,
   sicurezza o disponibilità. Stelle, accesso remoto e scelte editoriali non danno punti.
   <a href="https://github.com/bsab/italia-mcp-servers/blob/main/CONTRIBUTING.md#valutazione-statica-della-documentazione">Metodo e checklist</a>.
@@ -92,7 +92,7 @@
     <option value="unassessed">Non valutati</option>
   </select>
   <select id="sort" aria-label="Ordinamento">
-    <option value="readiness">Prontezza documentata ↓</option>
+    <option value="readiness">🎯 Ready score ↓</option>
     <option value="name">Nome A–Z</option>
   </select>
 </div>
@@ -127,7 +127,7 @@ function renderQuality(server) {
         <p class="meta">${date}</p></details>` : ''}</div>`;
   }
   return `<div class="quality">
-    <span class="score">Prontezza documentata: ${formatScore(server.readiness_score)}/100</span>
+    <span class="score">🎯 Ready score: ${formatScore(server.readiness_score)}/100</span>
     <span class="meta"> · ${date} · rubrica v${quality.rubric_version}</span>
     <details><summary>Criteri, motivazioni e fonti</summary>
       <ul class="criteria">${rubric.criteria.map((criterion) => {

@@ -133,7 +133,7 @@ def render_catalog(servers: list[dict]) -> str:
             "  <thead>\n"
             "    <tr>\n"
             '      <th width="23%">Progetto</th>\n'
-            '      <th width="13%" align="right">Prontezza /100</th>\n'
+            '      <th width="13%" align="right">🎯 Ready score /100</th>\n'
             '      <th width="6%" align="right">⭐</th>\n'
             '      <th width="8%">Lang</th>\n'
             '      <th width="40%">Descrizione</th>\n'

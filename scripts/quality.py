@@ -1,4 +1,4 @@
-"""Rubrica v1: prontezza d'uso documentata, non affidabilita' runtime."""
+"""Ready score, rubrica v1: prontezza documentata, non affidabilita' runtime."""
 
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ def readiness_label(server: dict) -> str:
 def quality_rubric() -> dict:
     return {
         "version": RUBRIC_VERSION,
-        "name": "Prontezza d’uso documentata",
+        "name": "Ready score",
         "criteria": [
             {"id": key, "label": label, "weight": weight}
             for key, (label, weight) in CRITERIA.items()
