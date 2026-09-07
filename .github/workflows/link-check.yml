@@ -20,6 +20,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Gli endpoint Streamable HTTP richiedono richieste MCP POST valide e possono
+      # rifiutare GET con 404/405: non sono link web verificabili da Lychee.
+      - name: Escludi gli endpoint MCP dal controllo HTTP generico
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          endpoints = {
+              json.loads(path.read_text(encoding="utf-8")).get("mcp_endpoint")
+              for path in Path("servers").glob("*.json")
+          }
+          patterns = [f"^{re.escape(url)}$" for url in sorted(endpoints - {None})]
+          Path(".lycheeignore").write_text("\n".join(patterns) + "\n", encoding="utf-8")
+          PY
+
       - name: Controlla i link
         id: lychee
         uses: lycheeverse/lychee-action@v2
