@@ -56,8 +56,7 @@
         "status": "partial",
         "evidence": [
           "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/README.md#L136-L173",
-          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/frontend/assets/guide/mcp-claude.svg",
-          "https://cruscotto-italia.dati.gov.it/about.html#accesso-mcp"
+          "https://github.com/AgID/cruscotto-italia/blob/6afd864dc1fadd4fe3d47246bd1a1459ddb3e920/frontend/assets/guide/mcp-claude.svg"
         ],
         "notes": "Sono presenti istruzioni concrete per Claude e ChatGPT e un URL MCP remoto. Le pagine consultate non identificano esplicitamente il trasporto MCP come Streamable HTTP o SSE: non lo si ricava dalla sola URL HTTPS né dai metadati del catalogo."
       },
