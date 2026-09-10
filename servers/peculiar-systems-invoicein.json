@@ -1,0 +1,29 @@
+{
+  "name": "InvoiceIn",
+  "site_url": "https://invoicein.peculiar.systems/it",
+  "mcp_endpoint": "https://invoicein-api.peculiar.systems/mcp",
+  "transport": "streamable-http",
+  "author": "peculiar-systems",
+  "language": "Python",
+  "license": null,
+  "stars": 0,
+  "category": "fatturazione",
+  "short_description": "Fatture passive europee normalizzate in un unico JSON EN 16931, con report di validazione",
+  "description": "Normalizza le fatture ricevute nei diversi formati europei — FatturaPA 1.2, XRechnung, ZUGFeRD/Factur-X, Peppol BIS 3, KSeF — in un unico JSON EN 16931 con report di validazione. Servizio ospitato.",
+  "tags": [
+    "fatturapa",
+    "en-16931",
+    "xrechnung",
+    "factur-x",
+    "peppol",
+    "ksef",
+    "remote-mcp"
+  ],
+  "tools": [
+    "read_invoice",
+    "validate_invoice",
+    "invoice_to_html",
+    "invoice_to_csv",
+    "invoice_to_datev"
+  ]
+}
