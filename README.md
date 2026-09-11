@@ -13,7 +13,7 @@
   <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/link-check.yml/badge.svg" alt="Link check"/></a>
   <a href="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml"><img src="https://github.com/bsab/italia-mcp-servers/actions/workflows/pages.yml/badge.svg" alt="GitHub Pages"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"/></a>
-  <img src="https://img.shields.io/badge/server%20MCP-33-blue.svg" alt="33 server"/>
+  <img src="https://img.shields.io/badge/server%20MCP-34-blue.svg" alt="34 server"/>
   <img src="https://img.shields.io/badge/categorie-6-orange.svg" alt="6 categorie"/>
 <!-- END:badges -->
 </p>
@@ -265,6 +265,14 @@ in fondo; il grassetto indica una scelta editoriale indipendente dal punteggio.
     <td>TS</td>
     <td>Fatture in Cloud API v2, CRUD completo</td>
     <td align="center">—</td>
+  </tr>
+  <tr>
+    <td><a href="https://invoicein.peculiar.systems/it">InvoiceIn</a></td>
+    <td align="right">Non valutato</td>
+    <td align="right">0</td>
+    <td>Python</td>
+    <td>Fatture passive europee normalizzate in un unico JSON EN 16931, con report di validazione</td>
+    <td align="center"><a href="https://invoicein-api.peculiar.systems/mcp" target="_blank" rel="noopener noreferrer" title="Apri endpoint MCP: InvoiceIn"><kbd>Connetti</kbd></a></td>
   </tr>
   </tbody>
 </table>
