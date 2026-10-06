@@ -1,0 +1,31 @@
+{
+  "name": "Zornade MCP",
+  "repository_url": "https://github.com/zornade/zornade-mcp",
+  "site_url": "https://zornade.com",
+  "mcp_endpoint": "https://mcp.zornade.com/mcp",
+  "transport": "streamable-http",
+  "author": "zornade",
+  "language": "TypeScript",
+  "license": "MIT",
+  "stars": 0,
+  "category": "dati-statistiche",
+  "short_description": "Catasto, geocodifica e valutazioni immobiliari italiane via MCP remoto",
+  "description": "Server MCP remoto sul catasto italiano: particelle arricchite, geocodifica ANNCSU, quotazioni OMI, rischio sismico e idrogeologico, potenziale solare. Richiede una chiave API gratuita.",
+  "tags": [
+    "catasto",
+    "geocodifica",
+    "immobiliare",
+    "omi",
+    "rischio",
+    "dati-aperti",
+    "remote-mcp"
+  ],
+  "tools": [
+    "zornade_geocode_search",
+    "zornade_geocode_reverse",
+    "zornade_parcel_by_id",
+    "zornade_parcel_locate",
+    "zornade_parcel_search",
+    "zornade_admin_lists"
+  ]
+}
